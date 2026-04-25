@@ -15,12 +15,22 @@
     <style>
         .container {
             max-width: 1180px;
-            margin: auto
+            margin: 0 auto;
         }
 
         header {
-            background: url('img/layer.png') center/cover;
-            height: 90vh;
+            background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+            height: 95vh;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        @keyframes flyAcross {
+            0% { transform: translate(0, 5vh) rotate(5deg) scale(0.8); }
+            100% { transform: translate(120vw, -10vh) rotate(5deg) scale(0.8); }
+        }
+        .fly-once {
+            animation: flyAcross 3.5s linear;
         }
     </style>
 </head>
@@ -77,158 +87,325 @@
             </div>
 
         </div>
-    </header>
-    <main>
-        <div class=" py-[40px]">
-            <div class="container  flex items-center   justify-between mb-[30px]">
-                <h3 class="font-bold text-[35px]">Qaynar turlar</h3>
-                <p class="hover:underline"><a href="">Bütün turlara bax</a></p>
-            </div>
-            <div class="relative max-w-[800px] w-full mx-auto ">
-    <div class="absolute  w-full m-auto md:m-0 translate-y-1/2  top-[30%]  z-12 flex items-center justify-between">
-
-                    <div class="my-custom-prev left-0 md:-ml-6 text-white px-2  py-[6px] border-white border-8 bg-[#e8e8e8] rounded-full ">
+        <img src="img/cloud8.png" class="absolute bottom-0 left-0 w-full h-auto z-[1]" alt="" onerror="this.style.display='none'">
+        <img src="img/cloud2.png" class="absolute bottom-[-10%] left-[-10%] w-[120%] h-auto z-[3]" alt="" onerror="this.style.display='none'">
         
- <i class="fa-solid fa-chevron-left "></i>
-                       
+        <img src="img/baku.png" class="absolute bottom-[0%] left-[5%] max-w-[500px] lg:max-w-[650px] z-[2] opacity-70" alt="">
+        <img src="img/fly.png" id="hero-plane" class="absolute left-[-400px] top-[15%] w-[250px] lg:w-[350px] z-[4]" alt="Təyyarə">
+
+        <div class="w-full px-4 lg:px-[8%] relative h-[calc(95vh-116px)] flex flex-col lg:flex-row items-center justify-between z-10 pt-[30px] lg:pt-0 pb-[30px] lg:pb-0">
+            <div class="w-full lg:w-[45%] flex items-center justify-center lg:justify-start gap-6 lg:gap-10 mb-10 lg:mb-0 relative z-[5]">
+                <div class="flex flex-col items-center gap-4 lg:gap-6 relative z-20">
+                    <div class="absolute h-[110%] w-[1.5px] bg-[#1e419b] -z-10 top-[-5%]"></div>
+                    <div class="hero-dot w-5 h-5 rounded-full border-2 border-[#f58220] flex items-center justify-center bg-transparent transition-all duration-300" data-index="0">
+                        <div class="w-2 h-2 rounded-full bg-[#1e419b]"></div>
                     </div>
+                    <div class="hero-dot w-2 h-2 rounded-full bg-[#1e419b] transition-all duration-300" data-index="1"></div>
+                    <div class="hero-dot w-2 h-2 rounded-full bg-[#1e419b] transition-all duration-300" data-index="2"></div>
+                    <div class="hero-dot w-2 h-2 rounded-full bg-[#1e419b] transition-all duration-300" data-index="3"></div>
+                    <div class="hero-dot w-2 h-2 rounded-full bg-[#1e419b] transition-all duration-300" data-index="4"></div>
+                </div>
 
-<div class="my-custom-next left-0 md:-mr-6  text-white px-2  py-[6px] border-white border-8 bg-[#e8e8e8] rounded-full ">
-        
-                        <i class="fa-solid fa-chevron-right"></i>
+                <div class="ml-2 z-20">
+                    <h1 id="hero-title" class="text-[#f58220] font-black text-[50px] md:text-[70px] lg:text-[100px] leading-none uppercase tracking-wide drop-shadow-md transition-all duration-300" style="font-family: 'Arial Black', Impact, sans-serif;">Moskva</h1>
+                    <p id="hero-subtitle" class="text-[14px] md:text-[18px] lg:text-[22px] font-semibold mt-2 uppercase text-[#111] tracking-widest mb-12 lg:mb-20 transition-all duration-300">Gəz, gəz və yenə gəz</p>
+
+                    <div class="flex gap-4 lg:gap-5 flex-nowrap mt-4">
+                        <a href="#" class="w-[65px] h-[65px] lg:w-[90px] lg:h-[90px] border-[1.5px] border-[#1e419b] rounded-[15px] lg:rounded-[20px] flex flex-col items-center justify-center text-[#1e419b] hover:bg-[#1e419b] hover:text-white transition-all duration-300 group bg-white/20 backdrop-blur-sm shadow-sm flex-shrink-0">
+                            <i class="fa-solid fa-plane text-[20px] lg:text-[28px] mb-1"></i>
+                            <span class="text-[9px] lg:text-[12px] font-semibold">Aviabilet</span>
+                        </a>
+                        <a href="#" class="w-[65px] h-[65px] lg:w-[90px] lg:h-[90px] border-[1.5px] border-[#1e419b] rounded-[15px] lg:rounded-[20px] flex flex-col items-center justify-center text-[#1e419b] hover:bg-[#1e419b] hover:text-white transition-all duration-300 group bg-white/20 backdrop-blur-sm shadow-sm flex-shrink-0">
+                            <i class="fa-solid fa-car text-[20px] lg:text-[28px] mb-1"></i>
+                            <span class="text-[9px] lg:text-[12px] font-semibold">Rent a car</span>
+                        </a>
+                        <a href="#" class="w-[65px] h-[65px] lg:w-[85px] lg:h-[85px] border-[1.5px] border-[#1e419b] rounded-[15px] lg:rounded-[20px] flex flex-col items-center justify-center text-[#1e419b] hover:bg-[#1e419b] hover:text-white transition-all duration-300 group bg-white/20 backdrop-blur-sm shadow-sm">
+                            <i class="fa-solid fa-bed text-[20px] lg:text-[28px] mb-1"></i>
+                            <span class="text-[9px] lg:text-[12px] font-semibold">Otellər</span>
+                        </a>
+                        <a href="#" class="w-[65px] h-[65px] lg:w-[85px] lg:h-[85px] border-[1.5px] border-[#1e419b] rounded-[15px] lg:rounded-[20px] flex flex-col items-center justify-center text-[#1e419b] hover:bg-[#1e419b] hover:text-white transition-all duration-300 group bg-white/20 backdrop-blur-sm shadow-sm">
+                            <i class="fa-solid fa-signs-post text-[20px] lg:text-[28px] mb-1"></i>
+                            <span class="text-[9px] lg:text-[12px] font-semibold">Turlar</span>
+                        </a>
+                        <a href="#" class="w-[65px] h-[65px] lg:w-[85px] lg:h-[85px] border-[1.5px] border-[#1e419b] rounded-[15px] lg:rounded-[20px] flex flex-col items-center justify-center text-[#1e419b] hover:bg-[#1e419b] hover:text-white transition-all duration-300 group bg-white/20 backdrop-blur-sm shadow-sm">
+                            <i class="fa-solid fa-passport text-[20px] lg:text-[28px] mb-1"></i>
+                            <span class="text-[9px] lg:text-[12px] font-semibold">Viza</span>
+                        </a>
                     </div>
                 </div>
-          
-                   
-            <div class="swiper mySwiper w-full">
-                <div class="swiper-wrapper   pb-[30px] pt-[10px] px-[15px]">
-
-                    <div class="swiper-slide">
-                        <div
-                            class="card w-[90%] md:w-[220px] h-fit rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold transition-shadow hover:shadow-[0_8px_12px_-2px_rgba(0,0,0,0.3)]">
-                            <div>
-                                <img src="img/1664460726_photo_5303063749382488715_y.jpg"
-                                    class="w-full h-[180px] object-cover" alt="Marmaris">
-                            </div>
-                            <div class="p-[14px] flex flex-col gap-2">
-                                <p class="font-bold uppercase text-[15px]">Marmaris</p>
-                                <p class="font-bold text-[13px]">02.09.2022 - 09.09.2022</p>
-                                <div class="mt-[8px]">
-                                    <div class="flex justify-between items-center text-[13px] mb-[10px]">
-                                        <button class="bg-[#f58220] text-white rounded-2xl py-1 px-2">5885 AZN</button>
-                                        <a href="" class="text-[#484848] font-semibold hover:text-[#f58220]">Ətraflı</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div
-                            class="card w-[90%] md:w-[220px] h-fit rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold transition-shadow hover:shadow-[0_8px_12px_-2px_rgba(0,0,0,0.3)]">
-                            <div>
-                                <img src="img/1664460726_photo_5303063749382488715_y.jpg"
-                                    class="w-full h-[180px] object-cover" alt="Marmaris">
-                            </div>
-                            <div class="p-[14px] flex flex-col gap-2">
-                                <p class="font-bold uppercase text-[15px]">Marmaris</p>
-                                <p class="font-bold text-[13px]">02.09.2022 - 09.09.2022</p>
-                                <div class="mt-[8px]">
-                                    <div class="flex justify-between items-center text-[13px] mb-[10px]">
-                                        <button class="bg-[#f58220] text-white rounded-2xl py-1 px-2">5885 AZN</button>
-                                        <a href="" class="text-[#484848] font-semibold hover:text-[#f58220]">Ətraflı</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div
-                            class="card w-[90%] md:w-[220px] h-fit rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold transition-shadow hover:shadow-[0_8px_12px_-2px_rgba(0,0,0,0.3)]">
-                            <div>
-                                <img src="img/1664460726_photo_5303063749382488715_y.jpg"
-                                    class="w-full h-[180px] object-cover" alt="Marmaris">
-                            </div>
-                            <div class="p-[14px] flex flex-col gap-2">
-                                <p class="font-bold uppercase text-[15px]">Marmaris</p>
-                                <p class="font-bold text-[13px]">02.09.2022 - 09.09.2022</p>
-                                <div class="mt-[8px]">
-                                    <div class="flex justify-between items-center text-[13px] mb-[10px]">
-                                        <button class="bg-[#f58220] text-white rounded-2xl py-1 px-2">5885 AZN</button>
-                                        <a href="" class="text-[#484848] font-semibold hover:text-[#f58220]">Ətraflı</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div
-                            class="card w-[90%] md:w-[220px] h-fit rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold transition-shadow hover:shadow-[0_8px_12px_-2px_rgba(0,0,0,0.3)]">
-                            <div>
-                                <img src="img/1664460726_photo_5303063749382488715_y.jpg"
-                                    class="w-full h-[180px] object-cover" alt="Marmaris">
-                            </div>
-                            <div class="p-[14px] flex flex-col gap-2">
-                                <p class="font-bold uppercase text-[15px]">Marmaris</p>
-                                <p class="font-bold text-[13px]">02.09.2022 - 09.09.2022</p>
-                                <div class="mt-[8px]">
-                                    <div class="flex justify-between items-center text-[13px] mb-[10px]">
-                                        <button class="bg-[#f58220] text-white rounded-2xl py-1 px-2">5885 AZN</button>
-                                        <a href="" class="text-[#484848] font-semibold hover:text-[#f58220]">Ətraflı</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div
-                            class="card w-[90%] md:w-[220px] h-fit rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold transition-shadow hover:shadow-[0_8px_12px_-2px_rgba(0,0,0,0.3)]">
-                            <div>
-                                <img src="img/1664460726_photo_5303063749382488715_y.jpg"
-                                    class="w-full h-[180px] object-cover" alt="Marmaris">
-                            </div>
-                            <div class="p-[14px] flex flex-col gap-2">
-                                <p class="font-bold uppercase text-[15px]">Marmaris</p>
-                                <p class="font-bold text-[13px]">02.09.2022 - 09.09.2022</p>
-                                <div class="mt-[8px]">
-                                    <div class="flex justify-between items-center text-[13px] mb-[10px]">
-                                        <button class="bg-[#f58220] text-white rounded-2xl py-1 px-2">5885 AZN</button>
-                                        <a href="" class="text-[#484848] font-semibold hover:text-[#f58220]">Ətraflı</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div
-                            class="card w-[90%] md:w-[220px] h-fit rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold transition-shadow hover:shadow-[0_8px_12px_-2px_rgba(0,0,0,0.3)]">
-                            <div>
-                                <img src="img/1664460726_photo_5303063749382488715_y.jpg"
-                                    class="w-full h-[180px] object-cover" alt="Marmaris">
-                            </div>
-                            <div class="p-[14px] flex flex-col gap-2">
-                                <p class="font-bold uppercase text-[15px]">Marmaris</p>
-                                <p class="font-bold text-[13px]">02.09.2022 - 09.09.2022</p>
-                                <div class="mt-[8px]">
-                                    <div class="flex justify-between items-center text-[13px] mb-[10px]">
-                                        <button class="bg-[#f58220] text-white rounded-2xl py-1 px-2">5885 AZN</button>
-                                        <a href="" class="text-[#484848] font-semibold hover:text-[#f58220]">Ətraflı</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-     
-
             </div>
+
+            <div class="w-full lg:w-[50%] relative h-[380px] lg:h-[450px] overflow-hidden lg:overflow-visible z-[5] flex justify-end">
+                <div class="swiper heroSwiper w-[100%] absolute top-[50%] -translate-y-1/2 right-0 pl-4 lg:pl-0">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide !w-[240px] lg:!w-[280px] !h-[350px] lg:!h-[420px] rounded-[25px] overflow-hidden relative shadow-[0_15px_30px_rgba(0,0,0,0.3)]">
+                            <img src="img/moskva.jpg" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#000000ee] via-[#00000055] to-transparent"></div>
+                            <div class="absolute bottom-6 lg:bottom-8 left-5 lg:left-6 right-5 lg:right-6 text-white">
+                                <h2 class="text-[22px] lg:text-[28px] font-bold uppercase tracking-widest drop-shadow-md">Moskva</h2>
+                                <p class="text-[13px] lg:text-[14px] font-medium italic mt-1 text-gray-200">Gəz, gəz və yenə gəz</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide !w-[240px] lg:!w-[280px] !h-[350px] lg:!h-[420px] rounded-[25px] overflow-hidden relative shadow-[0_15px_30px_rgba(0,0,0,0.3)]">
+                            <img src="img/Istanbul.jpg" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#000000ee] via-[#00000055] to-transparent"></div>
+                            <div class="absolute bottom-6 lg:bottom-8 left-5 lg:left-6 right-5 lg:right-6 text-white">
+                                <h2 class="text-[22px] lg:text-[28px] font-bold uppercase tracking-widest drop-shadow-md">İSTANBUL</h2>
+                                <p class="text-[13px] lg:text-[14px] font-medium italic mt-1 text-gray-200">Tarix yazan şəhər</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide !w-[240px] lg:!w-[280px] !h-[350px] lg:!h-[420px] rounded-[25px] overflow-hidden relative shadow-[0_15px_30px_rgba(0,0,0,0.3)]">
+                            <img src="img/dubay.jpg" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#000000ee] via-[#00000055] to-transparent"></div>
+                            <div class="absolute bottom-6 lg:bottom-8 left-5 lg:left-6 right-5 lg:right-6 text-white">
+                                <h2 class="text-[22px] lg:text-[28px] font-bold uppercase tracking-widest drop-shadow-md">Dubay</h2>
+                                <p class="text-[13px] lg:text-[14px] font-medium italic mt-1 text-gray-200">Dünyanın günəşli bucağı</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide !w-[240px] lg:!w-[280px] !h-[350px] lg:!h-[420px] rounded-[25px] overflow-hidden relative shadow-[0_15px_30px_rgba(0,0,0,0.3)]">
+                            <img src="img/avropa.jpg" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#000000ee] via-[#00000055] to-transparent"></div>
+                            <div class="absolute bottom-6 lg:bottom-8 left-5 lg:left-6 right-5 lg:right-6 text-white">
+                                <h2 class="text-[22px] lg:text-[28px] font-bold uppercase tracking-widest drop-shadow-md">Avropa</h2>
+                                <p class="text-[13px] lg:text-[14px] font-medium italic mt-1 text-gray-200">İlk qərar verilən destinasiya</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide !w-[240px] lg:!w-[280px] !h-[350px] lg:!h-[420px] rounded-[25px] overflow-hidden relative shadow-[0_15px_30px_rgba(0,0,0,0.3)]">
+                            <img src="img/maldiv.webp" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#000000ee] via-[#00000055] to-transparent"></div>
+                            <div class="absolute bottom-6 lg:bottom-8 left-5 lg:left-6 right-5 lg:right-6 text-white">
+                                <h2 class="text-[22px] lg:text-[28px] font-bold uppercase tracking-widest drop-shadow-md">Maldiv</h2>
+                                <p class="text-[13px] lg:text-[14px] font-medium italic mt-1 text-gray-200">Bir yerüzü cənnəti</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+
+        <div class="fixed bottom-8 right-8 w-[65px] h-[65px] bg-[#f58220] rounded-full flex items-center justify-center text-white text-[30px] shadow-[0_5px_15px_rgba(245,130,32,0.5)] z-[100] hover:scale-110 transition-transform">
+            <i class="fa-solid fa-comment-dots"></i>
+        </div>
+    </header>
+    <main>
+        <div class=" py-[40px]" >
+          
+
+      <div class="container">
+           <div class="  flex items-center   justify-between mb-[30px]" >
+
+                <h3 class="font-bold text-[35px]">Qaynar turlar</h3>
+                <p class="hover:underline"><a href="">Bütün turlara bax</a></p>
+
+  
+        </div>
+          <div class="relative md:px-[170px] w-full  " style="background-image: url('img/map.png') center/cover; ">
+                <div class="absolute w-full left-0 m-auto md:m-0 -translate-y-1/2 top-[50%] z-[50] flex items-center justify-between px-[10px] md:px-[120px] ">
+                    <div class="my-custom-prev  hover:bg-[#f58220] duration-500 text-white px-[12px] py-[8px] md:px-[16px] md:py-[10px] border-white border-8 bg-[#e8e8e8] rounded-full shadow-lg">
+                        <i class="fa-solid fa-chevron-left text-[14px]"></i>
+                    </div>
+                    <div class="my-custom-next  hover:bg-[#f58220] duration-500 text-white px-[12px] py-[8px] md:px-[16px] md:py-[10px] border-white border-8 bg-[#e8e8e8] rounded-full shadow-lg">
+                        <i class="fa-solid fa-chevron-right text-[14px]"></i>
+                    </div>
+                </div>
+
+
+                <div class="swiper mySwiper w-full">
+                    <div class="swiper-wrapper   pb-[30px] pt-[10px] px-[15px]">
+
+                        <div class="swiper-slide  px-[15px]">
+                            <div class="card w-[63%] md:w-full h-fit rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold transition-shadow hover:shadow-[0_8px_12px_-2px_rgba(0,0,0,0.3)]">
+                                <div>
+                                    <img src="img/1661868740_2022-08-30-18.08.16.jpg" class="w-full h-[30vh] object-cover" alt="Kapadokya">
+                                </div>
+                                <div class="p-[18px] flex flex-col gap-2">
+                                    <p class="font-bold uppercase text-[15px]">Kapadokya</p>
+                                    <p class="font-bold text-[13px]">25.09-30.09</p>
+                                    <div class="mt-[8px]">
+                                        <div class="flex justify-between items-center text-[13px] mb-[10px]">
+                                            <button class="bg-[#f58220] text-white rounded-2xl py-1 px-2">1640$ - 2210$</button>
+                                            <a href="" class="text-[#484848] font-semibold hover:text-[#f58220]">Ətraflı</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide  px-[15px]">
+                            <div class="card w-[63%] md:w-full h-fit rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold transition-shadow hover:shadow-[0_8px_12px_-2px_rgba(0,0,0,0.3)]">
+                                <div>
+                                    <img src="img/1661433370_photo_2022-08-25_16-15-30.jpg" class="w-full h-[30vh] object-cover" alt="Dubay">
+                                </div>
+                                <div class="p-[18px] flex flex-col gap-2">
+                                    <p class="font-bold uppercase text-[15px]">Dubay</p>
+                                    <p class="font-bold text-[13px]">8.11.2022 - 12.11.2022</p>
+                                    <div class="mt-[8px]">
+                                        <div class="flex justify-between items-center text-[13px] mb-[10px]">
+                                            <button class="bg-[#f58220] text-white rounded-2xl py-1 px-2">2725 AZN - 3200 AZN</button>
+                                            <a href="" class="text-[#484848] font-semibold hover:text-[#f58220]">Ətraflı</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide  px-[15px]">
+                            <div class="card w-[63%] md:w-full h-fit rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold transition-shadow hover:shadow-[0_8px_12px_-2px_rgba(0,0,0,0.3)]">
+                                <div>
+                                    <img src="img/1661432491_img_9995.jpg" class="w-full h-[30vh] object-cover" alt="Cenevrə">
+                                </div>
+                                <div class="p-[18px] flex flex-col gap-2">
+                                    <p class="font-bold uppercase text-[15px]">Cenevrə</p>
+                                    <p class="font-bold text-[13px]">15.10.2022 - 21.10.2022</p>
+                                    <div class="mt-[8px]">
+                                        <div class="flex justify-between items-center text-[13px] mb-[10px]">
+                                            <button class="bg-[#f58220] text-white rounded-2xl py-1 px-2">2460 USD - 4153 USD</button>
+                                            <a href="" class="text-[#484848] font-semibold hover:text-[#f58220]">Ətraflı</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide  px-[15px]">
+                            <div class="card w-[63%] md:w-full h-fit rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold transition-shadow hover:shadow-[0_8px_12px_-2px_rgba(0,0,0,0.3)]">
+                                <div>
+                                    <img src="img/1661869296_123123.jpg" class="w-full h-[30vh] object-cover" alt="Disneyland Paris">
+                                </div>
+                                <div class="p-[18px] flex flex-col gap-2">
+                                    <p class="font-bold uppercase text-[15px]">Disneyland Paris</p>
+                                    <p class="font-bold text-[13px]">20.10.2022 - 26.10.2022</p>
+                                    <div class="mt-[8px]">
+                                        <div class="flex justify-between items-center text-[13px] mb-[10px]">
+                                            <button class="bg-[#f58220] text-white rounded-2xl py-1 px-2">4710 USD - 6480 USD</button>
+                                            <a href="" class="text-[#484848] font-semibold hover:text-[#f58220]">Ətraflı</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide  px-[15px]">
+                            <div class="card w-[63%] md:w-full h-fit rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold transition-shadow hover:shadow-[0_8px_12px_-2px_rgba(0,0,0,0.3)]">
+                                <div>
+                                    <img src="img/1661869774_202.jpg" class="w-full h-[30vh] object-cover" alt="Tbilisi">
+                                </div>
+                                <div class="p-[18px] flex flex-col gap-2">
+                                    <p class="font-bold uppercase text-[15px]">Tbilisi</p>
+                                    <p class="font-bold text-[13px]">18.09.2022 - 23.09.2022</p>
+                                    <div class="mt-[8px]">
+                                        <div class="flex justify-between items-center text-[13px] mb-[10px]">
+                                            <button class="bg-[#f58220] text-white rounded-2xl py-1 px-2">1729 AZN - 2426 AZN</button>
+                                            <a href="" class="text-[#484848] font-semibold hover:text-[#f58220]">Ətraflı</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide  px-[15px]">
+                            <div class="card w-[63%] md:w-full h-fit rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold transition-shadow hover:shadow-[0_8px_12px_-2px_rgba(0,0,0,0.3)]">
+                                <div>
+                                    <img src="img/1661871303_8787.jpg" class="w-full h-[30vh] object-cover" alt="AMSTERDAM">
+                                </div>
+                                <div class="p-[18px] flex flex-col gap-2">
+                                    <p class="font-bold uppercase text-[15px]">AMSTERDAM</p>
+                                    <p class="font-bold text-[13px]">10.11.2022 - 15.11.2022</p>
+                                    <div class="mt-[8px]">
+                                        <div class="flex justify-between items-center text-[13px] mb-[10px]">
+                                            <button class="bg-[#f58220] text-white rounded-2xl py-1 px-2">2707 AZN - 5174 AZN</button>
+                                            <a href="" class="text-[#484848] font-semibold hover:text-[#f58220]">Ətraflı</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide  px-[15px]">
+                            <div class="card w-[63%] md:w-full h-fit rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold transition-shadow hover:shadow-[0_8px_12px_-2px_rgba(0,0,0,0.3)]">
+                                <div>
+                                    <img src="img/1664460726_photo_5303063749382488715_y.jpg" class="w-full h-[30vh] object-cover" alt="Marmaris">
+                                </div>
+                                <div class="p-[18px] flex flex-col gap-2">
+                                    <p class="font-bold uppercase text-[15px]">Marmaris</p>
+                                    <p class="font-bold text-[13px]">02.09.2022 - 09.09.2022</p>
+                                    <div class="mt-[8px]">
+                                        <div class="flex justify-between items-center text-[13px] mb-[10px]">
+                                            <button class="bg-[#f58220] text-white rounded-2xl py-1 px-2">1874 USD - 2040 USD</button>
+                                            <a href="" class="text-[#484848] font-semibold hover:text-[#f58220]">Ətraflı</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide  px-[15px]">
+                            <div class="card w-[63%] md:w-full h-fit rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold transition-shadow hover:shadow-[0_8px_12px_-2px_rgba(0,0,0,0.3)]">
+                                <div>
+                                    <img src="img/1662988718_photo_5251532023095476369_y.jpg" class="w-full h-[30vh] object-cover" alt="İSTANBULDA BLACK FRİDAY">
+                                </div>
+                                <div class="p-[18px] flex flex-col gap-2">
+                                    <p class="font-bold uppercase text-[15px]">İSTANBULDA BLACK FRİDAY</p>
+                                    <p class="font-bold text-[13px]">23.11.2022 - 27.11.2022</p>
+                                    <div class="mt-[8px]">
+                                        <div class="flex justify-between items-center text-[13px] mb-[10px]">
+                                            <button class="bg-[#f58220] text-white rounded-2xl py-1 px-2">559$ - 717$</button>
+                                            <a href="" class="text-[#484848] font-semibold hover:text-[#f58220]">Ətraflı</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide  px-[15px]">
+                            <div class="card w-[63%] md:w-full h-fit rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold transition-shadow hover:shadow-[0_8px_12px_-2px_rgba(0,0,0,0.3)]">
+                                <div>
+                                    <img src="img/1661868740_2022-08-30-18.08.16.jpg" class="w-full h-[30vh] object-cover" alt="BANGKOK-PATTAYA">
+                                </div>
+                                <div class="p-[18px] flex flex-col gap-2">
+                                    <p class="font-bold uppercase text-[15px]">BANGKOK-PATTAYA</p>
+                                    <p class="font-bold text-[13px]">06.11.2022-13.11.2022</p>
+                                    <div class="mt-[8px]">
+                                        <div class="flex justify-between items-center text-[13px] mb-[10px]">
+                                            <button class="bg-[#f58220] text-white rounded-2xl py-1 px-2">2455$ - 3696$</button>
+                                            <a href="" class="text-[#484848] font-semibold hover:text-[#f58220]">Ətraflı</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide  px-[15px]">
+                            <div class="card w-[63%] md:w-full h-fit rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold transition-shadow hover:shadow-[0_8px_12px_-2px_rgba(0,0,0,0.3)]">
+                                <div>
+                                    <img src="img/1661433370_photo_2022-08-25_16-15-30.jpg" class="w-full h-[30vh] object-cover" alt="LAPLANDİYA YENİ İL">
+                                </div>
+                                <div class="p-[18px] flex flex-col gap-2">
+                                    <p class="font-bold uppercase text-[15px]">LAPLANDİYA YENİ İL</p>
+                                    <p class="font-bold text-[13px]">27.12.2022- 03.01.2023</p>
+                                    <div class="mt-[8px]">
+                                        <div class="flex justify-between items-center text-[13px] mb-[10px]">
+                                            <button class="bg-[#f58220] text-white rounded-2xl py-1 px-2">4570$ - 10090$</button>
+                                            <a href="" class="text-[#484848] font-semibold hover:text-[#f58220]">Ətraflı</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                      
+
+                     
+                    </div>
+
+
+                </div>
+            </div>
+              </div>
+                          </div>
+      </div>
+         
 
 
         <div class="container py-[40px] px-[15px]">
@@ -238,285 +415,340 @@
             </div>
 
             <div class="grid mx-auto grid-cols-1 md:grid-cols-2 gap-4 lg:grid-cols-4">
-                <div
-                    class=" mb-[25px] m-auto  lg:mx-0 lg:mt-0 w-[70%] lg:w-full h-fit rounded-2xl  bg-[#f7f7fb]  overflow-hidden font-semibold  transition-shadow hover:shadow-[0_8px_12px_-2px_rgba(0,0,0,0.3)]">
-                    <div class=" h-[200px]">
-                        <img src="img/1671814845_320197824_474959374762484_6974740135922900451_n.jpg"
-                            class="w-full  h-full  object-cover" alt="">
+                <div class="mb-[25px] m-auto lg:mx-0 lg:mt-0 w-[70%] lg:w-full h-fit rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold">
+                    <div class="h-[200px]">
+                        <img src="img/1671814845_320197824_474959374762484_6974740135922900451_n.jpg" class="w-full h-full object-cover" alt="">
                     </div>
-                    <div class="p-4  flex  flex-col gap-2">
-                        <p class=" font-bold uppercase">BALİ TURU</p>
-                        <p class=" font-bold">10.04.2023-20.04.2023</p>
+                    <div class="p-4 flex flex-col gap-2">
+                        <p class="font-bold uppercase">BALİ TURU</p>
+                        <p class="font-bold">10.04.2023-20.04.2023</p>
                         <div class="mt-[10px]">
-                            <div class="flex justify-between items-center  text-[14px]   mb-[15px]">
-                                <button class="bg-[#f58220] text-white rounded-2xl py-1 px-2  ">5885 AZN
-                                </button>
-                                <a href="" class=" text-[#484848] font-semibold">Ətraflı</a>
+                            <div class="flex justify-between items-center text-[14px] mb-[15px]">
+                                <button class="bg-[#f58220] text-white rounded-2xl py-1 px-2">5885 AZN</button>
+                                <a href="" class="text-[#484848] font-semibold">Ətraflı</a>
                             </div>
                         </div>
                     </div>
-
                 </div>
-                <div
-                    class=" mb-[25px] m-auto  md:mx-0 md:mt-0 w-[70%] lg:w-full h-fit rounded-2xl  bg-[#f7f7fb]  overflow-hidden font-semibold  transition-shadow hover:shadow-[0_8px_12px_-2px_rgba(0,0,0,0.3)]">
-                    <div class=" h-[200px]">
-                        <img src="img/1671814744_319399561_1404265310312231_1180767154768122051_n.jpg"
-                            class="w-full  h-full  object-cover" alt="">
+
+                <div class="mb-[25px] m-auto md:mx-0 md:mt-0 w-[70%] lg:w-full h-fit rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold">
+                    <div class="h-[200px]">
+                        <img src="img/1671814744_319399561_1404265310312231_1180767154768122051_n.jpg" class="w-full h-full object-cover" alt="">
                     </div>
-                    <div class="p-4  flex  flex-col gap-2">
-                        <p class=" font-bold uppercase">Marmaris</p>
-                        <p class=" font-bold">02.09.2022 - 09.09.2022</p>
+                    <div class="p-4 flex flex-col gap-2">
+                        <p class="font-bold uppercase">GƏMİ TURU</p>
+                        <p class="font-bold">03.02.2023 - 10.02.2023</p>
                         <div class="mt-[10px]">
-                            <div class="flex justify-between items-center  text-[14px]   mb-[15px]">
-                                <button class="bg-[#f58220] text-white rounded-2xl py-1 px-2  ">5885 AZN
-                                </button>
-                                <a href="" class=" text-[#484848] font-semibold">Ətraflı</a>
+                            <div class="flex justify-between items-center text-[14px] mb-[15px]">
+                                <button class="bg-[#f58220] text-white rounded-2xl py-1 px-2">470 EUR</button>
+                                <a href="" class="text-[#484848] font-semibold">Ətraflı</a>
                             </div>
                         </div>
                     </div>
-
                 </div>
-                <div
-                    class=" mb-[25px] m-auto  lg:mx-0 lg:mt-0 w-[70%] lg:w-full h-fit rounded-2xl  bg-[#f7f7fb]  overflow-hidden font-semibold  transition-shadow hover:shadow-[0_8px_12px_-2px_rgba(0,0,0,0.3)]">
-                    <div class=" h-[200px]">
-                        <img src="img/1671814582_318927722_918446159123997_4786006261621954289_n.jpg"
-                            class="w-full  h-full  object-cover" alt="">
+
+                <div class="mb-[25px] m-auto lg:mx-0 lg:mt-0 w-[70%] lg:w-full h-fit rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold">
+                    <div class="h-[200px]">
+                        <img src="img/1671814582_318927722_918446159123997_4786006261621954289_n.jpg" class="w-full h-full object-cover" alt="">
                     </div>
-                    <div class="p-4  flex  flex-col gap-2">
-                        <p class=" font-bold uppercase">Marmaris</p>
-                        <p class=" font-bold">02.09.2022 - 09.09.2022</p>
+                    <div class="p-4 flex flex-col gap-2">
+                        <p class="font-bold uppercase">İSTANBUL TURU</p>
+                        <p class="font-bold">16.01.2023 - 20.01.2023</p>
                         <div class="mt-[10px]">
-                            <div class="flex justify-between items-center  text-[14px]   mb-[15px]">
-                                <button class="bg-[#f58220] text-white rounded-2xl py-1 px-2  ">5885 AZN
-                                </button>
-                                <a href="" class=" text-[#484848] font-semibold">Ətraflı</a>
+                            <div class="flex justify-between items-center text-[14px] mb-[15px]">
+                                <button class="bg-[#f58220] text-white rounded-2xl py-1 px-2">658 USD</button>
+                                <a href="" class="text-[#484848] font-semibold">Ətraflı</a>
                             </div>
                         </div>
                     </div>
-
                 </div>
-                <div
-                    class=" mb-[25px] m-auto  md:mx-0 md:mt-0 w-[70%] lg:w-full h-fit rounded-2xl  bg-[#f7f7fb]  overflow-hidden font-semibold  transition-shadow hover:shadow-[0_8px_12px_-2px_rgba(0,0,0,0.3)]">
-                    <div class=" h-[200px]">
-                        <img src="img/1671814284_318778486_859201515268009_4533359742507559573_n.jpg"
-                            class="w-full  h-full  object-cover" alt="">
+
+                <div class="mb-[25px] m-auto md:mx-0 md:mt-0 w-[70%] lg:w-full h-fit rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold">
+                    <div class="h-[200px]">
+                        <img src="img/1671814284_318778486_859201515268009_4533359742507559573_n.jpg" class="w-full h-full object-cover" alt="">
                     </div>
-                    <div class="p-4  flex  flex-col gap-2">
-                        <p class=" font-bold uppercase">Marmaris</p>
-                        <p class=" font-bold">02.09.2022 - 09.09.2022</p>
+                    <div class="p-4 flex flex-col gap-2">
+                        <p class="font-bold uppercase">ŞARM - ƏL - ŞEYX TURU</p>
+                        <p class="font-bold">11.02.2023 - 17.02.2023</p>
                         <div class="mt-[10px]">
-                            <div class="flex justify-between items-center  text-[14px]   mb-[15px]">
-                                <button class="bg-[#f58220] text-white rounded-2xl py-1 px-2  ">5885 AZN
-                                </button>
-                                <a href="" class=" text-[#484848] font-semibold">Ətraflı</a>
+                            <div class="flex justify-between items-center text-[14px] mb-[15px]">
+                                <button class="bg-[#f58220] text-white rounded-2xl py-1 px-2">1553 USD</button>
+                                <a href="" class="text-[#484848] font-semibold">Ətraflı</a>
                             </div>
                         </div>
                     </div>
-
                 </div>
-                <div
-                    class=" mb-[25px] m-auto  lg:mx-0 g:mt-0 w-[70%] lg:w-full h-fit rounded-2xl  bg-[#f7f7fb]  overflow-hidden font-semibold  transition-shadow hover:shadow-[0_8px_12px_-2px_rgba(0,0,0,0.3)]">
-                    <div class=" h-[200px]">
-                        <img src="img/1671814035_318775077_534116688733795_7032595625630696824_n.jpg"
-                            class="w-full  h-full  object-cover" alt="">
+
+                <div class="mb-[25px] m-auto lg:mx-0 lg:mt-0 w-[70%] lg:w-full h-fit rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold">
+                    <div class="h-[200px]">
+                        <img src="img/1671814035_318775077_534116688733795_7032595625630696824_n.jpg" class="w-full h-full object-cover" alt="">
                     </div>
-                    <div class="p-4  flex  flex-col gap-2">
-                        <p class=" font-bold uppercase">Marmaris</p>
-                        <p class=" font-bold">02.09.2022 - 09.09.2022</p>
+                    <div class="p-4 flex flex-col gap-2">
+                        <p class="font-bold uppercase">DUBAYDA NOVRUZ TƏTİLİ</p>
+                        <p class="font-bold">17.03.2023 - 21.03.2023</p>
                         <div class="mt-[10px]">
-                            <div class="flex justify-between items-center  text-[14px]   mb-[15px]">
-                                <button class="bg-[#f58220] text-white rounded-2xl py-1 px-2  ">5885 AZN
-                                </button>
-                                <a href="" class=" text-[#484848] font-semibold">Ətraflı</a>
+                            <div class="flex justify-between items-center text-[14px] mb-[15px]">
+                                <button class="bg-[#f58220] text-white rounded-2xl py-1 px-2">1325 USD</button>
+                                <a href="" class="text-[#484848] font-semibold">Ətraflı</a>
                             </div>
                         </div>
                     </div>
-
                 </div>
-                <div
-                    class=" mb-[25px] m-auto  md:mx-0 md:mt-0 w-[70%] lg:w-full h-fit rounded-2xl  bg-[#f7f7fb]  overflow-hidden font-semibold  transition-shadow hover:shadow-[0_8px_12px_-2px_rgba(0,0,0,0.3)]">
-                    <div class=" h-[200px]">
-                        <img src="img/1670236819_318027961_1104105636923431_9000607565790901101_n.jpg"
-                            class="w-full  h-full  object-cover" alt="">
+
+                <div class="mb-[25px] m-auto md:mx-0 md:mt-0 w-[70%] lg:w-full h-fit rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold">
+                    <div class="h-[200px]">
+                        <img src="img/1670236819_318027961_1104105636923431_9000607565790901101_n.jpg" class="w-full h-full object-cover" alt="">
                     </div>
-                    <div class="p-4  flex  flex-col gap-2">
-                        <p class=" font-bold uppercase">Marmaris</p>
-                        <p class=" font-bold">02.09.2022 - 09.09.2022</p>
+                    <div class="p-4 flex flex-col gap-2">
+                        <p class="font-bold uppercase">ISTANBUL SEVGİLİLƏR GÜNÜ</p>
+                        <p class="font-bold">13.02.2023- 16.02.2023</p>
                         <div class="mt-[10px]">
-                            <div class="flex justify-between items-center  text-[14px]   mb-[15px]">
-                                <button class="bg-[#f58220] text-white rounded-2xl py-1 px-2  ">5885 AZN
-                                </button>
-                                <a href="" class=" text-[#484848] font-semibold">Ətraflı</a>
+                            <div class="flex justify-between items-center text-[14px] mb-[15px]">
+                                <button class="bg-[#f58220] text-white rounded-2xl py-1 px-2">1027 $</button>
+                                <a href="" class="text-[#484848] font-semibold">Ətraflı</a>
                             </div>
                         </div>
                     </div>
-
                 </div>
-                <div
-                    class=" mb-[25px] m-auto  lg:mx-0 g:mt-0 w-[70%] lg:w-full h-fit rounded-2xl  bg-[#f7f7fb]  overflow-hidden font-semibold  transition-shadow hover:shadow-[0_8px_12px_-2px_rgba(0,0,0,0.3)]">
-                    <div class=" h-[200px]">
-                        <img src="img/1670236742_313744199_642864464293237_62955742268487170_n.jpg"
-                            class="w-full  h-full  object-cover" alt="">
+
+                <div class="mb-[25px] m-auto lg:mx-0 lg:mt-0 w-[70%] lg:w-full h-fit rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold">
+                    <div class="h-[200px]">
+                        <img src="img/1670236742_313744199_642864464293237_62955742268487170_n.jpg" class="w-full h-full object-cover" alt="">
                     </div>
-                    <div class="p-4  flex  flex-col gap-2">
-                        <p class=" font-bold uppercase">Marmaris</p>
-                        <p class=" font-bold">02.09.2022 - 09.09.2022</p>
+                    <div class="p-4 flex flex-col gap-2">
+                        <p class="font-bold uppercase">SEYŞEL ADALARI</p>
+                        <p class="font-bold">15.04.2023-22.04.2023</p>
                         <div class="mt-[10px]">
-                            <div class="flex justify-between items-center  text-[14px]   mb-[15px]">
-                                <button class="bg-[#f58220] text-white rounded-2xl py-1 px-2  ">5885 AZN
-                                </button>
-                                <a href="" class=" text-[#484848] font-semibold">Ətraflı</a>
+                            <div class="flex justify-between items-center text-[14px] mb-[15px]">
+                                <button class="bg-[#f58220] text-white rounded-2xl py-1 px-2">4320 $</button>
+                                <a href="" class="text-[#484848] font-semibold">Ətraflı</a>
                             </div>
                         </div>
                     </div>
-
                 </div>
-                <div
-                    class=" mb-[25px] m-auto  md:mx-0 md:mt-0 w-[70%] lg:w-full h-fit rounded-2xl  bg-[#f7f7fb]  overflow-hidden font-semibold  transition-shadow hover:shadow-[0_8px_12px_-2px_rgba(0,0,0,0.3)]">
-                    <div class=" h-[200px]">
-                        <img src="img/1670236589_317376347_1587710911660299_1135005269473721542_n.jpg"
-                            class="w-full  h-full  object-cover" alt="">
+
+                <div class="mb-[25px] m-auto md:mx-0 md:mt-0 w-[70%] lg:w-full h-fit rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold">
+                    <div class="h-[200px]">
+                        <img src="img/1670236589_317376347_1587710911660299_1135005269473721542_n.jpg" class="w-full h-full object-cover" alt="">
                     </div>
-                    <div class="p-4  flex  flex-col gap-2">
-                        <p class=" font-bold uppercase">Marmaris</p>
-                        <p class=" font-bold">02.09.2022 - 09.09.2022</p>
+                    <div class="p-4 flex flex-col gap-2">
+                        <p class="font-bold uppercase">SANTORİNİ - MYKONOS</p>
+                        <p class="font-bold">19.03.2023-24.03.2023</p>
                         <div class="mt-[10px]">
-                            <div class="flex justify-between items-center  text-[14px]   mb-[15px]">
-                                <button class="bg-[#f58220] text-white rounded-2xl py-1 px-2  ">5885 AZN
-                                </button>
-                                <a href="" class=" text-[#484848] font-semibold">Ətraflı</a>
+                            <div class="flex justify-between items-center text-[14px] mb-[15px]">
+                                <button class="bg-[#f58220] text-white rounded-2xl py-1 px-2">3999 $</button>
+                                <a href="" class="text-[#484848] font-semibold">Ətraflı</a>
                             </div>
                         </div>
                     </div>
-
                 </div>
-                <div
-                    class=" mb-[25px] m-auto  lg:mx-0 g:mt-0 w-[70%] lg:w-full h-fit rounded-2xl  bg-[#f7f7fb]  overflow-hidden font-semibold  transition-shadow hover:shadow-[0_8px_12px_-2px_rgba(0,0,0,0.3)]">
-                    <div class=" h-[200px]">
-                        <img src="img/1670236495_317442380_876203460062741_5500239468445802104_n.jpg"
-                            class="w-full  h-full  object-cover" alt="">
+
+                <div class="mb-[25px] m-auto lg:mx-0 lg:mt-0 w-[70%] lg:w-full h-fit rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold">
+                    <div class="h-[200px]">
+                        <img src="img/1670236495_317442380_876203460062741_5500239468445802104_n.jpg" class="w-full h-full object-cover" alt="">
                     </div>
-                    <div class="p-4  flex  flex-col gap-2">
-                        <p class=" font-bold uppercase">Marmaris</p>
-                        <p class=" font-bold">02.09.2022 - 09.09.2022</p>
+                    <div class="p-4 flex flex-col gap-2">
+                        <p class="font-bold uppercase">BALİ - Mistik tropik adada...</p>
+                        <p class="font-bold">10.04.2023- 17.04.2023</p>
                         <div class="mt-[10px]">
-                            <div class="flex justify-between items-center  text-[14px]   mb-[15px]">
-                                <button class="bg-[#f58220] text-white rounded-2xl py-1 px-2  ">5885 AZN
-                                </button>
-                                <a href="" class=" text-[#484848] font-semibold">Ətraflı</a>
+                            <div class="flex justify-between items-center text-[14px] mb-[15px]">
+                                <button class="bg-[#f58220] text-white rounded-2xl py-1 px-2">2675 AZN</button>
+                                <a href="" class="text-[#484848] font-semibold">Ətraflı</a>
                             </div>
                         </div>
                     </div>
-
                 </div>
-                <div
-                    class=" mb-[25px] m-auto  md:mx-0 md:mt-0 w-[70%] lg:w-full h-fit rounded-2xl  bg-[#f7f7fb]  overflow-hidden font-semibold  transition-shadow hover:shadow-[0_8px_12px_-2px_rgba(0,0,0,0.3)]">
-                    <div class=" h-[200px]">
-                        <img src="img/1670236433_316420244_135306575981074_7140874793604679837_n.jpg"
-                            class="w-full  h-full  object-cover" alt="">
+
+                <div class="mb-[25px] m-auto md:mx-0 md:mt-0 w-[70%] lg:w-full h-fit rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold">
+                    <div class="h-[200px]">
+                        <img src="img/1670236433_316420244_135306575981074_7140874793604679837_n.jpg" class="w-full h-full object-cover" alt="">
                     </div>
-                    <div class="p-4  flex  flex-col gap-2">
-                        <p class=" font-bold uppercase">Marmaris</p>
-                        <p class=" font-bold">02.09.2022 - 09.09.2022</p>
+                    <div class="p-4 flex flex-col gap-2">
+                        <p class="font-bold uppercase">ŞARM ƏL ŞEYX</p>
+                        <p class="font-bold">18.03.2023 - 24.03.2023</p>
                         <div class="mt-[10px]">
-                            <div class="flex justify-between items-center  text-[14px]   mb-[15px]">
-                                <button class="bg-[#f58220] text-white rounded-2xl py-1 px-2  ">5885 AZN
-                                </button>
-                                <a href="" class=" text-[#484848] font-semibold">Ətraflı</a>
+                            <div class="flex justify-between items-center text-[14px] mb-[15px]">
+                                <button class="bg-[#f58220] text-white rounded-2xl py-1 px-2">2340 USD</button>
+                                <a href="" class="text-[#484848] font-semibold">Ətraflı</a>
                             </div>
                         </div>
                     </div>
-
                 </div>
-                <div
-                    class=" mb-[25px] m-auto  lg:mx-0 g:mt-0 w-[70%] lg:w-full h-fit rounded-2xl  bg-[#f7f7fb]  overflow-hidden font-semibold  transition-shadow hover:shadow-[0_8px_12px_-2px_rgba(0,0,0,0.3)]">
-                    <div class=" h-[200px]">
-                        <img src="img/1670236336_317088838_135032282675170_4362932843425191754_n.jpg"
-                            class="w-full  h-full  object-cover" alt="">
+
+                <div class="mb-[25px] m-auto lg:mx-0 lg:mt-0 w-[70%] lg:w-full h-fit rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold">
+                    <div class="h-[200px]">
+                        <img src="img/1670236336_317088838_135032282675170_4362932843425191754_n.jpg" class="w-full h-full object-cover" alt="">
                     </div>
-                    <div class="p-4  flex  flex-col gap-2">
-                        <p class=" font-bold uppercase">Marmaris</p>
-                        <p class=" font-bold">02.09.2022 - 09.09.2022</p>
+                    <div class="p-4 flex flex-col gap-2">
+                        <p class="font-bold uppercase">GOA</p>
+                        <p class="font-bold">10.01.2023 - 16.01.2023</p>
                         <div class="mt-[10px]">
-                            <div class="flex justify-between items-center  text-[14px]   mb-[15px]">
-                                <button class="bg-[#f58220] text-white rounded-2xl py-1 px-2  ">5885 AZN
-                                </button>
-                                <a href="" class=" text-[#484848] font-semibold">Ətraflı</a>
+                            <div class="flex justify-between items-center text-[14px] mb-[15px]">
+                                <button class="bg-[#f58220] text-white rounded-2xl py-1 px-2">3570 AZN</button>
+                                <a href="" class="text-[#484848] font-semibold">Ətraflı</a>
                             </div>
                         </div>
                     </div>
-
                 </div>
-                <div
-                    class=" mb-[25px] m-auto  md:mx-0 md:mt-0 w-[70%] lg:w-full h-fit rounded-2xl  bg-[#f7f7fb]  overflow-hidden font-semibold  transition-shadow hover:shadow-[0_8px_12px_-2px_rgba(0,0,0,0.3)]">
-                    <div class=" h-[200px]">
-                        <img src="img/1670236213_316646683_722930792529591_3701633023910475299_n.jpg"
-                            class="w-full  h-full  object-cover" alt="">
+
+                <div class="mb-[25px] m-auto md:mx-0 md:mt-0 w-[70%] lg:w-full h-fit rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold">
+                    <div class="h-[200px]">
+                        <img src="img/1670236213_316646683_722930792529591_3701633023910475299_n.jpg" class="w-full h-full object-cover" alt="">
                     </div>
-                    <div class="p-4  flex  flex-col gap-2">
-                        <p class=" font-bold uppercase">Marmaris</p>
-                        <p class=" font-bold">02.09.2022 - 09.09.2022</p>
+                    <div class="p-4 flex flex-col gap-2">
+                        <p class="font-bold uppercase">TBİLİSİ - Yeni il</p>
+                        <p class="font-bold">28.12.2022- 02.01.2023</p>
                         <div class="mt-[10px]">
-                            <div class="flex justify-between items-center  text-[14px]   mb-[15px]">
-                                <button class="bg-[#f58220] text-white rounded-2xl py-1 px-2  ">5885 AZN
-                                </button>
-                                <a href="" class=" text-[#484848] font-semibold">Ətraflı</a>
+                            <div class="flex justify-between items-center text-[14px] mb-[15px]">
+                                <button class="bg-[#f58220] text-white rounded-2xl py-1 px-2">3581 $</button>
+                                <a href="" class="text-[#484848] font-semibold">Ətraflı</a>
                             </div>
                         </div>
                     </div>
-
                 </div>
-
             </div>
 
         </div>
-        <div class="container py-[50px]">
-            <div class="flex  items-center justify-between mb-[30px]">
-                <h3 class=" font-bold uppercase text-[35px]">Ölkə turları</h3>
-                <a href="">Bütün turlara bax</a>
+        <div class="bg-[#f7f7fb]">
+            <div class="container pt-[50px] pb-[100px]">
+                <div class="flex  items-center justify-between mb-[30px]">
+                    <h3 class=" font-bold uppercase text-[35px]">Ölkə turları</h3>
+                    <a href="">Bütün turlara bax</a>
+                </div>
+                <div class="grid gap-[15px] grid-cols-1 md:grid-cols-14 px-[15px] md:auto-rows-[180px]">
+
+                    <div class="h-[250px] md:h-auto md:row-span-3 md:col-span-5 relative rounded-3xl overflow-hidden">
+                        <img src="img/maldiv.webp" class="object-cover w-full h-full" alt="Maldiv">
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <p class="font-bold text-[20px]">Maldiv</p>
+                            <p class="text-[14px] italic">Bir yerüzü cənnəti</p>
+                        </div>
+                    </div>
+
+                    <div class="h-[200px] md:h-auto rounded-3xl col-span-3 relative overflow-hidden">
+                        <img src="img/Istanbul.jpg" class="object-cover w-full h-full">
+                        <div class="absolute bottom-3 left-3 text-white">
+                            <p class="font-bold text-[16px]">İstanbul</p>
+                            <p class="text-[12px] italic">Tarix yazan şəhər</p>
+                        </div>
+                    </div>
+                    <div class="h-[200px] md:h-auto rounded-3xl col-span-3 relative overflow-hidden">
+                        <img src="img/antalya.jpg" class="object-cover w-full h-full">
+                        <div class="absolute bottom-3 left-3 text-white">
+                            <p class="font-bold text-[16px]">Antalya</p>
+                            <p class="text-[12px] italic">Turizmin paytaxtı</p>
+                        </div>
+                    </div>
+                    <div class="h-[200px] md:h-auto rounded-3xl col-span-3 relative overflow-hidden">
+                        <img src="img/bodrum.jpg" class="object-cover w-full h-full">
+                        <div class="absolute bottom-3 left-3 text-white">
+                            <p class="font-bold text-[16px]">Bodrum</p>
+                            <p class="text-[12px] italic">Gücünü təbiətdən alan şəhər</p>
+                        </div>
+                    </div>
+                    <div class="h-[200px] md:h-auto rounded-3xl col-span-3 relative overflow-hidden">
+                        <img src="img/kemer.jpg" class="object-cover w-full h-full">
+                        <div class="absolute bottom-3 left-3 text-white">
+                            <p class="font-bold text-[16px]">Kemer</p>
+                            <p class="text-[12px] italic">Hekayələrin diyarı</p>
+                        </div>
+                    </div>
+                    <div class="h-[200px] md:h-auto rounded-3xl col-span-3 relative overflow-hidden">
+                        <img src="img/kusadasi.jpg" class="object-cover w-full h-full">
+                        <div class="absolute bottom-3 left-3 text-white">
+                            <p class="font-bold text-[16px]">Kuşadası</p>
+                            <p class="text-[12px] italic">Xəyalların həyata çevrildiyi yer</p>
+                        </div>
+                    </div>
+                    <div class="h-[200px] md:h-auto rounded-3xl col-span-3 relative overflow-hidden">
+                        <img src="img/marmaris.jpg" class="object-cover w-full h-full">
+                        <div class="absolute bottom-3 left-3 text-white">
+                            <p class="font-bold text-[16px]">Marmaris</p>
+                            <p class="text-[12px] italic">Sonsuz kəşf</p>
+                        </div>
+                    </div>
+                    <div class="h-[200px] md:h-auto rounded-3xl col-span-3 relative overflow-hidden">
+                        <img src="img/moskva.jpg" class="object-cover w-full h-full">
+                        <div class="absolute bottom-3 left-3 text-white">
+                            <p class="font-bold text-[16px]">Moskva</p>
+                            <p class="text-[12px] italic">Gəz, gəz və yenə gəz</p>
+                        </div>
+                    </div>
+                    <div class="h-[200px] md:h-auto rounded-3xl col-span-3 relative overflow-hidden">
+                        <img src="img/dubay.jpg" class="object-cover w-full h-full">
+                        <div class="absolute bottom-3 left-3 text-white">
+                            <p class="font-bold text-[16px]">Dubay</p>
+                            <p class="text-[12px] italic">Dünyanın günəşli bucağı</p>
+                        </div>
+                    </div>
+                    <div class="h-[200px] md:h-auto rounded-3xl col-span-3 relative overflow-hidden">
+                        <img src="img/avropa.jpg" class="object-cover w-full h-full">
+                        <div class="absolute bottom-3 left-3 text-white">
+                            <p class="font-bold text-[16px]">Avropa</p>
+                            <p class="text-[12px] italic">İlk qərar verilən destinasiya</p>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-            <div class="grid gap-[15px] grid-cols-1 md:grid-cols-14 px-[15px] md:auto-rows-[180px]">
+        </div>
 
-                <div class="md:row-span-3  md:col-span-5">
-                    <img src="img/maldiv.webp" class="object-cover rounded-3xl w-full h-full" alt="">
+        <div class="container pb-12.5 relative flex justify-center lg:justify-end items-center px-[15px] lg:px-0">
+            <img src="img/lady.png" class="hidden lg:block absolute left-15 top-0 -mt-18 z-20" alt="">
+
+            <div class="bg-[#1e419b] relative z-10 shadow-2xl min-h-100 my-[50px] w-full lg:w-[75%] mx-auto lg:mr-15 lg:ml-0 rounded-[25px] p-[30px_20px] lg:p-[40px_80px_60px_80px] text-white">
+                <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-[20px] lg:mb-[30px]">
+                    <h3 class="font-semibold text-[30px] lg:text-[40px]">Online sifariş</h3>
+                    <img src="img/Forma 1-5.png" class="hidden lg:block h-fit w-fit lg:-mr-10 mt-2" alt="">
+                </div>
+                
+                <div class="flex flex-col lg:flex-row text-[15px] mb-[15px] gap-[15px] lg:gap-[25px] relative z-40">
+                    <input type="text" placeholder="* Ad, Soyad" class="rounded-full px-[25px] h-[50px] w-full lg:w-1/2 focus:outline-none text-[#484848] placeholder-[#c0c0c0] bg-white">
+                    <input type="text" placeholder="* Mobil telefon" class="rounded-full px-[25px] h-[50px] w-full lg:w-1/2 focus:outline-none text-[#484848] placeholder-[#c0c0c0] bg-white">
+                </div>
+                
+                <div class="flex flex-col relative z-40">
+                    <select name="" id="" class="rounded-full px-[25px] h-[50px] mb-[15px] w-full text-[#484848] bg-white focus:outline-none">
+                        <option value="" disabled selected>-- Xidməti seçin</option>
+                        <option value="otel">Otel rezervasiyaları</option>
+                        <option value="aviabilet">Aviabiletlər</option>
+                        <option value="vip">VİP xidmətlər</option>
+                        <option value="korporativ">Korporativ biletlər</option>
+                        <option value="viza">Viza Dəstəyi</option>
+                        <option value="biznes">Biznes Turizmi</option>
+                        <option value="transfer">Transfer</option>
+                        <option value="sigorta">Sığorta</option>
+                        <option value="saglamliq">Sağlamlıq Turizmi</option>
+                        <option value="xarici">Xarici və Daxili turlar</option>
+                        <option value="qrup">Qrup turları</option>
+                        <option value="kruiz">Kruiz səyahəti</option>
+                        <option value="komanda">Komanda inkişafı</option>
+                        <option value="tecili">Təcili dəstək</option>
+                    </select>
+                    
+                    <textarea class="mb-[15px] px-[25px] py-[15px] text-[#484848] placeholder-[#c0c0c0] focus:outline-none resize-none bg-white w-full h-[120px] rounded-[25px]" placeholder="Əlavə qeydlərinizi bura yazın"></textarea>
+                    
+                    <div>
+                        <button class="bg-[#f58220] w-[170px] h-[50px] font-semibold rounded-full text-white">
+                            Göndər
+                        </button>
+                    </div>
                 </div>
 
-                <div class="rounded-3xl col-span-3">
-                    <img src="img/Istanbul.jpg" class="object-cover rounded-3xl w-full h-full">
+                <div class="absolute -bottom-[50px] left-[5%] z-30 w-[150px] md:w-[220px]">
+                    <img src="img/cloud5.png" alt="" class="w-full object-contain">
                 </div>
-                <div class="rounded-3xl col-span-3">
-                    <img src="img/antalya.jpg" class="object-cover rounded-3xl w-full h-full">
+                <div class="absolute -bottom-[80px] right-[-20px] z-20 w-[300px] md:w-[480px]">
+                    <img src="img/cloud9.png" alt="" class="w-full object-contain">
                 </div>
-                <div class="rounded-3xl col-span-3">
-                    <img src="img/bodrum.jpg" class="object-cover rounded-3xl w-full h-full">
-                </div>
-                <div class="rounded-3xl col-span-3">
-                    <img src="img/kemer.jpg" class="object-cover rounded-3xl w-full h-full">
-                </div>
-                <div class="rounded-3xl col-span-3">
-                    <img src="img/kusadasi.jpg" class="object-cover rounded-3xl w-full h-full">
-                </div>
-                <div class="rounded-3xl col-span-3">
-                    <img src="img/marmaris.jpg" class="object-cover rounded-3xl w-full h-full">
-                </div>
-                <div class="rounded-3xl col-span-3">
-                    <img src="img/moskva.jpg" class="object-cover rounded-3xl w-full h-full">
-                </div>
-                <div class="rounded-3xl col-span-3">
-                    <img src="img/dubay.jpg" class="object-cover rounded-3xl w-full h-full">
-                </div>
-                <div class="rounded-3xl col-span-3">
-                    <img src="img/avropa.jpg" class="object-cover rounded-3xl w-full h-full">
-                </div>
-
             </div>
         </div>
         <div class="bg-[#1e419b] h-[50vh] md:h-fit ">
             <div class="hidden md:flex">
                 <img src="img/cloud3.png" alt="">
-                <div class="container px-[50px]">
+                <div class="container px-12.5">
                     <div class="flex justify-between items-center text-center md:text-left flex-wrap text-white">
-                        <div class="flex items-center gap-3 ">
+                        <div  class="flex items-center gap-3 ">
                             <div class="flex items-center bg-[#f58220] rounded-full  px-[12px] py-2.5  justify-center">
                                 <img src="img/pin.png" alt="">
 
@@ -586,14 +818,84 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 
     <script>
+        const heroData = [
+            { title: "Moskva", subtitle: "Gəz, gəz və yenə gəz" },
+            { title: "İSTANBUL", subtitle: "Tarix yazan şəhər" },
+            { title: "Dubay", subtitle: "Dünyanın günəşli bucağı" },
+            { title: "Avropa", subtitle: "İlk qərar verilən destinasiya" },
+            { title: "Maldiv", subtitle: "Bir yerüzü cənnəti" }
+        ];
+
+        let heroSwiper = new Swiper(".heroSwiper", {
+            slidesPerView: "auto",
+            spaceBetween: 25,
+            loop: true,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+            mousewheel: {
+                forceToAxis: true,
+            },
+            breakpoints: {
+                1024: {
+                    spaceBetween: 30,
+                }
+            },
+            on: {
+                slideChange: function () {
+                    const index = this.realIndex;
+                    const titleEl = document.getElementById('hero-title');
+                    const subtitleEl = document.getElementById('hero-subtitle');
+                    
+                    if (titleEl && subtitleEl) {
+                        titleEl.style.opacity = '0';
+                        subtitleEl.style.opacity = '0';
+                        setTimeout(() => {
+                            titleEl.innerText = heroData[index].title;
+                            subtitleEl.innerText = heroData[index].subtitle;
+                            titleEl.style.opacity = '1';
+                            subtitleEl.style.opacity = '1';
+                        }, 150);
+                    }
+
+                    let plane = document.getElementById("hero-plane");
+                    if (plane) {
+                        plane.classList.remove("fly-once");
+                        void plane.offsetWidth; // trigger reflow
+                        plane.classList.add("fly-once");
+                    }
+
+                    document.querySelectorAll('.hero-dot').forEach((dot, i) => {
+                        if (i === index) {
+                            dot.className = "hero-dot w-5 h-5 rounded-full border-2 border-[#f58220] flex items-center justify-center bg-transparent transition-all duration-300";
+                            dot.innerHTML = '<div class="w-2 h-2 rounded-full bg-[#1e419b]"></div>';
+                        } else {
+                            dot.className = "hero-dot w-2 h-2 rounded-full bg-[#1e419b] transition-all duration-300";
+                            dot.innerHTML = '';
+                        }
+                    });
+                }
+            }
+        });
+
+        document.querySelectorAll('.hero-dot').forEach((dot) => {
+            dot.addEventListener('click', function() {
+                const index = parseInt(this.getAttribute('data-index'));
+                heroSwiper.slideToLoop(index);
+            });
+        });
+
         let swiper = new Swiper(".mySwiper", {
             slidesPerView: 1,
-            spaceBetween: 10,
             loop: true,
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+            },
             breakpoints: {
                 768: {
-                    slidesPerView: 3,
-                    spaceBetween: 30
+                    slidesPerView: 3
                 }
             },
             navigation: {
