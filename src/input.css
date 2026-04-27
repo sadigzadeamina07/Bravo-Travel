@@ -11,6 +11,15 @@
     animation: floatFly 20s linear infinite;
 }
 
+@keyframes flyAcross {
+    0% { transform: translate(0, 5vh) rotate(5deg) scale(0.8); }
+    100% { transform: translate(120vw, -10vh) rotate(5deg) scale(0.8); }
+}
+
+.fly-once {
+    animation: flyAcross 3.5s linear;
+}
+
 .container {
     max-width: 1180px;
     margin: 0 auto;
