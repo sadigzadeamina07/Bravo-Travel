@@ -1,4 +1,116 @@
 @import "tailwindcss";
 
+@theme {
+  --font-futura: "Futura", sans-serif;
+}
+
+@font-face {
+  font-family: "Futura";
+  src: url("../Fonts/FuturaNewMedium-Reg.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura";
+  src: url("../Fonts/FuturaNewBold-Reg.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura";
+  src: url("../Fonts/FuturaNewExtraBold-Reg.ttf") format("truetype");
+  font-weight: 900;
+  font-display: swap;
+}
+
+.hero-slide-title {
+  font-family: var(--font-futura);
+  font-weight: 700;
+}
+
+.hero-slide-subtitle {
+  font-family: var(--font-futura);
+  font-weight: 500;
+}
+
+.header-gradient {
+  background: url("../img/layer.png") center/cover;
+}
+
+.sticky-header-gradient {
+  background-image: linear-gradient(-90deg, #8ec7ef, #1e419b);
+}
+
+.mySwiper .swiper-slide {
+  height: auto !important;
+  display: flex;
+}
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+@keyframes floatFly {
+  0% {
+    transform: translate(-100vw, 5vh) rotate(5deg) scale(0.8);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(100vw, -10vh) rotate(5deg) scale(0.8);
+    opacity: 0;
+  }
+}
+
+.animate-fly {
+  animation: floatFly 20s linear infinite;
+}
+.heroSwiper .swiper-wrapper {
+  align-items: flex-start; 
+  transition: height 0.3s ease-out; 
+}
 
 
+.heroSwiper .swiper-slide {
+  height: auto !important;
+}
+
+@keyframes flyAcross {
+  0% {
+    transform: translate(0, 0) rotate(0deg) scale(0.8);
+  }
+
+  100% {
+    transform: translate(120vw, 0) rotate(0deg) scale(0.8);
+  }
+}
+
+.heroSwiper .swiper-slide {
+  display: flex;
+  align-items: flex-end;       
+}
+.heroSwiper .swiper-slide-active {
+  height: 300px !important;     
+}
+
+.heroSwiper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 24px;
+} 
+.fly-once {
+  animation: flyAcross 3.5s linear;
+}

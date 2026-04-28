@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link href="./src/output.css" rel="stylesheet" />
+        <link href="./src/input.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
@@ -13,82 +14,14 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
-    <style>
-      .hero-slider-gradient {
-        background-image: linear-gradient(to top, #000000ee, #00000055, transparent);
-      }
 
-      .header-gradient {
-        background: url("img/layer.png") center/cover;
-      }
-
-      .sticky-header-gradient {
-        background-image: linear-gradient(-90deg, #8ec7ef, #1e419b);
-      }
-
-      .mySwiper .swiper-wrapper {
-        align-items: stretch;
-      }
-
-      .mySwiper .swiper-slide {
-        height: auto !important;
-        display: flex;
-      }
-
-      .mySwiper .card {
-        flex: 1;
-      }
-
-      .container {
-        max-width: 1180px;
-        margin: 0 auto;
-      }
-
-      @keyframes floatFly {
-        0% {
-          transform: translate(-100vw, 5vh) rotate(5deg) scale(0.8);
-          opacity: 0;
-        }
-
-        10% {
-          opacity: 1;
-        }
-
-        90% {
-          opacity: 1;
-        }
-
-        100% {
-          transform: translate(100vw, -10vh) rotate(5deg) scale(0.8);
-          opacity: 0;
-        }
-      }
-
-      .animate-fly {
-        animation: floatFly 20s linear infinite;
-      }
-
-      @keyframes flyAcross {
-        0% {
-          transform: translate(0, 5vh) rotate(5deg) scale(0.8);
-        }
-
-        100% {
-          transform: translate(120vw, -10vh) rotate(5deg) scale(0.8);
-        }
-      }
-
-      .fly-once {
-        animation: flyAcross 3.5s linear;
-      }
-    </style>
   </head>
 
   <body class="overflow-x-hidden">
-    <!-- Sticky Header -->
+    
     <div
       id="sticky-header"
-      class="fixed top-0 left-0 w-full z-[1000] -translate-y-full sticky-header-gradient shadow-md"
+      class="fixed top-0 left-0 w-full z-[1000] -translate-y-full sticky-header-gradient  "
     >
       <div class="absolute rotate-180 w-[105px] -z-10 top-0 left-0">
         <img src="img/cloud4.png" alt="" />
@@ -98,39 +31,39 @@
           <img src="img/logo-new-white.png" class="h-fit relative z-10" />
         </div>
 
-        <!-- Desktop Navigation -->
+        
         <ul
           class="hidden lg:flex items-center gap-4 xl:gap-6 text-white font-bold text-[13px] xl:text-[14px]"
         >
           <li>
-            <a href="#" class="hover:text-[#f58220] transition-colors">Haqqımızda</a>
+            <a href="#" class="hover:text-[#f58220]    ">Haqqımızda</a>
           </li>
           <li>
-            <a href="#" class="hover:text-[#f58220] transition-colors">Yeni turlar</a>
+            <a href="#" class="hover:text-[#f58220]  duration-400">Yeni turlar</a>
           </li>
           <li>
-            <a href="#" class="hover:text-[#f58220] transition-colors">Xidmətlər</a>
+            <a href="#" class="hover:text-[#f58220]  duration-400">Xidmətlər</a>
           </li>
           <li>
-            <a href="#" class="hover:text-[#f58220] transition-colors">Azərbaycan turları</a>
+            <a href="#" class="hover:text-[#f58220]  duration-400 ">Azərbaycan turları</a>
           </li>
           <li>
-            <a href="#" class="hover:text-[#f58220] transition-colors">Korporativ əməkdaşlıq</a>
+            <a href="#" class="hover:text-[#f58220]  duration-400 ">Korporativ əməkdaşlıq</a>
           </li>
           <li>
-            <a href="#" class="hover:text-[#f58220] transition-colors">Əlaqə</a>
+            <a href="#" class="hover:text-[#f58220]  duration-400 ">Əlaqə</a>
           </li>
         </ul>
 
         <div class="flex items-center gap-3 lg:gap-4">
-          <!-- Search Icon -->
+          
           <div
             class="text-[#f58220] hidden lg:flex items-center justify-center bg-white w-8 h-8 rounded-full"
           >
             <i class="fa-solid fa-magnifying-glass text-[13px]"></i>
           </div>
 
-          <!-- Language Dropdown -->
+          
           <div class="relative group z-50">
             <div
               class="flex items-center gap-1.5 bg-white px-2 py-1.5 lg:px-2.5 lg:py-1.5 rounded-full"
@@ -149,7 +82,7 @@
               <div class="relative bg-white flex flex-col z-10 py-1">
                 <a
                   href="#"
-                  class="flex items-center gap-2 px-3 py-2 hover:bg-gray-50 transition-colors"
+                  class="flex items-center gap-2 px-3 py-2 hover:bg-gray-50  duration-400 "
                 >
                   <img
                     src="img/azerbaijan.png"
@@ -160,7 +93,7 @@
                 </a>
                 <a
                   href="#"
-                  class="flex items-center gap-2 px-3 py-2 hover:bg-gray-50 transition-colors"
+                  class="flex items-center gap-2 px-3 py-2 hover:bg-gray-50  duration-400 "
                 >
                   <img
                     src="img/ru.png"
@@ -171,7 +104,7 @@
                 </a>
                 <a
                   href="#"
-                  class="flex items-center gap-2 px-3 py-2 hover:bg-gray-50 transition-colors"
+                  class="flex items-center gap-2 px-3 py-2 hover:bg-gray-50  duration-400 "
                 >
                   <img
                     src="img/en.png"
@@ -184,7 +117,7 @@
             </div>
           </div>
 
-          <!-- Phone Number -->
+          
           <div
             class="hidden lg:flex bg-white items-center px-3 py-1.5 lg:px-4 lg:py-1.5 text-sm gap-2 rounded-full shadow-sm"
           >
@@ -194,7 +127,7 @@
             >
           </div>
 
-          <!-- Hamburger Menu -->
+          
           <div class="flex lg:hidden flex-col gap-1.5">
             <div class="w-8 h-[3px] bg-white rounded-full"></div>
             <div class="w-8 h-[3px] bg-white rounded-full"></div>
@@ -203,11 +136,11 @@
         </div>
       </div>
     </div>
-    <!-- Hero Section -->
+    
     <header class="header-gradient min-h-[95vh] relative overflow-hidden flex flex-col">
       <div class="container">
         <div class="flex py-2 items-center justify-between gap-1 mb-8 px-3.5 lg:px-0">
-          <img src="img/logo-new.png" class="w-40 py-5" />
+          <img src="img/logo-new.png" class="w-40  z-20 py-5" />
           <ul class="hidden font-semibold lg:flex flex-wrap items-center px-2.5 text-white gap-3.5">
             <li>
               <a href="#" class="hover:text-[#f58220] block">Haqqımızda</a>
@@ -232,7 +165,7 @@
             <div class="text-[#f6892d] hidden lg:flex items-center bg-white py-2 px-3 rounded-full">
               <i class="fa-solid fa-magnifying-glass"></i>
             </div>
-            <!-- Custom Language Dropdown -->
+            
             <div class="relative group z-50">
               <div class="flex items-center gap-2 bg-white px-3 py-1.5 rounded-full">
                 <img src="img/azerbaijan.png" alt="" class="w-5 h-5 rounded-full object-cover" />
@@ -249,7 +182,7 @@
                 <div class="relative bg-white flex flex-col z-10 py-1">
                   <a
                     href="#"
-                    class="flex items-center gap-2 px-3 py-2 hover:bg-gray-50 transition-colors"
+                    class="flex items-center gap-2 px-3 py-2 hover:bg-gray-50  duration-400 "
                   >
                     <img
                       src="img/azerbaijan.png"
@@ -260,10 +193,10 @@
                   </a>
                   <a
                     href="#"
-                    class="flex items-center gap-2 px-3 py-2 hover:bg-gray-50 transition-colors"
+                    class="flex items-center gap-2 px-3 py-2 hover:bg-gray-50  duration-400 "
                   >
                     <img
-                      src="img/ru.png"
+                      src="img/russia.png"
                       alt=""
                       class="w-5 h-5 rounded-full object-cover border border-gray-100"
                     />
@@ -271,10 +204,10 @@
                   </a>
                   <a
                     href="#"
-                    class="flex items-center gap-2 px-3 py-2 hover:bg-gray-50 transition-colors"
+                    class="flex items-center gap-2 px-3 py-2 hover:bg-gray-50  duration-400 "
                   >
                     <img
-                      src="img/en.png"
+                      src="img/united-kingdom.png"
                       alt=""
                       class="w-5 h-5 rounded-full object-cover border border-gray-100"
                     />
@@ -308,18 +241,18 @@
       <img
         src="img/fly.png"
         id="hero-plane"
-        class="absolute left-[-400px] top-[15%] w-60 lg:w-80 z-[4]"
+        class="absolute left-[-400px] top-[15%] w-60 lg:w-80 z-4"
         alt="Təyyarə"
       />
 
       <div
-        class="container mx-auto px-4 lg:px-0 relative flex-grow flex flex-col lg:flex-row items-center justify-between z-10 py-12 lg:py-0"
+        class="px-4 lg:px-0 relative    flex  md:items-end flex-col lg:flex-row items-center justify-between z-10 py-12 lg:py-0"
       >
         <div
-          class="w-full lg:w-[45%] flex items-center justify-center lg:justify-start gap-6 lg:gap-10 mb-10 lg:mb-0 relative z-[5]"
+          class="max-w-[1400px] mx-auto  lg:w-[45%] flex items-center   justify-center lg:justify-start gap-6 lg:gap-10 mb-10 lg:mb-0 relative z-[5]"
         >
-          <div class="flex flex-col items-center gap-4 lg:gap-6 relative z-20">
-            <div class="absolute h-[110%] w-[1.5px] bg-[#1e419b] -z-10 top-[-5%]"></div>
+          <div class="flex flex-col items-center gap-4 lg:gap-8 relative  -mt-10 md:-mt-40 z-20">
+            <div class="absolute h-[95%] w-[1.5px] bg-[#1e419b] -z-10 top-[4%]"></div>
             <div
               class="hero-dot w-5 h-5 rounded-full border-2 border-[#f58220] flex items-center justify-center duration-300"
             >
@@ -331,7 +264,7 @@
             <div class="hero-dot w-2 h-2 rounded-full bg-[#1e419b] duration-300"></div>
           </div>
 
-          <div class="ml-2 z-20">
+          <div class="ml-2 f not-target:z-20">
             <h1
               id="hero-title"
               class="text-[#f58220] font-black text-5xl md:text-7xl lg:text-8xl uppercase duration-300"
@@ -352,37 +285,37 @@
             </p>
 
             <div class="flex gap-2 sm:gap-3 lg:gap-5 justify-center lg:justify-start mt-4">
-              <a
+                <a
                 href="#"
-                class="w-16 h-16 lg:w-20 lg:h-20 border-[1.5px] border-[#1e419b] rounded-2xl lg:rounded-3xl flex flex-col items-center justify-center text-[#1e419b] hover:bg-[#1e419b] hover:text-white bg-white/20 backdrop-blur-sm shadow-sm"
+                class="w-16 h-16 lg:w-[85px]  lg:h-[85px] border-[1.5px]  px-[5px]  border-[#1e419b]   duration-400     rounded-2xl lg:rounded-xl flex flex-col items-center justify-center text-[#1e419b] hover:bg-[#1e419b] hover:text-white bg-white/20 backdrop-blur-sm shadow-sm"
               >
                 <i class="fa-solid fa-plane text-lg lg:text-2xl mb-1"></i>
                 <span class="text-[10px] lg:text-xs font-semibold text-center">Aviabilet</span>
               </a>
-              <a
+                <a
                 href="#"
-                class="w-16 h-16 lg:w-20 lg:h-20 border-[1.5px] border-[#1e419b] rounded-2xl lg:rounded-3xl flex flex-col items-center justify-center text-[#1e419b] hover:bg-[#1e419b] hover:text-white bg-white/20 backdrop-blur-sm shadow-sm"
+                class="w-16 h-16 lg:w-[85px]  lg:h-[85px] border-[1.5px]  px-[5px]  border-[#1e419b]   duration-400     rounded-2xl lg:rounded-xl flex flex-col items-center justify-center text-[#1e419b] hover:bg-[#1e419b] hover:text-white bg-white/20 backdrop-blur-sm shadow-sm"
               >
                 <i class="fa-solid fa-car text-lg lg:text-2xl mb-1"></i>
                 <span class="text-[10px] lg:text-xs font-semibold text-center">Rent a car</span>
               </a>
               <a
                 href="#"
-                class="w-16 h-16 lg:w-20 lg:h-20 border-[1.5px] border-[#1e419b] rounded-2xl lg:rounded-3xl flex flex-col items-center justify-center text-[#1e419b] hover:bg-[#1e419b] hover:text-white bg-white/20 backdrop-blur-sm shadow-sm"
+                class="w-16 h-16 lg:w-[85px]  lg:h-[85px] border-[1.5px]  px-[5px]  border-[#1e419b]   duration-400     rounded-2xl lg:rounded-xl flex flex-col items-center justify-center text-[#1e419b] hover:bg-[#1e419b] hover:text-white bg-white/20 backdrop-blur-sm shadow-sm"
               >
                 <i class="fa-solid fa-bed text-lg lg:text-2xl mb-1"></i>
                 <span class="text-[10px] lg:text-xs font-semibold text-center">Otellər</span>
               </a>
-              <a
+                <a
                 href="#"
-                class="w-16 h-16 lg:w-20 lg:h-20 border-[1.5px] border-[#1e419b] rounded-2xl lg:rounded-3xl flex flex-col items-center justify-center text-[#1e419b] hover:bg-[#1e419b] hover:text-white bg-white/20 backdrop-blur-sm shadow-sm"
+                class="w-16 h-16 lg:w-[85px]  lg:h-[85px] border-[1.5px]  px-[5px]  border-[#1e419b]   duration-400     rounded-2xl lg:rounded-xl flex flex-col items-center justify-center text-[#1e419b] hover:bg-[#1e419b] hover:text-white bg-white/20 backdrop-blur-sm shadow-sm"
               >
                 <i class="fa-solid fa-signs-post text-lg lg:text-2xl mb-1"></i>
                 <span class="text-[10px] lg:text-xs font-semibold text-center">Turlar</span>
               </a>
-              <a
+               <a
                 href="#"
-                class="w-16 h-16 lg:w-20 lg:h-20 border-[1.5px] border-[#1e419b] rounded-2xl lg:rounded-3xl flex flex-col items-center justify-center text-[#1e419b] hover:bg-[#1e419b] hover:text-white bg-white/20 backdrop-blur-sm shadow-sm"
+                class="w-16 h-16 lg:w-[85px]  lg:h-[85px] border-[1.5px]  px-[5px]  border-[#1e419b]   duration-400     rounded-2xl lg:rounded-xl flex flex-col items-center justify-center text-[#1e419b] hover:bg-[#1e419b] hover:text-white bg-white/20 backdrop-blur-sm shadow-sm"
               >
                 <i class="fa-solid fa-passport text-lg lg:text-2xl mb-1"></i>
                 <span class="text-[10px] lg:text-xs font-semibold text-center">Viza</span>
@@ -397,65 +330,65 @@
           <div class="swiper heroSwiper w-full">
             <div class="swiper-wrapper">
               <div
-                class="swiper-slide !w-60 lg:!w-72 !h-80 lg:!h-96 rounded-3xl overflow-hidden relative"
+                class="swiper-slide !w-60 lg:!w-[235px] !h-80 lg:!h-[265px] rounded-3xl overflow-hidden relative"
               >
-                <img src="img/moskva.jpg" class="w-full h-full object-cover" />
+                <img src="img/moskva_releated.jpg" class="w-full h-full object-cover" />
                 <div class="absolute inset-0 hero-slider-gradient"></div>
                 <div
                   class="absolute bottom-6 lg:bottom-8 left-5 lg:left-6 right-5 lg:right-6 text-white"
                 >
-                  <h2 class="text-xl lg:text-2xl font-bold uppercase drop-shadow-md">Moskva</h2>
-                  <p class="text-sm font-medium mt-1 text-gray-200">Gəz, gəz və yenə gəz</p>
+                  <h2 class="hero-slide-title text-xl lg:text-2xl font-bold uppercase drop-shadow-md">Moskva</h2>
+                  <p class="hero-slide-subtitle text-sm font-medium mt-1 text-gray-200">Gəz, gəz və yenə gəz</p>
                 </div>
               </div>
               <div
-                class="swiper-slide !w-60 lg:!w-72 !h-80 lg:!h-96 rounded-3xl overflow-hidden relative"
+                class="swiper-slide !w-60 lg:!w-[235px] !h-80 lg:!h-[265px] rounded-3xl overflow-hidden relative"
               >
-                <img src="img/Istanbul.jpg" class="w-full h-full object-cover" />
+                <img src="img/istanbul_releated.jpg" class="w-full h-full object-cover" />
                 <div class="absolute inset-0 hero-slider-gradient"></div>
                 <div
                   class="absolute bottom-6 lg:bottom-8 left-5 lg:left-6 right-5 lg:right-6 text-white"
                 >
-                  <h2 class="text-xl lg:text-2xl font-bold uppercase drop-shadow-md">İSTANBUL</h2>
-                  <p class="text-sm font-medium mt-1 text-gray-200">Tarix yazan şəhər</p>
+                  <h2 class="hero-slide-title text-xl lg:text-2xl font-bold uppercase drop-shadow-md">İSTANBUL</h2>
+                  <p class="hero-slide-subtitle text-sm font-medium mt-1 text-gray-200">Tarix yazan şəhər</p>
                 </div>
               </div>
               <div
-                class="swiper-slide !w-60 lg:!w-72 !h-80 lg:!h-96 rounded-3xl overflow-hidden relative"
+                class="swiper-slide !w-60 lg:!w-[235px] !h-80 lg:!h-[265px] rounded-3xl overflow-hidden relative"
               >
-                <img src="img/dubay.jpg" class="w-full h-full object-cover" />
+                <img src="img/dubai_releated2.jpg" class="w-full h-full object-cover" />
                 <div class="absolute inset-0 hero-slider-gradient"></div>
                 <div
                   class="absolute bottom-6 lg:bottom-8 left-5 lg:left-6 right-5 lg:right-6 text-white"
                 >
-                  <h2 class="text-xl lg:text-2xl font-bold uppercase drop-shadow-md">Dubay</h2>
-                  <p class="text-sm font-medium mt-1 text-gray-200">Dünyanın günəşli bucağı</p>
+                  <h2 class="hero-slide-title text-xl lg:text-2xl font-bold uppercase drop-shadow-md">Dubay</h2>
+                  <p class="hero-slide-subtitle text-sm font-medium mt-1 text-gray-200">Dünyanın günəşli bucağı</p>
                 </div>
               </div>
               <div
-                class="swiper-slide !w-60 lg:!w-72 !h-80 lg:!h-96 rounded-3xl overflow-hidden relative"
+                class="swiper-slide !w-60 lg:!w-[235px] !h-80 lg:!h-[265px] rounded-3xl overflow-hidden relative"
               >
-                <img src="img/avropa.jpg" class="w-full h-full object-cover" />
+                <img src="img/europe_releated3.jpg" class="w-full h-full object-cover" />
                 <div class="absolute inset-0 hero-slider-gradient"></div>
                 <div
                   class="absolute bottom-6 lg:bottom-8 left-5 lg:left-6 right-5 lg:right-6 text-white"
                 >
-                  <h2 class="text-xl lg:text-2xl font-bold uppercase drop-shadow-md">Avropa</h2>
-                  <p class="text-sm font-medium mt-1 text-gray-200">
+                  <h2 class="hero-slide-title text-xl lg:text-2xl font-bold uppercase drop-shadow-md">Avropa</h2>
+                  <p class="hero-slide-subtitle text-sm font-medium mt-1 text-gray-200">
                     İlk qərar verilən destinasiya
                   </p>
                 </div>
               </div>
               <div
-                class="swiper-slide !w-60 lg:!w-72 !h-80 lg:!h-96 rounded-3xl overflow-hidden relative"
+                class="swiper-slide !w-60 lg:!w-[235px] !h-80 lg:!h-[265px] rounded-3xl overflow-hidden relative"
               >
-                <img src="img/maldiv.webp" class="w-full h-full object-cover" />
+                <img src="img/maldiv_releated1.jpg" class="w-full h-full object-cover" />
                 <div class="absolute inset-0 hero-slider-gradient"></div>
                 <div
                   class="absolute bottom-6 lg:bottom-8 left-5 lg:left-6 right-5 lg:right-6 text-white"
                 >
-                  <h2 class="text-xl lg:text-2xl font-bold uppercase drop-shadow-md">Maldiv</h2>
-                  <p class="text-sm font-medium mt-1 text-gray-200">Bir yerüzü cənnəti</p>
+                  <h2 class="hero-slide-title text-xl lg:text-2xl font-bold uppercase drop-shadow-md">Maldiv</h2>
+                  <p class="hero-slide-subtitle text-sm font-medium mt-1 text-gray-200">Bir yerüzü cənnəti</p>
                 </div>
               </div>
             </div>
@@ -470,7 +403,7 @@
       </div>
     </header>
     <main>
-      <!-- Hot Tours Section -->
+      
       <div class="py-10">
         <div class="container px-3.5 lg:px-0">
           <div class="flex items-center justify-between mb-8 flex-wrap gap-2">
@@ -498,7 +431,7 @@
 
             <div class="swiper mySwiper w-full">
               <div class="swiper-wrapper pb-8 pt-2.5 px-3.5 items-stretch">
-                <!-- 1. İSTANBULDA BLACK FRİDAY -->
+                
                 <div class="swiper-slide px-3.5 flex">
                   <div
                     class="card w-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col shadow-md hover:shadow-xl transition-shadow duration-300 group"
@@ -510,19 +443,19 @@
                         alt="İSTANBULDA BLACK FRİDAY"
                       />
                     </div>
-                    <div class="p-5 flex flex-col gap-3 flex-grow justify-between">
+                    <div class="p-5 flex flex-col gap-3    justify-between">
                       <p class="font-black uppercase text-black">İSTANBULDA BLACK FRİDAY</p>
                       <p class="font-black text-sm text-black">23.11.2022 - 27.11.2022</p>
                       <div class="mt-3.5">
                         <div class="flex flex-wrap justify-between items-center text-sm mb-1 gap-2">
                           <button
-                            class="bg-[#f58220] text-white font-bold rounded-3xl py-1.5 px-3 text-xs md:text-sm hover:bg-[#d96a14] hover:shadow-md"
+                            class="bg-[#f58220] text-white text-[12px] font-bold rounded-3xl py-1.5 px-3 text-xs md:text-sm hover:bg-[#d96a14] hover:shadow-md"
                           >
                             559$ - 717$
                           </button>
                           <a
                             href=""
-                            class="text-[#333] font-black text-sm md:text-[12px] hover:text-[#f58220]"
+                            class="text-[#333] font-black text-sm     "
                             >Ətraflı</a
                           >
                         </div>
@@ -531,7 +464,7 @@
                   </div>
                 </div>
 
-                <!-- 2. BANGKOK-PATTAYA -->
+                
                 <div class="swiper-slide px-3.5 flex">
                   <div
                     class="card w-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col shadow-md hover:shadow-xl transition-shadow duration-300 group"
@@ -543,19 +476,19 @@
                         alt="BANGKOK-PATTAYA"
                       />
                     </div>
-                    <div class="p-5 flex flex-col gap-3 flex-grow justify-between">
+                    <div class="p-5 flex flex-col gap-3    justify-between">
                       <p class="font-black uppercase text-black">BANGKOK-PATTAYA</p>
                       <p class="font-black text-sm text-black">06.11.2022 - 13.11.2022</p>
                       <div class="mt-3.5">
                         <div class="flex flex-wrap justify-between items-center text-sm mb-1 gap-2">
                           <button
-                            class="bg-[#f58220] text-white font-bold rounded-3xl py-1.5 px-3 text-xs md:text-sm hover:bg-[#d96a14] hover:shadow-md"
+                            class="bg-[#f58220] text-white font-bold rounded-3xl py-1.5 px-3 text-xs md:text-sm hover:bg-[#d96a14] hover:shadow-md "
                           >
                             2455$ - 3696$
                           </button>
                           <a
                             href=""
-                            class="text-[#333] font-black text-sm md:text-[12px] hover:text-[#f58220]"
+                            class="text-[#333] font-black text-sm     "
                             >Ətraflı</a
                           >
                         </div>
@@ -564,10 +497,10 @@
                   </div>
                 </div>
 
-                <!-- 3. LAPLANDİYA YENİ İL -->
+                
                 <div class="swiper-slide px-3.5 flex">
                   <div
-                    class="card w-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col shadow-md hover:shadow-xl transition-shadow duration-300 group"
+                    class="card w-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col   hover:shadow-xl transition-shadow duration-300 group"
                   >
                     <div class="h-55">
                       <img
@@ -576,19 +509,19 @@
                         alt="LAPLANDİYA YENİ İL"
                       />
                     </div>
-                    <div class="p-5 flex flex-col gap-3 flex-grow justify-between">
+                    <div class="p-5 flex flex-col gap-3    justify-between">
                       <p class="font-black uppercase text-black">LAPLANDİYA YENİ İL</p>
                       <p class="font-black text-sm text-black">27.12.2022 - 03.01.2023</p>
                       <div class="mt-3.5">
                         <div class="flex flex-wrap justify-between items-center text-sm mb-1 gap-2">
-                          <button
-                            class="bg-[#f58220] text-white font-bold rounded-3xl py-1.5 px-3 text-xs md:text-sm hover:bg-[#d96a14] hover:shadow-md"
+                           <button
+                            class="bg-[#f58220] text-white text-[12px] font-bold rounded-3xl py-1.5 px-3 text-xs md:text-sm hover:bg-[#d96a14] hover:shadow-md"
                           >
                             4570$ - 10090$
                           </button>
                           <a
                             href=""
-                            class="text-[#333] font-black text-sm md:text-[12px] hover:text-[#f58220]"
+                            class="text-[#333] font-black text-sm     "
                             >Ətraflı</a
                           >
                         </div>
@@ -597,10 +530,10 @@
                   </div>
                 </div>
 
-                <!-- 4. KAPADOKYA -->
+                
                 <div class="swiper-slide px-3.5 flex">
                   <div
-                    class="card w-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col shadow-md hover:shadow-xl transition-shadow duration-300 group"
+                    class="card w-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col   hover:shadow-xl transition-shadow duration-300 group"
                   >
                     <div class="h-55">
                       <img
@@ -609,19 +542,19 @@
                         alt="KAPADOKYA"
                       />
                     </div>
-                    <div class="p-5 flex flex-col gap-3 flex-grow justify-between">
+                    <div class="p-5 flex flex-col gap-3    justify-between">
                       <p class="font-black uppercase text-black">KAPADOKYA</p>
                       <p class="font-black text-sm text-black">25.09 - 30.09</p>
                       <div class="mt-3.5">
                         <div class="flex flex-wrap justify-between items-center text-sm mb-1 gap-2">
-                          <button
-                            class="bg-[#f58220] text-white font-bold rounded-3xl py-1.5 px-3 text-xs md:text-sm hover:bg-[#d96a14] hover:shadow-md"
+                           <button
+                            class="bg-[#f58220] text-white text-[12px] font-bold rounded-3xl py-1.5 px-3 text-xs md:text-sm hover:bg-[#d96a14] hover:shadow-md"
                           >
                             1640$ - 2210$
                           </button>
                           <a
                             href=""
-                            class="text-[#333] font-black text-sm md:text-[12px] hover:text-[#f58220]"
+                            class="text-[#333] font-black text-sm     "
                             >Ətraflı</a
                           >
                         </div>
@@ -630,10 +563,10 @@
                   </div>
                 </div>
 
-                <!-- 5. DUBAY -->
+                
                 <div class="swiper-slide px-3.5 flex">
                   <div
-                    class="card w-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col shadow-md hover:shadow-xl transition-shadow duration-300 group"
+                    class="card w-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col   hover:shadow-xl transition-shadow duration-300 group"
                   >
                     <div class="h-55">
                       <img
@@ -642,19 +575,19 @@
                         alt="Dubay"
                       />
                     </div>
-                    <div class="p-5 flex flex-col gap-3 flex-grow justify-between">
+                    <div class="p-5 flex flex-col gap-3    justify-between">
                       <p class="font-black uppercase text-black">Dubay</p>
                       <p class="font-black text-sm text-black">08.11.2022 - 12.11.2022</p>
                       <div class="mt-3.5">
                         <div class="flex flex-wrap justify-between items-center text-sm mb-1 gap-2">
-                          <button
-                            class="bg-[#f58220] text-white font-bold rounded-3xl py-1.5 px-3 text-xs md:text-sm hover:bg-[#d96a14] hover:shadow-md"
+                           <button
+                            class="bg-[#f58220] text-white text-[12px] font-bold rounded-3xl py-1.5 px-3 text-xs md:text-sm hover:bg-[#d96a14] hover:shadow-md"
                           >
                             2725 AZN - 3200 AZN
                           </button>
                           <a
                             href=""
-                            class="text-[#333] font-black text-sm md:text-[12px] hover:text-[#f58220]"
+                            class="text-[#333] font-black text-sm     "
                             >Ətraflı</a
                           >
                         </div>
@@ -663,10 +596,10 @@
                   </div>
                 </div>
 
-                <!-- 6. CENEVRƏ -->
+                
                 <div class="swiper-slide px-3.5 flex">
                   <div
-                    class="card w-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col shadow-md hover:shadow-xl transition-shadow duration-300 group"
+                    class="card w-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col   hover:shadow-xl transition-shadow duration-300 group"
                   >
                     <div class="h-55">
                       <img
@@ -675,19 +608,19 @@
                         alt="Cenevrə"
                       />
                     </div>
-                    <div class="p-5 flex flex-col gap-3 flex-grow justify-between">
+                    <div class="p-5 flex flex-col gap-3    justify-between">
                       <p class="font-black uppercase text-black">Cenevrə</p>
                       <p class="font-black text-sm text-black">15.10.2022 - 21.10.2022</p>
                       <div class="mt-3.5">
                         <div class="flex flex-wrap justify-between items-center text-sm mb-1 gap-2">
-                          <button
-                            class="bg-[#f58220] text-white font-bold rounded-3xl py-1.5 px-3 text-xs md:text-sm hover:bg-[#d96a14] hover:shadow-md"
+                           <button
+                            class="bg-[#f58220] text-white text-[12px] font-bold rounded-3xl py-1.5 px-3 text-xs md:text-sm hover:bg-[#d96a14] hover:shadow-md"
                           >
                             2460 USD - 4153 USD
                           </button>
                           <a
                             href=""
-                            class="text-[#333] font-black text-sm md:text-[12px] hover:text-[#f58220]"
+                            class="text-[#333] font-black text-sm     "
                             >Ətraflı</a
                           >
                         </div>
@@ -696,10 +629,10 @@
                   </div>
                 </div>
 
-                <!-- 7. DİSNEYLAND PARİS -->
+                
                 <div class="swiper-slide px-3.5 flex">
                   <div
-                    class="card w-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col shadow-md hover:shadow-xl transition-shadow duration-300 group"
+                    class="card w-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col   hover:shadow-xl transition-shadow duration-300 group"
                   >
                     <div class="h-55">
                       <img
@@ -708,19 +641,19 @@
                         alt="Disneyland Paris"
                       />
                     </div>
-                    <div class="p-5 flex flex-col gap-3 flex-grow justify-between">
+                    <div class="p-5 flex flex-col gap-3    justify-between">
                       <p class="font-black uppercase text-black">Disneyland Paris</p>
                       <p class="font-black text-sm text-black">20.10.2022 - 26.10.2022</p>
                       <div class="mt-3.5">
                         <div class="flex flex-wrap justify-between items-center text-sm mb-1 gap-2">
-                          <button
-                            class="bg-[#f58220] text-white font-bold rounded-3xl py-1.5 px-3 text-xs md:text-sm hover:bg-[#d96a14] hover:shadow-md"
+                           <button
+                            class="bg-[#f58220] text-white text-[12px] font-bold rounded-3xl py-1.5 px-3 text-xs md:text-sm hover:bg-[#d96a14] hover:shadow-md"
                           >
                             4710 USD - 6480 USD
                           </button>
                           <a
                             href=""
-                            class="text-[#333] font-black text-sm md:text-[12px] hover:text-[#f58220]"
+                            class="text-[#333] font-black text-sm     "
                             >Ətraflı</a
                           >
                         </div>
@@ -729,10 +662,10 @@
                   </div>
                 </div>
 
-                <!-- 8. TBİLİSİ -->
+                
                 <div class="swiper-slide px-3.5 flex">
                   <div
-                    class="card w-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col shadow-md hover:shadow-xl transition-shadow duration-300 group"
+                    class="card w-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col   hover:shadow-xl transition-shadow duration-300 group"
                   >
                     <div class="h-55">
                       <img
@@ -741,19 +674,19 @@
                         alt="Tbilisi"
                       />
                     </div>
-                    <div class="p-5 flex flex-col gap-3 flex-grow justify-between">
+                    <div class="p-5 flex flex-col gap-3    justify-between">
                       <p class="font-black uppercase text-black">Tbilisi</p>
                       <p class="font-black text-sm text-black">18.09.2022 - 23.09.2022</p>
                       <div class="mt-3.5">
                         <div class="flex flex-wrap justify-between items-center text-sm mb-1 gap-2">
-                          <button
-                            class="bg-[#f58220] text-white font-bold rounded-3xl py-1.5 px-3 text-xs md:text-sm hover:bg-[#d96a14] hover:shadow-md"
+                           <button
+                            class="bg-[#f58220] text-white text-[12px] font-bold rounded-3xl py-1.5 px-3 text-xs md:text-sm hover:bg-[#d96a14] hover:shadow-md"
                           >
                             1729 AZN - 2426 AZN
                           </button>
                           <a
                             href=""
-                            class="text-[#333] font-black text-sm md:text-[12px] hover:text-[#f58220]"
+                            class="text-[#333] font-black text-sm     "
                             >Ətraflı</a
                           >
                         </div>
@@ -762,10 +695,10 @@
                   </div>
                 </div>
 
-                <!-- 9. AMSTERDAM -->
+                
                 <div class="swiper-slide px-3.5 flex">
                   <div
-                    class="card w-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col shadow-md hover:shadow-xl transition-shadow duration-300 group"
+                    class="card w-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col   hover:shadow-xl transition-shadow duration-300 group"
                   >
                     <div class="h-55">
                       <img
@@ -774,19 +707,19 @@
                         alt="AMSTERDAM"
                       />
                     </div>
-                    <div class="p-5 flex flex-col gap-3 flex-grow justify-between">
+                    <div class="p-5 flex flex-col gap-3    justify-between">
                       <p class="font-black uppercase text-black">AMSTERDAM</p>
                       <p class="font-black text-sm text-black">10.11.2022 - 15.11.2022</p>
                       <div class="mt-3.5">
                         <div class="flex flex-wrap justify-between items-center text-sm mb-1 gap-2">
-                          <button
-                            class="bg-[#f58220] text-white font-bold rounded-3xl py-1.5 px-3 text-xs md:text-sm hover:bg-[#d96a14] hover:shadow-md"
+                           <button
+                            class="bg-[#f58220] text-white text-[12px] font-bold rounded-3xl py-1.5 px-3 text-xs md:text-sm hover:bg-[#d96a14] hover:shadow-md"
                           >
                             2707 AZN - 5174 AZN
                           </button>
                           <a
                             href=""
-                            class="text-[#333] font-black text-sm md:text-[12px] hover:text-[#f58220]"
+                            class="text-[#333] font-black text-sm     "
                             >Ətraflı</a
                           >
                         </div>
@@ -795,10 +728,10 @@
                   </div>
                 </div>
 
-                <!-- 10. MARMARİS -->
+                
                 <div class="swiper-slide px-3.5 flex">
                   <div
-                    class="card w-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col shadow-md hover:shadow-xl transition-shadow duration-300 group"
+                    class="card w-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col   hover:shadow-xl transition-shadow duration-300 group"
                   >
                     <div class="h-55">
                       <img
@@ -807,17 +740,17 @@
                         alt="Marmaris"
                       />
                     </div>
-                    <div class="p-5 flex flex-col gap-3 flex-grow justify-between">
+                    <div class="p-5 flex flex-col gap-3    justify-between">
                       <p class="font-black uppercase text-black">Marmaris</p>
                       <p class="font-black text-sm text-black">02.09.2022 - 09.09.2022</p>
                       <div class="mt-3.5">
                         <div class="flex flex-wrap justify-between items-center text-sm mb-1 gap-2">
-                          <button
-                            class="bg-[#f58220] text-white font-bold rounded-3xl py-1.5 px-3 text-xs md:text-sm hover:bg-[#d96a14] hover:shadow-md"
+                           <button
+                            class="bg-[#f58220] text-white text-[12px] font-bold rounded-3xl py-1.5 px-3 text-xs md:text-sm hover:bg-[#d96a14] hover:shadow-md"
                           >
                             1874 USD - 2040 USD
                           </button>
-                          <a href="" class="text-[#333] font-black text-sm hover:text-[#f58220]"
+                          <a href="" class="text-[#333] font-black text-sm   "
                             >Ətraflı</a
                           >
                         </div>
@@ -831,7 +764,7 @@
         </div>
       </div>
 
-      <!-- Newest Tours Section -->
+      
       <div class="container py-10 px-3.5">
         <div class="flex items-center flex-wrap justify-between mb-8 gap-2">
           <h3 class="font-bold text-2xl md:text-4xl">Ən yeni turlar</h3>
@@ -840,7 +773,7 @@
 
         <div class="grid mx-auto grid-cols-1 md:grid-cols-2 gap-4 lg:grid-cols-4">
           <div
-            class="w-full max-w-96 mx-auto md:max-w-none h-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col shadow-md hover:shadow-xl transition-shadow duration-300"
+            class="w-full w-96 mx-auto h-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col   hover:shadow-xl transition-shadow duration-300"
           >
             <div class="h-48">
               <img
@@ -849,12 +782,12 @@
                 alt=""
               />
             </div>
-            <div class="p-4 flex flex-col gap-2">
+            <div class="p-4  flex flex-col gap-2">
               <p class="font-bold uppercase">BALİ TURU</p>
-              <p class="font-bold">10.04.2023-20.04.2023</p>
-              <div class="mt-2.5">
-                <div class="flex flex-wrap justify-between items-center text-sm mb-3.5 gap-2">
-                  <button class="bg-[#f58220] text-white rounded-2xl py-1 px-2">5885 AZN</button>
+              <p class="font-bold mb-[16px]">10.04.2023-20.04.2023</p>
+              <div class="mb-[30px]">
+                <div class="flex flex-wrap justify-between items-center text-sm  gap-2">
+                  <button class="bg-[#f58220] text-white text-[12px] rounded-2xl py-1 px-2">5885 AZN</button>
                   <a href="" class="text-[#484848] font-semibold">Ətraflı</a>
                 </div>
               </div>
@@ -862,7 +795,7 @@
           </div>
 
           <div
-            class="w-full max-w-96 mx-auto md:max-w-none h-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col shadow-md hover:shadow-xl transition-shadow duration-300"
+            class="w-full  w-96 mx-auto   h-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col   hover:shadow-xl transition-shadow duration-300"
           >
             <div class="h-48">
               <img
@@ -873,10 +806,10 @@
             </div>
             <div class="p-4 flex flex-col gap-2">
               <p class="font-bold uppercase">GƏMİ TURU</p>
-              <p class="font-bold">03.02.2023 - 10.02.2023</p>
-              <div class="mt-2.5">
-                <div class="flex flex-wrap justify-between items-center text-sm mb-3.5 gap-2">
-                  <button class="bg-[#f58220] text-white rounded-2xl py-1 px-2">470 EUR</button>
+             <p class="font-bold mb-[16px]">03.02.2023 - 10.02.2023</p>
+              <div class="mb-[30px]">
+                <div class="flex flex-wrap justify-between items-center text-sm    gap-2">
+                  <button class="bg-[#f58220] text-white text-[12px] rounded-2xl py-1 px-2">470 EUR</button>
                   <a href="" class="text-[#484848] font-semibold">Ətraflı</a>
                 </div>
               </div>
@@ -884,7 +817,7 @@
           </div>
 
           <div
-            class="w-full max-w-96 mx-auto md:max-w-none h-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col shadow-md hover:shadow-xl transition-shadow duration-300"
+            class="w-full  w-96 mx-auto   h-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col   hover:shadow-xl transition-shadow duration-300"
           >
             <div class="h-48">
               <img
@@ -895,10 +828,10 @@
             </div>
             <div class="p-4 flex flex-col gap-2">
               <p class="font-bold uppercase">İSTANBUL TURU</p>
-              <p class="font-bold">16.01.2023 - 20.01.2023</p>
-              <div class="mt-2.5">
-                <div class="flex flex-wrap justify-between items-center text-sm mb-3.5 gap-2">
-                  <button class="bg-[#f58220] text-white rounded-2xl py-1 px-2">858 USD</button>
+             <p class="font-bold mb-[16px]">16.01.2023 - 20.01.2023</p>
+              <div class="mb-[30px]">
+                <div class="flex flex-wrap justify-between items-center text-sm    gap-2">
+                  <button class="bg-[#f58220] text-white text-[12px] rounded-2xl py-1 px-2">858 USD</button>
                   <a href="" class="text-[#484848] font-semibold">Ətraflı</a>
                 </div>
               </div>
@@ -906,7 +839,7 @@
           </div>
 
           <div
-            class="w-full max-w-96 mx-auto md:max-w-none h-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col shadow-md hover:shadow-xl transition-shadow duration-300"
+            class="w-full  w-96 mx-auto   h-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col   hover:shadow-xl transition-shadow duration-300"
           >
             <div class="h-48">
               <img
@@ -917,10 +850,10 @@
             </div>
             <div class="p-4 flex flex-col gap-2">
               <p class="font-bold uppercase">ŞARM - ƏL - ŞEYX TURU</p>
-              <p class="font-bold">11.02.2023 - 17.02.2023</p>
-              <div class="mt-2.5">
-                <div class="flex flex-wrap justify-between items-center text-sm mb-3.5 gap-2">
-                  <button class="bg-[#f58220] text-white rounded-2xl py-1 px-2">1553 USD</button>
+             <p class="font-bold mb-[16px]">11.02.2023 - 17.02.2023</p>
+              <div class="mb-[30px]">
+                <div class="flex flex-wrap justify-between items-center text-sm    gap-2">
+                  <button class="bg-[#f58220] text-white text-[12px] rounded-2xl py-1 px-2">1553 USD</button>
                   <a href="" class="text-[#484848] font-semibold">Ətraflı</a>
                 </div>
               </div>
@@ -928,7 +861,7 @@
           </div>
 
           <div
-            class="w-full max-w-96 mx-auto md:max-w-none h-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col shadow-md hover:shadow-xl transition-shadow duration-300"
+            class="w-full  w-96 mx-auto   h-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col   hover:shadow-xl transition-shadow duration-300"
           >
             <div class="h-48">
               <img
@@ -939,10 +872,10 @@
             </div>
             <div class="p-4 flex flex-col gap-2">
               <p class="font-bold uppercase">DUBAYDA NOVRUZ TƏTİLİ</p>
-              <p class="font-bold">17.03.2023 - 21.03.2023</p>
-              <div class="mt-2.5">
-                <div class="flex flex-wrap justify-between items-center text-sm mb-3.5 gap-2">
-                  <button class="bg-[#f58220] text-white rounded-2xl py-1 px-2">1525 USD</button>
+             <p class="font-bold mb-[16px]">17.03.2023 - 21.03.2023</p>
+              <div class="mb-[30px]">
+                <div class="flex flex-wrap justify-between items-center text-sm    gap-2">
+                  <button class="bg-[#f58220] text-white text-[12px] rounded-2xl py-1 px-2">1525 USD</button>
                   <a href="" class="text-[#484848] font-semibold">Ətraflı</a>
                 </div>
               </div>
@@ -950,7 +883,7 @@
           </div>
 
           <div
-            class="w-full max-w-96 mx-auto md:max-w-none h-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col shadow-md hover:shadow-xl transition-shadow duration-300"
+            class="w-full  w-96 mx-auto   h-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col   hover:shadow-xl transition-shadow duration-300"
           >
             <div class="h-48">
               <img
@@ -960,11 +893,11 @@
               />
             </div>
             <div class="p-4 flex flex-col gap-2">
-              <p class="font-bold uppercase">ISTANBUL SEVGİLİLƏR GÜNÜ</p>
-              <p class="font-bold">13.02.2023- 16.02.2023</p>
-              <div class="mt-2.5">
-                <div class="flex flex-wrap justify-between items-center text-sm mb-3.5 gap-2">
-                  <button class="bg-[#f58220] text-white rounded-2xl py-1 px-2">1027 $</button>
+              <p class=" font- font-bold uppercase">ISTANBUL SEVGİLİLƏR GÜNÜ</p>
+             <p class="font-bold mb-[16px]">13.02.2023- 16.02.2023</p>
+              <div class="mb-[30px]">
+                <div class="flex flex-wrap justify-between items-center text-sm    gap-2">
+                  <button class="bg-[#f58220] text-white text-[12px] rounded-2xl py-1 px-2">1027 $</button>
                   <a href="" class="text-[#484848] font-semibold">Ətraflı</a>
                 </div>
               </div>
@@ -972,7 +905,7 @@
           </div>
 
           <div
-            class="w-full max-w-96 mx-auto md:max-w-none h-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col shadow-md hover:shadow-xl transition-shadow duration-300"
+            class="w-full  w-96 mx-auto   h-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col   hover:shadow-xl transition-shadow duration-300"
           >
             <div class="h-48">
               <img
@@ -983,10 +916,10 @@
             </div>
             <div class="p-4 flex flex-col gap-2">
               <p class="font-bold uppercase">SEYŞEL ADALARI</p>
-              <p class="font-bold">15.04.2023-22.04.2023</p>
-              <div class="mt-2.5">
-                <div class="flex flex-wrap justify-between items-center text-sm mb-3.5 gap-2">
-                  <button class="bg-[#f58220] text-white rounded-2xl py-1 px-2">4320 $</button>
+             <p class="font-bold mb-[16px]">15.04.2023-22.04.2023</p>
+              <div class="mb-[30px]">
+                <div class="flex flex-wrap justify-between items-center text-sm    gap-2">
+                  <button class="bg-[#f58220] text-white text-[12px] rounded-2xl py-1 px-2">4320 $</button>
                   <a href="" class="text-[#484848] font-semibold">Ətraflı</a>
                 </div>
               </div>
@@ -994,7 +927,7 @@
           </div>
 
           <div
-            class="w-full max-w-96 mx-auto md:max-w-none h-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col shadow-md hover:shadow-xl transition-shadow duration-300"
+            class="w-full  w-96 mx-auto   h-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col   hover:shadow-xl transition-shadow duration-300"
           >
             <div class="h-48">
               <img
@@ -1005,10 +938,10 @@
             </div>
             <div class="p-4 flex flex-col gap-2">
               <p class="font-bold uppercase">SANTORİNİ - MYKONOS</p>
-              <p class="font-bold">19.03.2023-24.03.2023</p>
-              <div class="mt-2.5">
-                <div class="flex flex-wrap justify-between items-center text-sm mb-3.5 gap-2">
-                  <button class="bg-[#f58220] text-white rounded-2xl py-1 px-2">2999 $</button>
+             <p class="font-bold mb-[16px]">19.03.2023-24.03.2023</p>
+              <div class="mb-[30px]">
+                <div class="flex flex-wrap justify-between items-center text-sm    gap-2">
+                  <button class="bg-[#f58220] text-white text-[12px] rounded-2xl py-1 px-2">2999 $</button>
                   <a href="" class="text-[#484848] font-semibold">Ətraflı</a>
                 </div>
               </div>
@@ -1016,7 +949,7 @@
           </div>
 
           <div
-            class="w-full max-w-96 mx-auto md:max-w-none h-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col shadow-md hover:shadow-xl transition-shadow duration-300"
+            class="w-full  w-96 mx-auto   h-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col   hover:shadow-xl transition-shadow duration-300"
           >
             <div class="h-48">
               <img
@@ -1027,10 +960,10 @@
             </div>
             <div class="p-4 flex flex-col gap-2">
               <p class="font-bold uppercase">BALİ - Mistik tropik adada...</p>
-              <p class="font-bold">10.04.2023- 17.04.2023</p>
-              <div class="mt-2.5">
-                <div class="flex flex-wrap justify-between items-center text-sm mb-3.5 gap-2">
-                  <button class="bg-[#f58220] text-white rounded-2xl py-1 px-2">2675 AZN</button>
+             <p class="font-bold mb-[16px]">10.04.2023- 17.04.2023</p>
+              <div class="mb-[30px]">
+                <div class="flex flex-wrap justify-between items-center text-sm    gap-2">
+                  <button class="bg-[#f58220] text-white text-[12px] rounded-2xl py-1 px-2">2675 AZN</button>
                   <a href="" class="text-[#484848] font-semibold">Ətraflı</a>
                 </div>
               </div>
@@ -1038,7 +971,7 @@
           </div>
 
           <div
-            class="w-full max-w-96 mx-auto md:max-w-none h-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col shadow-md hover:shadow-xl transition-shadow duration-300"
+            class="w-full  w-96 mx-auto   h-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col   hover:shadow-xl transition-shadow duration-300"
           >
             <div class="h-48">
               <img
@@ -1049,10 +982,10 @@
             </div>
             <div class="p-4 flex flex-col gap-2">
               <p class="font-bold uppercase">ŞARM ƏL ŞEYX</p>
-              <p class="font-bold">18.03.2023 - 24.03.2023</p>
-              <div class="mt-2.5">
-                <div class="flex flex-wrap justify-between items-center text-sm mb-3.5 gap-2">
-                  <button class="bg-[#f58220] text-white rounded-2xl py-1 px-2">2340 USD</button>
+             <p class="font-bold mb-[16px]">18.03.2023 - 24.03.2023</p>
+              <div class="mb-[30px]">
+                <div class="flex flex-wrap justify-between items-center text-sm    gap-2">
+                  <button class="bg-[#f58220] text-white text-[12px] rounded-2xl py-1 px-2">2340 USD</button>
                   <a href="" class="text-[#484848] font-semibold">Ətraflı</a>
                 </div>
               </div>
@@ -1060,7 +993,7 @@
           </div>
 
           <div
-            class="w-full max-w-96 mx-auto md:max-w-none h-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col shadow-md hover:shadow-xl transition-shadow duration-300"
+            class="w-full  w-96 mx-auto   h-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col   hover:shadow-xl transition-shadow duration-300"
           >
             <div class="h-48">
               <img
@@ -1071,10 +1004,10 @@
             </div>
             <div class="p-4 flex flex-col gap-2">
               <p class="font-bold uppercase">GOA</p>
-              <p class="font-bold">10.01.2023 - 16.01.2023</p>
-              <div class="mt-2.5">
-                <div class="flex flex-wrap justify-between items-center text-sm mb-3.5 gap-2">
-                  <button class="bg-[#f58220] text-white rounded-2xl py-1 px-2">2570 AZN</button>
+             <p class="font-bold mb-[16px]">10.01.2023 - 16.01.2023</p>
+              <div class="mb-[30px]">
+                <div class="flex flex-wrap justify-between items-center text-sm    gap-2">
+                  <button class="bg-[#f58220] text-white text-[12px] rounded-2xl py-1 px-2">2570 AZN</button>
                   <a href="" class="text-[#484848] font-semibold">Ətraflı</a>
                 </div>
               </div>
@@ -1082,7 +1015,7 @@
           </div>
 
           <div
-            class="w-full max-w-96 mx-auto md:max-w-none h-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col shadow-md hover:shadow-xl transition-shadow duration-300"
+            class="w-full  w-96 mx-auto   h-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col   hover:shadow-xl transition-shadow duration-300"
           >
             <div class="h-48">
               <img
@@ -1093,10 +1026,10 @@
             </div>
             <div class="p-4 flex flex-col gap-2">
               <p class="font-bold uppercase">TBİLİSİ - Yeni il</p>
-              <p class="font-bold">28.12.2022- 02.01.2023</p>
-              <div class="mt-2.5">
-                <div class="flex flex-wrap justify-between items-center text-sm mb-3.5 gap-2">
-                  <button class="bg-[#f58220] text-white rounded-2xl py-1 px-2">2581 $</button>
+             <p class="font-bold mb-[16px]">28.12.2022- 02.01.2023</p>
+              <div class="mb-[30px]">
+                <div class="flex flex-wrap justify-between items-center text-sm    gap-2">
+                  <button class="bg-[#f58220] text-white text-[12px] rounded-2xl py-1 px-2">2581 $</button>
                   <a href="" class="text-[#484848] font-semibold">Ətraflı</a>
                 </div>
               </div>
@@ -1104,7 +1037,7 @@
           </div>
         </div>
       </div>
-      <!-- Country Tours Section -->
+      
       <div class="bg-[#f7f7fb]">
         <div class="container pt-12 pb-24 px-3.5 lg:px-0">
           <div class="flex items-center flex-wrap gap-2 justify-between mb-8">
@@ -1257,7 +1190,7 @@
         </div>
       </div>
 
-      <!-- Online Booking Section -->
+      
       <div
         class="container pb-12.5 relative flex justify-center lg:justify-end items-center px-3.5 lg:px-0"
       >
@@ -1333,7 +1266,7 @@
           </div>
         </div>
       </div>
-      <!-- Contact Info Section -->
+      
       <div class="bg-[#1e419b] relative h-auto overflow-hidden">
         <div
           class="flex flex-col md:flex-row justify-between items-center relative z-10 w-full md:h-fit"
@@ -1355,10 +1288,10 @@
                   <img src="img/pin.png" alt="" class="w-5 md:w-3.5" />
                 </div>
                 <div class="flex flex-col gap-1 md:gap-0 mt-2 md:mt-0">
-                  <a href="" class="max-w-72 md:max-w-none block"
+                  <a href="" class=" w-72   block"
                     >Azadlıq pr. 95/12. Bakı, Azərbaycan</a
                   >
-                  <a href="" class="max-w-72 md:max-w-none block"
+                  <a href="" class=" w-72   block"
                     >Əhməd Cəmil Küçəsi, 2, Bakı, Azərbaycan</a
                   >
                 </div>
@@ -1390,7 +1323,7 @@
         </div>
       </div>
     </main>
-    <!-- Footer -->
+    
     <footer class="bg-white">
       <div class="container px-4">
         <div class="flex flex-col md:flex-row items-center text-center py-5 justify-between gap-4">

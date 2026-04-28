@@ -25,35 +25,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function initHeroSwiper() {
   const heroSwiper = new Swiper(".heroSwiper", {
-    slidesPerView: "auto",
-    spaceBetween: 25,
+    slidesPerView: "auto",      
+    centeredSlides: false,      
+    spaceBetween: 20,           
     loop: true,
-    autoplay: {
-      delay: 4000,
-      disableOnInteraction: false,
-    },
-    mousewheel: {
-      forceToAxis: true,
-    },
-    breakpoints: {
-      1024: {
-        spaceBetween: 30,
-      },
-    },
+    speed: 1000,          
     on: {
       slideChange: function () {
         const index = this.realIndex;
         updateHeroText(index);
-        animateHeroPlane();
-        updateHeroDots(index);
+        animateHeroPlane(); 
       },
     },
-  });
-
-  document.querySelectorAll(".hero-dot").forEach((dot, index) => {
-    dot.addEventListener("click", function () {
-      heroSwiper.slideToLoop(index);
-    });
   });
 }
 
@@ -78,7 +61,7 @@ function animateHeroPlane() {
   const plane = document.getElementById("hero-plane");
   if (plane) {
     plane.classList.remove("fly-once");
-    void plane.offsetWidth; // Reflow trigger
+    void plane.offsetWidth;
     plane.classList.add("fly-once");
   }
 }
