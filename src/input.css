@@ -55,7 +55,7 @@
 .heroSwiper .swiper-slide {
   background-color: transparent !important;
   height: 400px !important;
-  width: 260px !important;
+  width: 100% !important;
   margin: auto;
   transition: all 0.4s ease-in-out !important;
 }
@@ -73,7 +73,7 @@
 #hero-subtitle {
   #hero-title {
     display: inline-block;
-    /* Bu mütləqdir! */
+    
     transition: transform 0.5s ease-in-out, opacity 0.5s;
   }
 }
@@ -118,4 +118,12 @@
 
 .fly-once {
   animation: flyAcross 3.5s linear;
+}
+@media (min-width: 768px) {
+  .heroSwiper .swiper-slide {
+    width: 260px !important;
+  }
+  .heroSwiper{
+    overflow: hidden;
+  }
 }

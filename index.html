@@ -29,7 +29,7 @@
       </div>
 
 
-      <ul class="hidden lg:flex items-center gap-4 xl:gap-6 text-white font-bold text-[13px] xl:text-[14px]">
+      <ul class="hidden lg:flex items-center gap-4 xl:gap-6 text-white font-bold text-[13px] xl:text-[14px] relative nav-magic">
         <li>
           <a href="#" class="transition-colors duration-300 hover:text-[#f58220]">Haqqımızda</a>
         </li>
@@ -48,6 +48,7 @@
         <li>
           <a href="#" class="transition-colors duration-300 hover:text-[#f58220]">Əlaqə</a>
         </li>
+        <div class="nav-magic-line"></div>
       </ul>
 
       <div class="flex items-center gap-3 lg:gap-4">
@@ -90,9 +91,9 @@
 
 
       <div
-        class="hidden lg:flex bg-white items-center px-3 py-1.5 lg:px-4 lg:py-1.5 text-sm gap-2 rounded-full shadow-sm">
+        class="hidden lg:flex bg-white items-center px-3 py-1.5 lg:px-4 lg:py-1.5 text-sm gap-2 rounded-full shadow-sm whitespace-nowrap">
         <img src="img/callcolor.png" alt="" class="w-3.5 h-3.5 object-contain" />
-        <a href="tel:+99450 603 77 77" class="text-black font-bold text-[13px]">(+99450) 603 77 77</a>
+        <a href="tel:+99450 603 77 77" class="text-black font-bold text-[13px] whitespace-nowrap">(+99450) 603 77 77</a>
       </div>
 
 
@@ -109,7 +110,7 @@
     <div class="container">
       <div class="flex py-2 items-center justify-between gap-1 mb-8 px-3.5 lg:px-0">
         <img src="img/logo-new.png" class="w-40  z-20 py-5" />
-        <ul class="hidden font-semibold lg:flex flex-wrap items-center px-2.5 text-white gap-3.5">
+        <ul class="hidden font-semibold lg:flex flex-wrap items-center px-2.5 text-white gap-3.5 relative nav-magic">
           <li>
             <a href="#" class="transition-colors duration-300 hover:text-[#f58220] block">Haqqımızda</a>
           </li>
@@ -128,10 +129,11 @@
           <li>
             <a href="#" class="transition-colors duration-300 hover:text-[#f58220] block">Əlaqə</a>
           </li>
+          <div class="nav-magic-line"></div>
         </ul>
         <div class="flex items-center gap-3.5">
           <div
-            class="search-toggle text-[#f6892d] hidden lg:flex items-center bg-white py-2 px-3 rounded-full  hover:bg-gray-50 transition-colors shadow-sm">
+            class="search-toggle text-[#f6892d] hidden lg:flex items-center bg-white p-2 rounded-full  hover:bg-gray-50 transition-colors shadow-sm">
             <i class="fa-solid fa-magnifying-glass"></i>
           </div>
 
@@ -164,9 +166,9 @@
             </div>
           </div>
 
-          <div class="hidden lg:flex bg-white items-center px-3.5 py-1 text-sm gap-2 rounded-full">
+          <div class="hidden lg:flex bg-white items-center px-3 py-1 text-sm gap-2 rounded-full whitespace-nowrap">
             <img src="img/callcolor.png" alt="" />
-            <a href="tel:+99450 603 77 77">(+99450) 603 77 77</a>
+            <a href="tel:+99450 603 77 77" class="whitespace-nowrap">(+99450) 603 77 77</a>
           </div>
         </div>
       </div>
@@ -178,10 +180,10 @@
     <img src="img/fly.png" id="hero-plane" class="absolute left-[-400px] top-[15%] w-60 lg:w-80 z-4" alt="Təyyarə" />
 
     <div
-      class="px-4 lg:px-0 relative flex md:items-end flex-col lg:flex-row items-center justify-between z-10 py-12 lg:py-0 gap-12 lg:gap-0 pb-24 lg:pb-0">
+      class="px-4 lg:px-0 relative  flex md:items-end flex-col lg:flex-row items-center justify-between z-10 py-12 lg:py-0 gap-12 lg:gap-0 pb-24 lg:pb-0">
       <div
         class="max-w-[1400px] mx-auto  lg:w-[45%] flex items-center   justify-center lg:justify-start gap-6 lg:gap-10 mb-10 lg:mb-0 relative z-[5]">
-        <div class="flex flex-col items-center gap-4 lg:gap-8 relative  -mt-10 md:-mt-40 z-20">
+        <div class=" hidden md:flex flex-col items-center gap-4 lg:gap-8 relative  -mt-10 md:-mt-40 z-20">
           <div class="absolute h-[95%] w-[1.5px] bg-[#1e419b] -z-10 top-[4%]"></div>
           <div
             class="hero-dot w-5 h-5 rounded-full border-2 border-[#f58220] flex items-center justify-center duration-300">
@@ -238,12 +240,12 @@
         <div class="swiper heroSwiper w-full">
           <div class="swiper-wrapper">
 
-            <div class="swiper-slide w-[260px] h-[340px] rounded-3xl overflow-hidden relative">
+            <div class="swiper-slide w-[260px] h-[340px] rounded-3xl   overflow-hidden relative">
               <img src="img/moskva_releated.jpg" class="w-full h-full object-cover absolute inset-0" />
               <div class="absolute inset-0 hero-slider-gradient"></div>
               <div class="absolute bottom-6 lg:bottom-8 left-5 lg:left-6 right-5 lg:right-6 text-white z-10">
                 <h2 class="text-xl lg:text-2xl font-bold uppercase drop-shadow-md">Moskva</h2>
-                <p class="text-sm font-medium mt-1 text-gray-200">Gəz, gəz və yenə gəz</p>
+                <p class="text-sm font-medium mt-1  ">Gəz, gəz və yenə gəz</p>
               </div>
             </div>
 
@@ -252,7 +254,7 @@
               <div class="absolute inset-0 hero-slider-gradient"></div>
               <div class="absolute bottom-6 lg:bottom-8 left-5 lg:left-6 right-5 lg:right-6 text-white z-10">
                 <h2 class="text-xl lg:text-2xl font-bold uppercase drop-shadow-md">İSTANBUL</h2>
-                <p class="text-sm font-medium mt-1 text-gray-200">Tarix yazan şəhər</p>
+                <p class="text-sm font-medium mt-1  ">Tarix yazan şəhər</p>
               </div>
             </div>
 
@@ -261,7 +263,7 @@
               <div class="absolute inset-0 hero-slider-gradient"></div>
               <div class="absolute bottom-6 lg:bottom-8 left-5 lg:left-6 right-5 lg:right-6 text-white z-10">
                 <h2 class="text-xl lg:text-2xl font-bold uppercase drop-shadow-md">Dubay</h2>
-                <p class="text-sm font-medium mt-1 text-gray-200">Dünyanın günəşli bucağı</p>
+                <p class="text-sm  font-semibold mt-1  ">Dünyanın günəşli bucağı</p>
               </div>
             </div>
 
@@ -270,7 +272,7 @@
               <div class="absolute inset-0 hero-slider-gradient"></div>
               <div class="absolute bottom-6 lg:bottom-8 left-5 lg:left-6 right-5 lg:right-6 text-white z-10">
                 <h2 class="text-xl lg:text-2xl font-bold uppercase drop-shadow-md">Avropa</h2>
-                <p class="text-sm font-medium mt-1 text-gray-200">İlk qərar verilən destinasiya</p>
+                <p class="text-sm  font-semibold mt-1  ">İlk qərar verilən destinasiya</p>
               </div>
             </div>
 
@@ -279,7 +281,7 @@
               <div class="absolute inset-0 hero-slider-gradient"></div>
               <div class="absolute bottom-6 lg:bottom-8 left-5 lg:left-6 right-5 lg:right-6 text-white z-10">
                 <h2 class="text-xl lg:text-2xl font-bold uppercase drop-shadow-md">Maldiv</h2>
-                <p class="text-sm font-medium mt-1 text-gray-200">Bir yerüzü cənnəti</p>
+                <p class="text-sm  font-semibold mt-1  ">Bir yerüzü cənnəti</p>
               </div>
             </div>
 
@@ -303,7 +305,7 @@
         </div>
         <div class="relative md:px-40 w-full bg-cover bg-center" style="background-image: url(&quot;img/map.png&quot;)">
           <div
-            class="absolute w-full max-w-[900px] left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 z-[60] flex items-center justify-between px-2 pointer-events-none">
+            class="absolute w-full max-w-[930px] left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 z-[60] flex items-center justify-between px-2 pointer-events-none">
             <div
               class="my-custom-prev pointer-events-auto cursor-pointer flex items-center justify-center w-[42px] h-[42px] md:w-[50px] md:h-[50px] bg-[#e6e6e6] hover:bg-[#f58220] text-white border-[4px] md:border-[5px] border-white rounded-full shadow-md transition-all duration-300">
               <i class="fa-solid fa-chevron-left text-sm md:text-base"></i>
@@ -925,7 +927,7 @@
 
         <div class="flex flex-col relative z-40">
           <div class="relative z-[60] w-full mb-3.5 custom-select-wrapper">
-            <!-- Native select (hidden but used for form submission) -->
+            
             <select name="service" class="hidden" id="service-select">
               <option value="" disabled selected>-- Xidməti seçin</option>
               <option value="otel">Otel rezervasiyaları</option>
@@ -944,24 +946,24 @@
               <option value="tecili">Təcili dəstək</option>
             </select>
 
-            <!-- Custom Select Trigger -->
+            
             <div
               class="w-full h-12 bg-white rounded-full px-6 flex items-center justify-between  text-[#c0c0c0] custom-select-trigger transition-all duration-300 shadow-sm border border-transparent">
               <span class="custom-select-value truncate select-none">-- Xidməti seçin</span>
               <i class="fa-solid fa-chevron-down text-sm transition-transform duration-300 custom-select-icon"></i>
             </div>
 
-            <!-- Custom Select Dropdown -->
+            
             <div
               class="absolute left-0 top-0 w-full bg-white rounded-3xl shadow-xl opacity-0 invisible -translate-y-2 transition-all duration-300 custom-select-dropdown z-[100] overflow-hidden flex flex-col border border-gray-100">
-              <!-- Header of Dropdown (looks like the trigger but with border-b) -->
+              
               <div
                 class="w-full h-12 px-6 flex items-center justify-between  text-[#c0c0c0] border-b border-gray-100 shrink-0 custom-select-dropdown-close hover:bg-gray-50 transition-colors">
                 <span class="truncate select-none">-- Xidməti seçin</span>
                 <i class="fa-solid fa-chevron-up text-sm"></i>
               </div>
 
-              <!-- Options List -->
+              
               <div
                 class="grid grid-cols-1 md:grid-cols-2 gap-x-2 gap-y-1 p-4 max-h-[250px] md:max-h-none overflow-y-auto w-full">
                 <div
