@@ -1,1234 +1,932 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link href="./src/output.css" rel="stylesheet" />
-        <link href="./src/input.css" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
 
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link href="./src/output.css" rel="stylesheet" />
+  <link href="./src/input.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
 
-  <body class="overflow-x-hidden">
-    
-    <div
-      id="sticky-header"
-      class="fixed top-0 left-0 w-full z-[1000] -translate-y-full sticky-header-gradient  "
-    >
-      <div class="absolute rotate-180 w-[105px] -z-10 top-0 left-0">
-        <img src="img/cloud4.png" alt="" />
+</head>
+
+<body class="overflow-x-hidden">
+
+  <div id="sticky-header" class="fixed top-0 left-0 w-full z-[1000] -translate-y-full sticky-header-gradient  ">
+    <div class="absolute rotate-180 w-[105px] -z-10 top-0 left-0">
+      <img src="img/cloud4.png" alt="" />
+    </div>
+    <div class="container h-full px-4 lg:px-0 flex items-center justify-between relative">
+      <div class="hidden md:flex items-center py-[20px] w-[130px] h-full relative">
+        <img src="img/logo-new-white.png" class="h-fit relative z-10" />
       </div>
-      <div class="container h-full px-4 lg:px-0 flex items-center justify-between relative">
-        <div class="flex items-center py-[20px] w-[130px] h-full relative">
-          <img src="img/logo-new-white.png" class="h-fit relative z-10" />
+      <div class="flex md:hidden items-center py-[20px] w-[130px] h-full relative">
+        <img src="img/logo-new.png" class="h-fit relative z-10" />
+      </div>
+
+
+      <ul class="hidden lg:flex items-center gap-4 xl:gap-6 text-white font-bold text-[13px] xl:text-[14px]">
+        <li>
+          <a href="#" class="transition-colors duration-300 hover:text-[#f58220]">Haqqımızda</a>
+        </li>
+        <li>
+          <a href="#" class="transition-colors duration-300 hover:text-[#f58220]">Yeni turlar</a>
+        </li>
+        <li>
+          <a href="#" class="transition-colors duration-300 hover:text-[#f58220]">Xidmətlər</a>
+        </li>
+        <li>
+          <a href="#" class="transition-colors duration-300 hover:text-[#f58220]">Azərbaycan turları</a>
+        </li>
+        <li>
+          <a href="#" class="transition-colors duration-300 hover:text-[#f58220]">Korporativ əməkdaşlıq</a>
+        </li>
+        <li>
+          <a href="#" class="transition-colors duration-300 hover:text-[#f58220]">Əlaqə</a>
+        </li>
+      </ul>
+
+      <div class="flex items-center gap-3 lg:gap-4">
+        <div
+          class="search-toggle text-[#f58220] hidden lg:flex items-center justify-center bg-white w-8 h-8 rounded-full  hover:bg-gray-50 transition-colors shadow-sm">
+          <i class="fa-solid fa-magnifying-glass text-[13px]"></i>
         </div>
 
-        
-        <ul
-          class="hidden lg:flex items-center gap-4 xl:gap-6 text-white font-bold text-[13px] xl:text-[14px]"
-        >
-          <li>
-            <a href="#" class="hover:text-[#f58220]    ">Haqqımızda</a>
-          </li>
-          <li>
-            <a href="#" class="hover:text-[#f58220]  duration-400">Yeni turlar</a>
-          </li>
-          <li>
-            <a href="#" class="hover:text-[#f58220]  duration-400">Xidmətlər</a>
-          </li>
-          <li>
-            <a href="#" class="hover:text-[#f58220]  duration-400 ">Azərbaycan turları</a>
-          </li>
-          <li>
-            <a href="#" class="hover:text-[#f58220]  duration-400 ">Korporativ əməkdaşlıq</a>
-          </li>
-          <li>
-            <a href="#" class="hover:text-[#f58220]  duration-400 ">Əlaqə</a>
-          </li>
-        </ul>
-
-        <div class="flex items-center gap-3 lg:gap-4">
-          
+        <div class="relative lang-container z-[200]">
           <div
-            class="text-[#f58220] hidden lg:flex items-center justify-center bg-white w-8 h-8 rounded-full"
-          >
-            <i class="fa-solid fa-magnifying-glass text-[13px]"></i>
+            class="flex items-center gap-1.5 bg-white px-2 py-1.5 lg:px-2.5 lg:py-1.5 rounded-full  lang-toggle shadow-sm">
+            <img src="img/azerbaijan.png" alt="" class="w-5 h-5 rounded-full object-cover" />
+            <span class="uppercase text-[13px] font-bold text-black">AZ</span>
+            <i
+              class="fa-solid fa-caret-down text-gray-300 text-[10px] ml-0.5 transition-transform duration-300 icon-caret"></i>
           </div>
 
-          
-          <div class="relative group z-50">
+          <div
+            class="absolute top-[120%] left-1/2 -translate-x-1/2 mt-2 bg-white rounded-xl opacity-0 invisible translate-y-2 transition-all duration-300 ease-in-out w-24 overflow-hidden z-[200] shadow-xl border border-gray-100 lang-dropdown">
             <div
-              class="flex items-center gap-1.5 bg-white px-2 py-1.5 lg:px-2.5 lg:py-1.5 rounded-full"
-            >
+              class="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-white rotate-45 z-0 border-t border-l border-gray-100">
+            </div>
+            <div class="relative bg-white flex flex-col z-10 py-1">
+              <a href="#" class="flex items-center gap-2 px-3 py-2 hover:bg-gray-50 transition-colors">
+                <img src="img/azerbaijan.png" alt="" class="w-5 h-5 rounded-full object-cover" />
+                <span class="uppercase text-sm font-bold text-[#484848]">AZ</span>
+              </a>
+              <a href="#" class="flex items-center gap-2 px-3 py-2 hover:bg-gray-50 transition-colors">
+                <img src="img/russia.png" alt="" class="w-5 h-5 rounded-full object-cover" />
+                <span class="uppercase text-sm font-bold text-[#484848]">RU</span>
+              </a>
+              <a href="#" class="flex items-center gap-2 px-3 py-2 hover:bg-gray-50 transition-colors">
+                <img src="img/united-kingdom.png" alt="" class="w-5 h-5 rounded-full object-cover" />
+                <span class="uppercase text-sm font-bold text-[#484848]">EN</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div
+        class="hidden lg:flex bg-white items-center px-3 py-1.5 lg:px-4 lg:py-1.5 text-sm gap-2 rounded-full shadow-sm">
+        <img src="img/callcolor.png" alt="" class="w-3.5 h-3.5 object-contain" />
+        <a href="tel:+99450 603 77 77" class="text-black font-bold text-[13px]">(+99450) 603 77 77</a>
+      </div>
+
+
+      <div class="flex lg:hidden flex-col gap-1.5">
+        <div class="w-8 h-[3px] bg-white rounded-full"></div>
+        <div class="w-8 h-[3px] bg-white rounded-full"></div>
+        <div class="w-5 h-[3px] bg-white rounded-full self-end"></div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <header class="header-gradient min-h-[95vh] relative overflow-hidden flex flex-col">
+    <div class="container">
+      <div class="flex py-2 items-center justify-between gap-1 mb-8 px-3.5 lg:px-0">
+        <img src="img/logo-new.png" class="w-40  z-20 py-5" />
+        <ul class="hidden font-semibold lg:flex flex-wrap items-center px-2.5 text-white gap-3.5">
+          <li>
+            <a href="#" class="transition-colors duration-300 hover:text-[#f58220] block">Haqqımızda</a>
+          </li>
+          <li>
+            <a href="#" class="transition-colors duration-300 hover:text-[#f58220] block">Yeni turlar</a>
+          </li>
+          <li>
+            <a href="#" class="transition-colors duration-300 hover:text-[#f58220] block">Xidmətlər</a>
+          </li>
+          <li>
+            <a href="#" class="transition-colors duration-300 hover:text-[#f58220] block">Azərbaycan turları</a>
+          </li>
+          <li>
+            <a href="#" class="transition-colors duration-300 hover:text-[#f58220] block">Korporativ əməkdaşlıq</a>
+          </li>
+          <li>
+            <a href="#" class="transition-colors duration-300 hover:text-[#f58220] block">Əlaqə</a>
+          </li>
+        </ul>
+        <div class="flex items-center gap-3.5">
+          <div
+            class="search-toggle text-[#f6892d] hidden lg:flex items-center bg-white py-2 px-3 rounded-full  hover:bg-gray-50 transition-colors shadow-sm">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+
+          <div class="relative lang-container z-[200]">
+            <div class="flex items-center gap-2 bg-white px-3 py-1.5 rounded-full  lang-toggle shadow-sm">
               <img src="img/azerbaijan.png" alt="" class="w-5 h-5 rounded-full object-cover" />
-              <span class="uppercase text-[13px] font-bold text-black">AZ</span>
-              <i class="fa-solid fa-caret-down text-gray-300 text-[10px] ml-0.5"></i>
+              <span class="uppercase text-sm font-bold text-black">AZ</span>
+              <i class="fa-solid fa-caret-down text-gray-300 text-xs transition-transform duration-300 icon-caret"></i>
             </div>
 
             <div
-              class="absolute top-full left-1/2 -translate-x-1/2 mt-2 bg-white rounded-xl opacity-0 invisible group-hover:visible w-24 overflow-hidden z-[200]"
-            >
+              class="absolute top-[120%] left-1/2 -translate-x-1/2 mt-2 bg-white rounded-xl opacity-0 invisible translate-y-2 transition-all duration-300 ease-in-out w-24 overflow-hidden z-[200] shadow-xl border border-gray-100 lang-dropdown">
               <div
-                class="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-white rotate-45 z-0"
-              ></div>
+                class="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-white rotate-45 z-0 border-t border-l border-gray-100">
+              </div>
               <div class="relative bg-white flex flex-col z-10 py-1">
-                <a
-                  href="#"
-                  class="flex items-center gap-2 px-3 py-2 hover:bg-gray-50  duration-400 "
-                >
-                  <img
-                    src="img/azerbaijan.png"
-                    alt=""
-                    class="w-5 h-5 rounded-full object-cover border border-gray-100"
-                  />
+                <a href="#" class="flex items-center gap-2 px-3 py-2 hover:bg-gray-50 transition-colors">
+                  <img src="img/azerbaijan.png" alt="" class="w-5 h-5 rounded-full object-cover" />
                   <span class="uppercase text-sm font-bold text-[#484848]">AZ</span>
                 </a>
-                <a
-                  href="#"
-                  class="flex items-center gap-2 px-3 py-2 hover:bg-gray-50  duration-400 "
-                >
-                  <img
-                    src="img/ru.png"
-                    alt=""
-                    class="w-5 h-5 rounded-full object-cover border border-gray-100"
-                  />
+                <a href="#" class="flex items-center gap-2 px-3 py-2 hover:bg-gray-50 transition-colors">
+                  <img src="img/russia.png" alt="" class="w-5 h-5 rounded-full object-cover" />
                   <span class="uppercase text-sm font-bold text-[#484848]">RU</span>
                 </a>
-                <a
-                  href="#"
-                  class="flex items-center gap-2 px-3 py-2 hover:bg-gray-50  duration-400 "
-                >
-                  <img
-                    src="img/en.png"
-                    alt=""
-                    class="w-5 h-5 rounded-full object-cover border border-gray-100"
-                  />
+                <a href="#" class="flex items-center gap-2 px-3 py-2 hover:bg-gray-50 transition-colors">
+                  <img src="img/united-kingdom.png" alt="" class="w-5 h-5 rounded-full object-cover" />
                   <span class="uppercase text-sm font-bold text-[#484848]">EN</span>
                 </a>
               </div>
             </div>
           </div>
 
-          
-          <div
-            class="hidden lg:flex bg-white items-center px-3 py-1.5 lg:px-4 lg:py-1.5 text-sm gap-2 rounded-full shadow-sm"
-          >
-            <img src="img/callcolor.png" alt="" class="w-3.5 h-3.5 object-contain" />
-            <a href="tel:+99450 603 77 77" class="text-black font-bold text-[13px]"
-              >(+99450) 603 77 77</a
-            >
-          </div>
-
-          
-          <div class="flex lg:hidden flex-col gap-1.5">
-            <div class="w-8 h-[3px] bg-white rounded-full"></div>
-            <div class="w-8 h-[3px] bg-white rounded-full"></div>
-            <div class="w-5 h-[3px] bg-white rounded-full self-end"></div>
+          <div class="hidden lg:flex bg-white items-center px-3.5 py-1 text-sm gap-2 rounded-full">
+            <img src="img/callcolor.png" alt="" />
+            <a href="tel:+99450 603 77 77">(+99450) 603 77 77</a>
           </div>
         </div>
       </div>
     </div>
-    
-    <header class="header-gradient min-h-[95vh] relative overflow-hidden flex flex-col">
-      <div class="container">
-        <div class="flex py-2 items-center justify-between gap-1 mb-8 px-3.5 lg:px-0">
-          <img src="img/logo-new.png" class="w-40  z-20 py-5" />
-          <ul class="hidden font-semibold lg:flex flex-wrap items-center px-2.5 text-white gap-3.5">
-            <li>
-              <a href="#" class="hover:text-[#f58220] block">Haqqımızda</a>
-            </li>
-            <li>
-              <a href="#" class="hover:text-[#f58220] block">Yeni turlar</a>
-            </li>
-            <li>
-              <a href="#" class="hover:text-[#f58220] block">Xidmətlər</a>
-            </li>
-            <li>
-              <a href="#" class="hover:text-[#f58220] block">Azərbaycan turları</a>
-            </li>
-            <li>
-              <a href="#" class="hover:text-[#f58220] block">Korporativ əməkdaşlıq</a>
-            </li>
-            <li>
-              <a href="#" class="hover:text-[#f58220] block">Əlaqə</a>
-            </li>
-          </ul>
-          <div class="flex items-center gap-3.5">
-            <div class="text-[#f6892d] hidden lg:flex items-center bg-white py-2 px-3 rounded-full">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </div>
-            
-            <div class="relative group z-50">
-              <div class="flex items-center gap-2 bg-white px-3 py-1.5 rounded-full">
-                <img src="img/azerbaijan.png" alt="" class="w-5 h-5 rounded-full object-cover" />
-                <span class="uppercase text-sm font-bold text-black">AZ</span>
-                <i class="fa-solid fa-caret-down text-gray-300 text-xs"></i>
-              </div>
+    <img src="img/cloud8.png" class="absolute bottom-0 left-0 w-full h-auto z-[1]" alt="" />
+    <img src="img/cloud2.png" class="absolute bottom-[-10%] left-[-10%] w-[120%] h-auto z-[3]" alt="" />
 
-              <div
-                class="absolute top-full left-1/2 -translate-x-1/2 mt-2 bg-white rounded-xl opacity-0 invisible group-hover:visible w-24 overflow-hidden z-[200]"
-              >
-                <div
-                  class="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-white rotate-45 z-0"
-                ></div>
-                <div class="relative bg-white flex flex-col z-10 py-1">
-                  <a
-                    href="#"
-                    class="flex items-center gap-2 px-3 py-2 hover:bg-gray-50  duration-400 "
-                  >
-                    <img
-                      src="img/azerbaijan.png"
-                      alt=""
-                      class="w-5 h-5 rounded-full object-cover border border-gray-100"
-                    />
-                    <span class="uppercase text-sm font-bold text-[#484848]">AZ</span>
-                  </a>
-                  <a
-                    href="#"
-                    class="flex items-center gap-2 px-3 py-2 hover:bg-gray-50  duration-400 "
-                  >
-                    <img
-                      src="img/russia.png"
-                      alt=""
-                      class="w-5 h-5 rounded-full object-cover border border-gray-100"
-                    />
-                    <span class="uppercase text-sm font-bold text-[#484848]">RU</span>
-                  </a>
-                  <a
-                    href="#"
-                    class="flex items-center gap-2 px-3 py-2 hover:bg-gray-50  duration-400 "
-                  >
-                    <img
-                      src="img/united-kingdom.png"
-                      alt=""
-                      class="w-5 h-5 rounded-full object-cover border border-gray-100"
-                    />
-                    <span class="uppercase text-sm font-bold text-[#484848]">EN</span>
-                  </a>
-                </div>
-              </div>
-            </div>
+    <img src="img/baku.png" class="absolute bottom-[40%] left-0 w-96 md:w-fit z-[2] opacity-70" alt="" />
+    <img src="img/fly.png" id="hero-plane" class="absolute left-[-400px] top-[15%] w-60 lg:w-80 z-4" alt="Təyyarə" />
 
-            <div
-              class="hidden lg:flex bg-white items-center px-3.5 py-1 text-sm gap-2 rounded-full"
-            >
-              <img src="img/callcolor.png" alt="" />
-              <a href="tel:+99450 603 77 77">(+99450) 603 77 77</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img src="img/cloud8.png" class="absolute bottom-0 left-0 w-full h-auto z-[1]" alt="" />
-      <img
-        src="img/cloud2.png"
-        class="absolute bottom-[-10%] left-[-10%] w-[120%] h-auto z-[3]"
-        alt=""
-      />
-
-      <img
-        src="img/baku.png"
-        class="absolute bottom-[40%] left-0 w-96 md:w-fit z-[2] opacity-70"
-        alt=""
-      />
-      <img
-        src="img/fly.png"
-        id="hero-plane"
-        class="absolute left-[-400px] top-[15%] w-60 lg:w-80 z-4"
-        alt="Təyyarə"
-      />
-
+    <div
+      class="px-4 lg:px-0 relative flex md:items-end flex-col lg:flex-row items-center justify-between z-10 py-12 lg:py-0 gap-12 lg:gap-0 pb-24 lg:pb-0">
       <div
-        class="px-4 lg:px-0 relative    flex  md:items-end flex-col lg:flex-row items-center justify-between z-10 py-12 lg:py-0"
-      >
-        <div
-          class="max-w-[1400px] mx-auto  lg:w-[45%] flex items-center   justify-center lg:justify-start gap-6 lg:gap-10 mb-10 lg:mb-0 relative z-[5]"
-        >
-          <div class="flex flex-col items-center gap-4 lg:gap-8 relative  -mt-10 md:-mt-40 z-20">
-            <div class="absolute h-[95%] w-[1.5px] bg-[#1e419b] -z-10 top-[4%]"></div>
-            <div
-              class="hero-dot w-5 h-5 rounded-full border-2 border-[#f58220] flex items-center justify-center duration-300"
-            >
-              <div class="w-2 h-2 rounded-full bg-[#1e419b]"></div>
-            </div>
-            <div class="hero-dot w-2 h-2 rounded-full bg-[#1e419b] duration-300"></div>
-            <div class="hero-dot w-2 h-2 rounded-full bg-[#1e419b] duration-300"></div>
-            <div class="hero-dot w-2 h-2 rounded-full bg-[#1e419b] duration-300"></div>
-            <div class="hero-dot w-2 h-2 rounded-full bg-[#1e419b] duration-300"></div>
-          </div>
-
-          <div class="ml-2 f not-target:z-20">
-            <h1
-              id="hero-title"
-              class="text-[#f58220] font-black text-5xl md:text-7xl lg:text-8xl uppercase duration-300"
-              style="
-                font-family:
-                  Arial Black,
-                  Impact,
-                  sans-serif;
-              "
-            >
-              Moskva
-            </h1>
-            <p
-              id="hero-subtitle"
-              class="text-sm md:text-lg lg:text-xl font-semibold mt-2 uppercase text-[#111] mb-12 lg:mb-20 duration-300"
-            >
-              Gəz, gəz və yenə gəz
-            </p>
-
-            <div class="flex gap-2 sm:gap-3 lg:gap-5 justify-center lg:justify-start mt-4">
-                <a
-                href="#"
-                class="w-16 h-16 lg:w-[85px]  lg:h-[85px] border-[1.5px]  px-[5px]  border-[#1e419b]   duration-400     rounded-2xl lg:rounded-xl flex flex-col items-center justify-center text-[#1e419b] hover:bg-[#1e419b] hover:text-white bg-white/20 backdrop-blur-sm shadow-sm"
-              >
-                <i class="fa-solid fa-plane text-lg lg:text-2xl mb-1"></i>
-                <span class="text-[10px] lg:text-xs font-semibold text-center">Aviabilet</span>
-              </a>
-                <a
-                href="#"
-                class="w-16 h-16 lg:w-[85px]  lg:h-[85px] border-[1.5px]  px-[5px]  border-[#1e419b]   duration-400     rounded-2xl lg:rounded-xl flex flex-col items-center justify-center text-[#1e419b] hover:bg-[#1e419b] hover:text-white bg-white/20 backdrop-blur-sm shadow-sm"
-              >
-                <i class="fa-solid fa-car text-lg lg:text-2xl mb-1"></i>
-                <span class="text-[10px] lg:text-xs font-semibold text-center">Rent a car</span>
-              </a>
-              <a
-                href="#"
-                class="w-16 h-16 lg:w-[85px]  lg:h-[85px] border-[1.5px]  px-[5px]  border-[#1e419b]   duration-400     rounded-2xl lg:rounded-xl flex flex-col items-center justify-center text-[#1e419b] hover:bg-[#1e419b] hover:text-white bg-white/20 backdrop-blur-sm shadow-sm"
-              >
-                <i class="fa-solid fa-bed text-lg lg:text-2xl mb-1"></i>
-                <span class="text-[10px] lg:text-xs font-semibold text-center">Otellər</span>
-              </a>
-                <a
-                href="#"
-                class="w-16 h-16 lg:w-[85px]  lg:h-[85px] border-[1.5px]  px-[5px]  border-[#1e419b]   duration-400     rounded-2xl lg:rounded-xl flex flex-col items-center justify-center text-[#1e419b] hover:bg-[#1e419b] hover:text-white bg-white/20 backdrop-blur-sm shadow-sm"
-              >
-                <i class="fa-solid fa-signs-post text-lg lg:text-2xl mb-1"></i>
-                <span class="text-[10px] lg:text-xs font-semibold text-center">Turlar</span>
-              </a>
-               <a
-                href="#"
-                class="w-16 h-16 lg:w-[85px]  lg:h-[85px] border-[1.5px]  px-[5px]  border-[#1e419b]   duration-400     rounded-2xl lg:rounded-xl flex flex-col items-center justify-center text-[#1e419b] hover:bg-[#1e419b] hover:text-white bg-white/20 backdrop-blur-sm shadow-sm"
-              >
-                <i class="fa-solid fa-passport text-lg lg:text-2xl mb-1"></i>
-                <span class="text-[10px] lg:text-xs font-semibold text-center">Viza</span>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="w-full lg:w-[50%] relative h-96 lg:h-96 overflow-hidden lg:overflow-visible z-[5] flex items-center justify-center lg:justify-end mt-8 lg:mt-0"
-        >
-          <div class="swiper heroSwiper w-full">
-            <div class="swiper-wrapper">
-              <div
-                class="swiper-slide !w-60 lg:!w-[235px] !h-80 lg:!h-[265px] rounded-3xl overflow-hidden relative"
-              >
-                <img src="img/moskva_releated.jpg" class="w-full h-full object-cover" />
-                <div class="absolute inset-0 hero-slider-gradient"></div>
-                <div
-                  class="absolute bottom-6 lg:bottom-8 left-5 lg:left-6 right-5 lg:right-6 text-white"
-                >
-                  <h2 class="hero-slide-title text-xl lg:text-2xl font-bold uppercase drop-shadow-md">Moskva</h2>
-                  <p class="hero-slide-subtitle text-sm font-medium mt-1 text-gray-200">Gəz, gəz və yenə gəz</p>
-                </div>
-              </div>
-              <div
-                class="swiper-slide !w-60 lg:!w-[235px] !h-80 lg:!h-[265px] rounded-3xl overflow-hidden relative"
-              >
-                <img src="img/istanbul_releated.jpg" class="w-full h-full object-cover" />
-                <div class="absolute inset-0 hero-slider-gradient"></div>
-                <div
-                  class="absolute bottom-6 lg:bottom-8 left-5 lg:left-6 right-5 lg:right-6 text-white"
-                >
-                  <h2 class="hero-slide-title text-xl lg:text-2xl font-bold uppercase drop-shadow-md">İSTANBUL</h2>
-                  <p class="hero-slide-subtitle text-sm font-medium mt-1 text-gray-200">Tarix yazan şəhər</p>
-                </div>
-              </div>
-              <div
-                class="swiper-slide !w-60 lg:!w-[235px] !h-80 lg:!h-[265px] rounded-3xl overflow-hidden relative"
-              >
-                <img src="img/dubai_releated2.jpg" class="w-full h-full object-cover" />
-                <div class="absolute inset-0 hero-slider-gradient"></div>
-                <div
-                  class="absolute bottom-6 lg:bottom-8 left-5 lg:left-6 right-5 lg:right-6 text-white"
-                >
-                  <h2 class="hero-slide-title text-xl lg:text-2xl font-bold uppercase drop-shadow-md">Dubay</h2>
-                  <p class="hero-slide-subtitle text-sm font-medium mt-1 text-gray-200">Dünyanın günəşli bucağı</p>
-                </div>
-              </div>
-              <div
-                class="swiper-slide !w-60 lg:!w-[235px] !h-80 lg:!h-[265px] rounded-3xl overflow-hidden relative"
-              >
-                <img src="img/europe_releated3.jpg" class="w-full h-full object-cover" />
-                <div class="absolute inset-0 hero-slider-gradient"></div>
-                <div
-                  class="absolute bottom-6 lg:bottom-8 left-5 lg:left-6 right-5 lg:right-6 text-white"
-                >
-                  <h2 class="hero-slide-title text-xl lg:text-2xl font-bold uppercase drop-shadow-md">Avropa</h2>
-                  <p class="hero-slide-subtitle text-sm font-medium mt-1 text-gray-200">
-                    İlk qərar verilən destinasiya
-                  </p>
-                </div>
-              </div>
-              <div
-                class="swiper-slide !w-60 lg:!w-[235px] !h-80 lg:!h-[265px] rounded-3xl overflow-hidden relative"
-              >
-                <img src="img/maldiv_releated1.jpg" class="w-full h-full object-cover" />
-                <div class="absolute inset-0 hero-slider-gradient"></div>
-                <div
-                  class="absolute bottom-6 lg:bottom-8 left-5 lg:left-6 right-5 lg:right-6 text-white"
-                >
-                  <h2 class="hero-slide-title text-xl lg:text-2xl font-bold uppercase drop-shadow-md">Maldiv</h2>
-                  <p class="hero-slide-subtitle text-sm font-medium mt-1 text-gray-200">Bir yerüzü cənnəti</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div
-        class="fixed bottom-8 right-8 w-16 h-16 bg-[#f58220] rounded-full flex items-center justify-center text-white text-3xl z-[100]"
-      >
-        <i class="fa-solid fa-comment-dots"></i>
-      </div>
-    </header>
-    <main>
-      
-      <div class="py-10">
-        <div class="container px-3.5 lg:px-0">
-          <div class="flex items-center justify-between mb-8 flex-wrap gap-2">
-            <h3 class="font-bold text-2xl md:text-4xl">Qaynar turlar</h3>
-            <p class="hover:underline"><a href="">Bütün turlara bax</a></p>
-          </div>
+        class="max-w-[1400px] mx-auto  lg:w-[45%] flex items-center   justify-center lg:justify-start gap-6 lg:gap-10 mb-10 lg:mb-0 relative z-[5]">
+        <div class="flex flex-col items-center gap-4 lg:gap-8 relative  -mt-10 md:-mt-40 z-20">
+          <div class="absolute h-[95%] w-[1.5px] bg-[#1e419b] -z-10 top-[4%]"></div>
           <div
-            class="relative md:px-40 w-full bg-cover bg-center"
-            style="background-image: url(&quot;img/map.png&quot;)"
-          >
-            <div
-              class="absolute w-full left-0 top-[15vh] md:top-32 -translate-y-1/2 z-[50] flex items-center justify-between px-1 md:px-28"
-            >
-              <div
-                class="my-custom-prev flex items-center justify-center mr-5 w-11 h-11 md:w-12 md:h-12 hover:bg-[#f58220] hover:text-white text-gray-500 bg-[#f8f9fa] md:bg-white rounded-full z-[60]"
-              >
-                <i class="fa-solid fa-chevron-left"></i>
-              </div>
-              <div
-                class="my-custom-next flex items-center justify-center w-11 h-11 md:w-12 md:h-12 hover:bg-[#f58220] hover:text-white text-gray-500 bg-[#f8f9fa] md:bg-white rounded-full z-[60]"
-              >
-                <i class="fa-solid fa-chevron-right"></i>
-              </div>
-            </div>
+            class="hero-dot w-5 h-5 rounded-full border-2 border-[#f58220] flex items-center justify-center duration-300">
+            <div class="w-2 h-2 rounded-full bg-[#1e419b]"></div>
+          </div>
+          <div class="hero-dot w-2 h-2 rounded-full bg-[#1e419b] duration-300"></div>
+          <div class="hero-dot w-2 h-2 rounded-full bg-[#1e419b] duration-300"></div>
+          <div class="hero-dot w-2 h-2 rounded-full bg-[#1e419b] duration-300"></div>
+          <div class="hero-dot w-2 h-2 rounded-full bg-[#1e419b] duration-300"></div>
+        </div>
 
-            <div class="swiper mySwiper w-full">
-              <div class="swiper-wrapper pb-8 pt-2.5 px-3.5 items-stretch">
-                
-                <div class="swiper-slide px-3.5 flex">
-                  <div
-                    class="card w-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col shadow-md hover:shadow-xl transition-shadow duration-300 group"
-                  >
-                    <div class="h-55">
-                      <img
-                        src="img/1664460726_photo_5303063749382488715_y.jpg"
-                        class="w-full h-full object-cover"
-                        alt="İSTANBULDA BLACK FRİDAY"
-                      />
-                    </div>
-                    <div class="p-5 flex flex-col gap-3    justify-between">
-                      <p class="font-black uppercase text-black">İSTANBULDA BLACK FRİDAY</p>
-                      <p class="font-black text-sm text-black">23.11.2022 - 27.11.2022</p>
-                      <div class="mt-3.5">
-                        <div class="flex flex-wrap justify-between items-center text-sm mb-1 gap-2">
-                          <button
-                            class="bg-[#f58220] text-white text-[12px] font-bold rounded-3xl py-1.5 px-3 text-xs md:text-sm hover:bg-[#d96a14] hover:shadow-md"
-                          >
-                            559$ - 717$
-                          </button>
-                          <a
-                            href=""
-                            class="text-[#333] font-black text-sm     "
-                            >Ətraflı</a
-                          >
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+        <div class="ml-2  not-target:z-20">
+          <h1 id="hero-title" class="Futura text-[#f58220] font-black text-5xl md:text-7xl uppercase transition-opacity duration-300 ease-in-out">
+            Moskva
+          </h1>
+          <p id="hero-subtitle"
+            class="text-sm md:text-lg lg:text-xl font-semibold mt-2 uppercase text-[#111] mb-8 lg:mb-20 transition-opacity duration-300 ease-in-out">
+            Gəz, gəz və yenə gəz
+          </p>
 
-                
-                <div class="swiper-slide px-3.5 flex">
-                  <div
-                    class="card w-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col shadow-md hover:shadow-xl transition-shadow duration-300 group"
-                  >
-                    <div class="h-55">
-                      <img
-                        src="https://bravotravel.az/uploads/posts/2022-09/medium/1663771518_3.png"
-                        class="w-full h-full object-cover"
-                        alt="BANGKOK-PATTAYA"
-                      />
-                    </div>
-                    <div class="p-5 flex flex-col gap-3    justify-between">
-                      <p class="font-black uppercase text-black">BANGKOK-PATTAYA</p>
-                      <p class="font-black text-sm text-black">06.11.2022 - 13.11.2022</p>
-                      <div class="mt-3.5">
-                        <div class="flex flex-wrap justify-between items-center text-sm mb-1 gap-2">
-                          <button
-                            class="bg-[#f58220] text-white font-bold rounded-3xl py-1.5 px-3 text-xs md:text-sm hover:bg-[#d96a14] hover:shadow-md "
-                          >
-                            2455$ - 3696$
-                          </button>
-                          <a
-                            href=""
-                            class="text-[#333] font-black text-sm     "
-                            >Ətraflı</a
-                          >
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                
-                <div class="swiper-slide px-3.5 flex">
-                  <div
-                    class="card w-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col   hover:shadow-xl transition-shadow duration-300 group"
-                  >
-                    <div class="h-55">
-                      <img
-                        src="img/1662988718_photo_5251532023095476369_y.jpg"
-                        class="w-full h-full object-cover"
-                        alt="LAPLANDİYA YENİ İL"
-                      />
-                    </div>
-                    <div class="p-5 flex flex-col gap-3    justify-between">
-                      <p class="font-black uppercase text-black">LAPLANDİYA YENİ İL</p>
-                      <p class="font-black text-sm text-black">27.12.2022 - 03.01.2023</p>
-                      <div class="mt-3.5">
-                        <div class="flex flex-wrap justify-between items-center text-sm mb-1 gap-2">
-                           <button
-                            class="bg-[#f58220] text-white text-[12px] font-bold rounded-3xl py-1.5 px-3 text-xs md:text-sm hover:bg-[#d96a14] hover:shadow-md"
-                          >
-                            4570$ - 10090$
-                          </button>
-                          <a
-                            href=""
-                            class="text-[#333] font-black text-sm     "
-                            >Ətraflı</a
-                          >
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                
-                <div class="swiper-slide px-3.5 flex">
-                  <div
-                    class="card w-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col   hover:shadow-xl transition-shadow duration-300 group"
-                  >
-                    <div class="h-55">
-                      <img
-                        src="https://bravotravel.az/uploads/posts/2022-09/thumbs/1662541308_55.png"
-                        class="w-full h-full object-cover"
-                        alt="KAPADOKYA"
-                      />
-                    </div>
-                    <div class="p-5 flex flex-col gap-3    justify-between">
-                      <p class="font-black uppercase text-black">KAPADOKYA</p>
-                      <p class="font-black text-sm text-black">25.09 - 30.09</p>
-                      <div class="mt-3.5">
-                        <div class="flex flex-wrap justify-between items-center text-sm mb-1 gap-2">
-                           <button
-                            class="bg-[#f58220] text-white text-[12px] font-bold rounded-3xl py-1.5 px-3 text-xs md:text-sm hover:bg-[#d96a14] hover:shadow-md"
-                          >
-                            1640$ - 2210$
-                          </button>
-                          <a
-                            href=""
-                            class="text-[#333] font-black text-sm     "
-                            >Ətraflı</a
-                          >
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                
-                <div class="swiper-slide px-3.5 flex">
-                  <div
-                    class="card w-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col   hover:shadow-xl transition-shadow duration-300 group"
-                  >
-                    <div class="h-55">
-                      <img
-                        src="img/1661871303_8787.jpg"
-                        class="w-full h-full object-cover"
-                        alt="Dubay"
-                      />
-                    </div>
-                    <div class="p-5 flex flex-col gap-3    justify-between">
-                      <p class="font-black uppercase text-black">Dubay</p>
-                      <p class="font-black text-sm text-black">08.11.2022 - 12.11.2022</p>
-                      <div class="mt-3.5">
-                        <div class="flex flex-wrap justify-between items-center text-sm mb-1 gap-2">
-                           <button
-                            class="bg-[#f58220] text-white text-[12px] font-bold rounded-3xl py-1.5 px-3 text-xs md:text-sm hover:bg-[#d96a14] hover:shadow-md"
-                          >
-                            2725 AZN - 3200 AZN
-                          </button>
-                          <a
-                            href=""
-                            class="text-[#333] font-black text-sm     "
-                            >Ətraflı</a
-                          >
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                
-                <div class="swiper-slide px-3.5 flex">
-                  <div
-                    class="card w-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col   hover:shadow-xl transition-shadow duration-300 group"
-                  >
-                    <div class="h-55">
-                      <img
-                        src="img/1661869774_202.jpg"
-                        class="w-full h-full object-cover"
-                        alt="Cenevrə"
-                      />
-                    </div>
-                    <div class="p-5 flex flex-col gap-3    justify-between">
-                      <p class="font-black uppercase text-black">Cenevrə</p>
-                      <p class="font-black text-sm text-black">15.10.2022 - 21.10.2022</p>
-                      <div class="mt-3.5">
-                        <div class="flex flex-wrap justify-between items-center text-sm mb-1 gap-2">
-                           <button
-                            class="bg-[#f58220] text-white text-[12px] font-bold rounded-3xl py-1.5 px-3 text-xs md:text-sm hover:bg-[#d96a14] hover:shadow-md"
-                          >
-                            2460 USD - 4153 USD
-                          </button>
-                          <a
-                            href=""
-                            class="text-[#333] font-black text-sm     "
-                            >Ətraflı</a
-                          >
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                
-                <div class="swiper-slide px-3.5 flex">
-                  <div
-                    class="card w-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col   hover:shadow-xl transition-shadow duration-300 group"
-                  >
-                    <div class="h-55">
-                      <img
-                        src="img/1661869296_123123.jpg"
-                        class="w-full h-full object-cover"
-                        alt="Disneyland Paris"
-                      />
-                    </div>
-                    <div class="p-5 flex flex-col gap-3    justify-between">
-                      <p class="font-black uppercase text-black">Disneyland Paris</p>
-                      <p class="font-black text-sm text-black">20.10.2022 - 26.10.2022</p>
-                      <div class="mt-3.5">
-                        <div class="flex flex-wrap justify-between items-center text-sm mb-1 gap-2">
-                           <button
-                            class="bg-[#f58220] text-white text-[12px] font-bold rounded-3xl py-1.5 px-3 text-xs md:text-sm hover:bg-[#d96a14] hover:shadow-md"
-                          >
-                            4710 USD - 6480 USD
-                          </button>
-                          <a
-                            href=""
-                            class="text-[#333] font-black text-sm     "
-                            >Ətraflı</a
-                          >
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                
-                <div class="swiper-slide px-3.5 flex">
-                  <div
-                    class="card w-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col   hover:shadow-xl transition-shadow duration-300 group"
-                  >
-                    <div class="h-55">
-                      <img
-                        src="img/1661868740_2022-08-30-18.08.16.jpg"
-                        class="w-full h-full object-cover"
-                        alt="Tbilisi"
-                      />
-                    </div>
-                    <div class="p-5 flex flex-col gap-3    justify-between">
-                      <p class="font-black uppercase text-black">Tbilisi</p>
-                      <p class="font-black text-sm text-black">18.09.2022 - 23.09.2022</p>
-                      <div class="mt-3.5">
-                        <div class="flex flex-wrap justify-between items-center text-sm mb-1 gap-2">
-                           <button
-                            class="bg-[#f58220] text-white text-[12px] font-bold rounded-3xl py-1.5 px-3 text-xs md:text-sm hover:bg-[#d96a14] hover:shadow-md"
-                          >
-                            1729 AZN - 2426 AZN
-                          </button>
-                          <a
-                            href=""
-                            class="text-[#333] font-black text-sm     "
-                            >Ətraflı</a
-                          >
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                
-                <div class="swiper-slide px-3.5 flex">
-                  <div
-                    class="card w-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col   hover:shadow-xl transition-shadow duration-300 group"
-                  >
-                    <div class="h-55">
-                      <img
-                        src="img/1661433370_photo_2022-08-25_16-15-30.jpg"
-                        class="w-full h-full object-cover"
-                        alt="AMSTERDAM"
-                      />
-                    </div>
-                    <div class="p-5 flex flex-col gap-3    justify-between">
-                      <p class="font-black uppercase text-black">AMSTERDAM</p>
-                      <p class="font-black text-sm text-black">10.11.2022 - 15.11.2022</p>
-                      <div class="mt-3.5">
-                        <div class="flex flex-wrap justify-between items-center text-sm mb-1 gap-2">
-                           <button
-                            class="bg-[#f58220] text-white text-[12px] font-bold rounded-3xl py-1.5 px-3 text-xs md:text-sm hover:bg-[#d96a14] hover:shadow-md"
-                          >
-                            2707 AZN - 5174 AZN
-                          </button>
-                          <a
-                            href=""
-                            class="text-[#333] font-black text-sm     "
-                            >Ətraflı</a
-                          >
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                
-                <div class="swiper-slide px-3.5 flex">
-                  <div
-                    class="card w-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col   hover:shadow-xl transition-shadow duration-300 group"
-                  >
-                    <div class="h-55">
-                      <img
-                        src="img/1661432491_img_9995.jpg"
-                        class="w-full h-full object-cover"
-                        alt="Marmaris"
-                      />
-                    </div>
-                    <div class="p-5 flex flex-col gap-3    justify-between">
-                      <p class="font-black uppercase text-black">Marmaris</p>
-                      <p class="font-black text-sm text-black">02.09.2022 - 09.09.2022</p>
-                      <div class="mt-3.5">
-                        <div class="flex flex-wrap justify-between items-center text-sm mb-1 gap-2">
-                           <button
-                            class="bg-[#f58220] text-white text-[12px] font-bold rounded-3xl py-1.5 px-3 text-xs md:text-sm hover:bg-[#d96a14] hover:shadow-md"
-                          >
-                            1874 USD - 2040 USD
-                          </button>
-                          <a href="" class="text-[#333] font-black text-sm   "
-                            >Ətraflı</a
-                          >
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div class="flex gap-2 sm:gap-3 lg:gap-5 justify-center lg:justify-start mt-4">
+            <a href="#"
+              class="w-16 h-16 lg:w-[85px]  lg:h-[85px] border-[1.5px]  px-[5px]  border-[#1e419b]   duration-400     rounded-2xl lg:rounded-xl flex flex-col items-center justify-center text-[#1e419b] hover:bg-[#1e419b] hover:text-white bg-white/20 backdrop-blur-sm shadow-sm">
+              <i class="fa-solid fa-plane text-lg lg:text-2xl mb-1"></i>
+              <span class="text-[10px] lg:text-xs font-semibold text-center">Aviabilet</span>
+            </a>
+            <a href="#"
+              class="w-16 h-16 lg:w-[85px]  lg:h-[85px] border-[1.5px]  px-[5px]  border-[#1e419b]   duration-400     rounded-2xl lg:rounded-xl flex flex-col items-center justify-center text-[#1e419b] hover:bg-[#1e419b] hover:text-white bg-white/20 backdrop-blur-sm shadow-sm">
+              <i class="fa-solid fa-car text-lg lg:text-2xl mb-1"></i>
+              <span class="text-[10px] lg:text-xs font-semibold text-center">Rent a car</span>
+            </a>
+            <a href="#"
+              class="w-16 h-16 lg:w-[85px]  lg:h-[85px] border-[1.5px]  px-[5px]  border-[#1e419b]   duration-400     rounded-2xl lg:rounded-xl flex flex-col items-center justify-center text-[#1e419b] hover:bg-[#1e419b] hover:text-white bg-white/20 backdrop-blur-sm shadow-sm">
+              <i class="fa-solid fa-bed text-lg lg:text-2xl mb-1"></i>
+              <span class="text-[10px] lg:text-xs font-semibold text-center">Otellər</span>
+            </a>
+            <a href="#"
+              class="w-16 h-16 lg:w-[85px]  lg:h-[85px] border-[1.5px]  px-[5px]  border-[#1e419b]   duration-400     rounded-2xl lg:rounded-xl flex flex-col items-center justify-center text-[#1e419b] hover:bg-[#1e419b] hover:text-white bg-white/20 backdrop-blur-sm shadow-sm">
+              <i class="fa-solid fa-signs-post text-lg lg:text-2xl mb-1"></i>
+              <span class="text-[10px] lg:text-xs font-semibold text-center">Turlar</span>
+            </a>
+            <a href="#"
+              class="w-16 h-16 lg:w-[85px]  lg:h-[85px] border-[1.5px]  px-[5px]  border-[#1e419b]   duration-400     rounded-2xl lg:rounded-xl flex flex-col items-center justify-center text-[#1e419b] hover:bg-[#1e419b] hover:text-white bg-white/20 backdrop-blur-sm shadow-sm">
+              <i class="fa-solid fa-passport text-lg lg:text-2xl mb-1"></i>
+              <span class="text-[10px] lg:text-xs font-semibold text-center">Viza</span>
+            </a>
           </div>
         </div>
       </div>
 
-      
-      <div class="container py-10 px-3.5">
-        <div class="flex items-center flex-wrap justify-between mb-8 gap-2">
-          <h3 class="font-bold text-2xl md:text-4xl">Ən yeni turlar</h3>
+      <div
+        class="w-full lg:w-[50%] relative  overflow-hidden lg:overflow-visible z-[5] flex items-center justify-center lg:justify-end mt-8 lg:mt-0">
+  <div class="swiper heroSwiper w-full">
+  <div class="swiper-wrapper">
+    
+    <div class="swiper-slide w-[260px] h-[340px] rounded-3xl overflow-hidden relative">
+      <img src="img/moskva_releated.jpg" class="w-full h-full object-cover absolute inset-0" />
+      <div class="absolute inset-0 hero-slider-gradient"></div>
+      <div class="absolute bottom-6 lg:bottom-8 left-5 lg:left-6 right-5 lg:right-6 text-white z-10">
+        <h2 class="text-xl lg:text-2xl font-bold uppercase drop-shadow-md">Moskva</h2>
+        <p class="text-sm font-medium mt-1 text-gray-200">Gəz, gəz və yenə gəz</p>
+      </div>
+    </div>
+
+    <div class="swiper-slide w-[260px] h-[340px] rounded-3xl overflow-hidden relative">
+      <img src="img/istanbul_releated.jpg" class="w-full h-full object-cover absolute inset-0" />
+      <div class="absolute inset-0 hero-slider-gradient"></div>
+      <div class="absolute bottom-6 lg:bottom-8 left-5 lg:left-6 right-5 lg:right-6 text-white z-10">
+        <h2 class="text-xl lg:text-2xl font-bold uppercase drop-shadow-md">İSTANBUL</h2>
+        <p class="text-sm font-medium mt-1 text-gray-200">Tarix yazan şəhər</p>
+      </div>
+    </div>
+
+    <div class="swiper-slide w-[260px] h-[340px] rounded-3xl overflow-hidden relative">
+      <img src="img/dubai_releated2.jpg" class="w-full h-full object-cover absolute inset-0" />
+      <div class="absolute inset-0 hero-slider-gradient"></div>
+      <div class="absolute bottom-6 lg:bottom-8 left-5 lg:left-6 right-5 lg:right-6 text-white z-10">
+        <h2 class="text-xl lg:text-2xl font-bold uppercase drop-shadow-md">Dubay</h2>
+        <p class="text-sm font-medium mt-1 text-gray-200">Dünyanın günəşli bucağı</p>
+      </div>
+    </div>
+
+    <div class="swiper-slide w-[260px] h-[340px] rounded-3xl overflow-hidden relative">
+      <img src="img/europe_releated3.jpg" class="w-full h-full object-cover absolute inset-0" />
+      <div class="absolute inset-0 hero-slider-gradient"></div>
+      <div class="absolute bottom-6 lg:bottom-8 left-5 lg:left-6 right-5 lg:right-6 text-white z-10">
+        <h2 class="text-xl lg:text-2xl font-bold uppercase drop-shadow-md">Avropa</h2>
+        <p class="text-sm font-medium mt-1 text-gray-200">İlk qərar verilən destinasiya</p>
+      </div>
+    </div>
+
+    <div class="swiper-slide w-[260px] h-[340px] rounded-3xl overflow-hidden relative">
+      <img src="img/maldiv_releated1.jpg" class="w-full h-full object-cover absolute inset-0" />
+      <div class="absolute inset-0 hero-slider-gradient"></div>
+      <div class="absolute bottom-6 lg:bottom-8 left-5 lg:left-6 right-5 lg:right-6 text-white z-10">
+        <h2 class="text-xl lg:text-2xl font-bold uppercase drop-shadow-md">Maldiv</h2>
+        <p class="text-sm font-medium mt-1 text-gray-200">Bir yerüzü cənnəti</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+      </div>
+    </div>
+
+    <div
+      class="fixed bottom-8 right-8 w-16 h-16 bg-[#f58220] rounded-full flex items-center justify-center text-white text-3xl z-[100]">
+      <i class="fa-solid fa-comment-dots"></i>
+    </div>
+  </header>
+  <main>
+
+    <div class="py-10">
+      <div class="container px-3.5 lg:px-0">
+        <div class="flex items-center justify-between mb-8 flex-wrap gap-2">
+          <h3 class=" Futura font-bold text-2xl md:text-4xl">Qaynar turlar</h3>
           <p class="hover:underline"><a href="">Bütün turlara bax</a></p>
         </div>
-
-        <div class="grid mx-auto grid-cols-1 md:grid-cols-2 gap-4 lg:grid-cols-4">
+        <div class="relative md:px-40 w-full bg-cover bg-center" style="background-image: url(&quot;img/map.png&quot;)">
           <div
-            class="w-full w-96 mx-auto h-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col   hover:shadow-xl transition-shadow duration-300"
-          >
-            <div class="h-48">
-              <img
-                src="img/1671814845_320197824_474959374762484_6974740135922900451_n.jpg"
-                class="w-full h-full object-cover"
-                alt=""
-              />
+            class="absolute w-full left-0 top-1/2 -translate-y-1/2 z-[50] flex items-center justify-between px-2 md:px-16 pointer-events-none">
+            <div
+              class="my-custom-prev flex items-center justify-center w-10 h-10 md:w-14 md:h-14 hover:bg-[#f58220] hover:text-white text-[#1e419b] bg-white shadow-lg rounded-full z-[60]  transition-all duration-300  ">
+              <i class="fa-solid fa-chevron-left text-lg md:text-xl"></i>
             </div>
-            <div class="p-4  flex flex-col gap-2">
-              <p class="font-bold uppercase">BALİ TURU</p>
-              <p class="font-bold mb-[16px]">10.04.2023-20.04.2023</p>
-              <div class="mb-[30px]">
-                <div class="flex flex-wrap justify-between items-center text-sm  gap-2">
-                  <button class="bg-[#f58220] text-white text-[12px] rounded-2xl py-1 px-2">5885 AZN</button>
-                  <a href="" class="text-[#484848] font-semibold">Ətraflı</a>
-                </div>
-              </div>
+            <div
+              class="my-custom-next flex items-center justify-center w-10 h-10 md:w-14 md:h-14 hover:bg-[#f58220] hover:text-white text-[#1e419b] bg-white shadow-lg rounded-full z-[60]  transition-all duration-300  ">
+              <i class="fa-solid fa-chevron-right text-lg md:text-xl"></i>
             </div>
           </div>
 
-          <div
-            class="w-full  w-96 mx-auto   h-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col   hover:shadow-xl transition-shadow duration-300"
-          >
-            <div class="h-48">
-              <img
-                src="img/1671814744_319399561_1404265310312231_1180767154768122051_n.jpg"
-                class="w-full h-full object-cover"
-                alt=""
-              />
-            </div>
-            <div class="p-4 flex flex-col gap-2">
-              <p class="font-bold uppercase">GƏMİ TURU</p>
-             <p class="font-bold mb-[16px]">03.02.2023 - 10.02.2023</p>
-              <div class="mb-[30px]">
-                <div class="flex flex-wrap justify-between items-center text-sm    gap-2">
-                  <button class="bg-[#f58220] text-white text-[12px] rounded-2xl py-1 px-2">470 EUR</button>
-                  <a href="" class="text-[#484848] font-semibold">Ətraflı</a>
+          <div class="swiper mySwiper w-full">
+            <div class="swiper-wrapper pb-8 pt-2.5 px-3.5 items-stretch">
+
+              <div class="swiper-slide px-3.5 flex">
+                <div
+                  class="card w-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col shadow-md hover:shadow-xl transition-shadow duration-300 group">
+                  <div class="h-56">
+                    <img src="img/1664460726_photo_5303063749382488715_y.jpg" class="w-full h-full object-cover"
+                      alt="İSTANBULDA BLACK FRİDAY" />
+                  </div>
+                  <div class="p-4 flex flex-col gap-2">
+                    <p class="font-bold uppercase">İSTANBULDA BLACK FRİDAY</p>
+                    <p class="font-bold mb-[16px]">23.11.2022 - 27.11.2022</p>
+                    <div class="mb-[30px]">
+                      <div class="flex flex-wrap justify-between items-center text-sm gap-2">
+                        <button class="bg-[#f58220] text-white text-[12px] rounded-2xl py-1 px-2">
+                          559$ - 717$
+                        </button>
+                        <a href="" class="text-[#484848] font-bold">Ətraflı</a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
 
-          <div
-            class="w-full  w-96 mx-auto   h-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col   hover:shadow-xl transition-shadow duration-300"
-          >
-            <div class="h-48">
-              <img
-                src="img/1671814582_318927722_918446159123997_4786006261621954289_n.jpg"
-                class="w-full h-full object-cover"
-                alt=""
-              />
-            </div>
-            <div class="p-4 flex flex-col gap-2">
-              <p class="font-bold uppercase">İSTANBUL TURU</p>
-             <p class="font-bold mb-[16px]">16.01.2023 - 20.01.2023</p>
-              <div class="mb-[30px]">
-                <div class="flex flex-wrap justify-between items-center text-sm    gap-2">
-                  <button class="bg-[#f58220] text-white text-[12px] rounded-2xl py-1 px-2">858 USD</button>
-                  <a href="" class="text-[#484848] font-semibold">Ətraflı</a>
+
+              <div class="swiper-slide px-3.5 flex">
+                <div
+                  class="card w-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col shadow-md hover:shadow-xl transition-shadow duration-300 group">
+                  <div class="h-56">
+                    <img src="https://bravotravel.az/uploads/posts/2022-09/medium/1663771518_3.png"
+                      class="w-full h-full object-cover" alt="BANGKOK-PATTAYA" />
+                  </div>
+                  <div class="p-4 flex flex-col gap-2">
+                    <p class="font-bold uppercase">BANGKOK-PATTAYA</p>
+                    <p class="font-bold mb-[16px]">06.11.2022 - 13.11.2022</p>
+                    <div class="mb-[30px]">
+                      <div class="flex flex-wrap justify-between items-center text-sm gap-2">
+                        <button class="bg-[#f58220] text-white text-[12px] rounded-2xl py-1 px-2">
+                          2455$ - 3696$
+                        </button>
+                        <a href="" class="text-[#484848] font-bold">Ətraflı</a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
 
-          <div
-            class="w-full  w-96 mx-auto   h-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col   hover:shadow-xl transition-shadow duration-300"
-          >
-            <div class="h-48">
-              <img
-                src="img/1671814284_318778486_859201515268009_4533359742507559573_n.jpg"
-                class="w-full h-full object-cover"
-                alt=""
-              />
-            </div>
-            <div class="p-4 flex flex-col gap-2">
-              <p class="font-bold uppercase">ŞARM - ƏL - ŞEYX TURU</p>
-             <p class="font-bold mb-[16px]">11.02.2023 - 17.02.2023</p>
-              <div class="mb-[30px]">
-                <div class="flex flex-wrap justify-between items-center text-sm    gap-2">
-                  <button class="bg-[#f58220] text-white text-[12px] rounded-2xl py-1 px-2">1553 USD</button>
-                  <a href="" class="text-[#484848] font-semibold">Ətraflı</a>
+
+              <div class="swiper-slide px-3.5 flex">
+                <div
+                  class="card w-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col   hover:shadow-xl transition-shadow duration-300 group">
+                  <div class="h-56">
+                    <img src="img/1662988718_photo_5251532023095476369_y.jpg" class="w-full h-full object-cover"
+                      alt="LAPLANDİYA YENİ İL" />
+                  </div>
+                  <div class="p-4 flex flex-col gap-2">
+                    <p class="font-bold uppercase">LAPLANDİYA YENİ İL</p>
+                    <p class="font-bold mb-[16px]">27.12.2022 - 03.01.2023</p>
+                    <div class="mb-[30px]">
+                      <div class="flex flex-wrap justify-between items-center text-sm gap-2">
+                        <button class="bg-[#f58220] text-white text-[12px] rounded-2xl py-1 px-2">
+                          4570$ - 10090$
+                        </button>
+                        <a href="" class="text-[#484848] font-bold">Ətraflı</a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
 
-          <div
-            class="w-full  w-96 mx-auto   h-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col   hover:shadow-xl transition-shadow duration-300"
-          >
-            <div class="h-48">
-              <img
-                src="img/1671814035_318775077_534116688733795_7032595625630696824_n.jpg"
-                class="w-full h-full object-cover"
-                alt=""
-              />
-            </div>
-            <div class="p-4 flex flex-col gap-2">
-              <p class="font-bold uppercase">DUBAYDA NOVRUZ TƏTİLİ</p>
-             <p class="font-bold mb-[16px]">17.03.2023 - 21.03.2023</p>
-              <div class="mb-[30px]">
-                <div class="flex flex-wrap justify-between items-center text-sm    gap-2">
-                  <button class="bg-[#f58220] text-white text-[12px] rounded-2xl py-1 px-2">1525 USD</button>
-                  <a href="" class="text-[#484848] font-semibold">Ətraflı</a>
+
+              <div class="swiper-slide px-3.5 flex">
+                <div
+                  class="card w-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col   hover:shadow-xl transition-shadow duration-300 group">
+                  <div class="h-56">
+                    <img src="https://bravotravel.az/uploads/posts/2022-09/thumbs/1662541308_55.png"
+                      class="w-full h-full object-cover" alt="KAPADOKYA" />
+                  </div>
+                  <div class="p-4 flex flex-col gap-2">
+                    <p class="font-bold uppercase">KAPADOKYA</p>
+                    <p class="font-bold mb-[16px]">25.09 - 30.09</p>
+                    <div class="mb-[30px]">
+                      <div class="flex flex-wrap justify-between items-center text-sm gap-2">
+                        <button class="bg-[#f58220] text-white text-[12px] rounded-2xl py-1 px-2">
+                          1640$ - 2210$
+                        </button>
+                        <a href="" class="text-[#484848] font-bold">Ətraflı</a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
 
-          <div
-            class="w-full  w-96 mx-auto   h-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col   hover:shadow-xl transition-shadow duration-300"
-          >
-            <div class="h-48">
-              <img
-                src="img/1670236819_318027961_1104105636923431_9000607565790901101_n.jpg"
-                class="w-full h-full object-cover"
-                alt=""
-              />
-            </div>
-            <div class="p-4 flex flex-col gap-2">
-              <p class=" font- font-bold uppercase">ISTANBUL SEVGİLİLƏR GÜNÜ</p>
-             <p class="font-bold mb-[16px]">13.02.2023- 16.02.2023</p>
-              <div class="mb-[30px]">
-                <div class="flex flex-wrap justify-between items-center text-sm    gap-2">
-                  <button class="bg-[#f58220] text-white text-[12px] rounded-2xl py-1 px-2">1027 $</button>
-                  <a href="" class="text-[#484848] font-semibold">Ətraflı</a>
+
+              <div class="swiper-slide px-3.5 flex">
+                <div
+                  class="card w-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col   hover:shadow-xl transition-shadow duration-300 group">
+                  <div class="h-56">
+                    <img src="img/1661871303_8787.jpg" class="w-full h-full object-cover" alt="Dubay" />
+                  </div>
+                  <div class="p-4 flex flex-col gap-2">
+                    <p class="font-bold uppercase">Dubay</p>
+                    <p class="font-bold mb-[16px]">08.11.2022 - 12.11.2022</p>
+                    <div class="mb-[30px]">
+                      <div class="flex flex-wrap justify-between items-center text-sm gap-2">
+                        <button class="bg-[#f58220] text-white text-[12px] rounded-2xl py-1 px-2">
+                          2725 AZN - 3200 AZN
+                        </button>
+                        <a href="" class="text-[#484848] font-bold">Ətraflı</a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
 
-          <div
-            class="w-full  w-96 mx-auto   h-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col   hover:shadow-xl transition-shadow duration-300"
-          >
-            <div class="h-48">
-              <img
-                src="img/1670236742_313744199_642864464293237_62955742268487170_n.jpg"
-                class="w-full h-full object-cover"
-                alt=""
-              />
-            </div>
-            <div class="p-4 flex flex-col gap-2">
-              <p class="font-bold uppercase">SEYŞEL ADALARI</p>
-             <p class="font-bold mb-[16px]">15.04.2023-22.04.2023</p>
-              <div class="mb-[30px]">
-                <div class="flex flex-wrap justify-between items-center text-sm    gap-2">
-                  <button class="bg-[#f58220] text-white text-[12px] rounded-2xl py-1 px-2">4320 $</button>
-                  <a href="" class="text-[#484848] font-semibold">Ətraflı</a>
+
+              <div class="swiper-slide px-3.5 flex">
+                <div
+                  class="card w-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col   hover:shadow-xl transition-shadow duration-300 group">
+                  <div class="h-56">
+                    <img src="img/1661869774_202.jpg" class="w-full h-full object-cover" alt="Cenevrə" />
+                  </div>
+                  <div class="p-4 flex flex-col gap-2">
+                    <p class="font-bold uppercase">Cenevrə</p>
+                    <p class="font-bold mb-[16px]">15.10.2022 - 21.10.2022</p>
+                    <div class="mb-[30px]">
+                      <div class="flex flex-wrap justify-between items-center text-sm gap-2">
+                        <button class="bg-[#f58220] text-white text-[12px] rounded-2xl py-1 px-2">
+                          2460 USD - 4153 USD
+                        </button>
+                        <a href="" class="text-[#484848] font-bold">Ətraflı</a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
 
-          <div
-            class="w-full  w-96 mx-auto   h-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col   hover:shadow-xl transition-shadow duration-300"
-          >
-            <div class="h-48">
-              <img
-                src="img/1670236589_317376347_1587710911660299_1135005269473721542_n.jpg"
-                class="w-full h-full object-cover"
-                alt=""
-              />
-            </div>
-            <div class="p-4 flex flex-col gap-2">
-              <p class="font-bold uppercase">SANTORİNİ - MYKONOS</p>
-             <p class="font-bold mb-[16px]">19.03.2023-24.03.2023</p>
-              <div class="mb-[30px]">
-                <div class="flex flex-wrap justify-between items-center text-sm    gap-2">
-                  <button class="bg-[#f58220] text-white text-[12px] rounded-2xl py-1 px-2">2999 $</button>
-                  <a href="" class="text-[#484848] font-semibold">Ətraflı</a>
+
+              <div class="swiper-slide px-3.5 flex">
+                <div
+                  class="card w-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col   hover:shadow-xl transition-shadow duration-300 group">
+                  <div class="h-56">
+                    <img src="img/1661869296_123123.jpg" class="w-full h-full object-cover" alt="Disneyland Paris" />
+                  </div>
+                  <div class="p-4 flex flex-col gap-2">
+                    <p class="font-bold uppercase">Disneyland Paris</p>
+                    <p class="font-bold mb-[16px]">20.10.2022 - 26.10.2022</p>
+                    <div class="mb-[30px]">
+                      <div class="flex flex-wrap justify-between items-center text-sm gap-2">
+                        <button class="bg-[#f58220] text-white text-[12px] rounded-2xl py-1 px-2">
+                          4710 USD - 6480 USD
+                        </button>
+                        <a href="" class="text-[#484848] font-bold">Ətraflı</a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
 
-          <div
-            class="w-full  w-96 mx-auto   h-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col   hover:shadow-xl transition-shadow duration-300"
-          >
-            <div class="h-48">
-              <img
-                src="img/1670236495_317442380_876203460062741_5500239468445802104_n.jpg"
-                class="w-full h-full object-cover"
-                alt=""
-              />
-            </div>
-            <div class="p-4 flex flex-col gap-2">
-              <p class="font-bold uppercase">BALİ - Mistik tropik adada...</p>
-             <p class="font-bold mb-[16px]">10.04.2023- 17.04.2023</p>
-              <div class="mb-[30px]">
-                <div class="flex flex-wrap justify-between items-center text-sm    gap-2">
-                  <button class="bg-[#f58220] text-white text-[12px] rounded-2xl py-1 px-2">2675 AZN</button>
-                  <a href="" class="text-[#484848] font-semibold">Ətraflı</a>
+
+              <div class="swiper-slide px-3.5 flex">
+                <div
+                  class="card w-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col   hover:shadow-xl transition-shadow duration-300 group">
+                  <div class="h-56">
+                    <img src="img/1661868740_2022-08-30-18.08.16.jpg" class="w-full h-full object-cover"
+                      alt="Tbilisi" />
+                  </div>
+                  <div class="p-4 flex flex-col gap-2">
+                    <p class="font-bold uppercase">Tbilisi</p>
+                    <p class="font-bold mb-[16px]">18.09.2022 - 23.09.2022</p>
+                    <div class="mb-[30px]">
+                      <div class="flex flex-wrap justify-between items-center text-sm gap-2">
+                        <button class="bg-[#f58220] text-white text-[12px] rounded-2xl py-1 px-2">
+                          1729 AZN - 2426 AZN
+                        </button>
+                        <a href="" class="text-[#484848] font-bold">Ətraflı</a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
 
-          <div
-            class="w-full  w-96 mx-auto   h-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col   hover:shadow-xl transition-shadow duration-300"
-          >
-            <div class="h-48">
-              <img
-                src="img/1670236433_316420244_135306575981074_7140874793604679837_n.jpg"
-                class="w-full h-full object-cover"
-                alt=""
-              />
-            </div>
-            <div class="p-4 flex flex-col gap-2">
-              <p class="font-bold uppercase">ŞARM ƏL ŞEYX</p>
-             <p class="font-bold mb-[16px]">18.03.2023 - 24.03.2023</p>
-              <div class="mb-[30px]">
-                <div class="flex flex-wrap justify-between items-center text-sm    gap-2">
-                  <button class="bg-[#f58220] text-white text-[12px] rounded-2xl py-1 px-2">2340 USD</button>
-                  <a href="" class="text-[#484848] font-semibold">Ətraflı</a>
+
+              <div class="swiper-slide px-3.5 flex">
+                <div
+                  class="card w-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col   hover:shadow-xl transition-shadow duration-300 group">
+                  <div class="h-56">
+                    <img src="img/1661433370_photo_2022-08-25_16-15-30.jpg" class="w-full h-full object-cover"
+                      alt="AMSTERDAM" />
+                  </div>
+                  <div class="p-4 flex flex-col gap-2">
+                    <p class="font-bold uppercase">AMSTERDAM</p>
+                    <p class="font-bold mb-[16px]">10.11.2022 - 15.11.2022</p>
+                    <div class="mb-[30px]">
+                      <div class="flex flex-wrap justify-between items-center text-sm gap-2">
+                        <button class="bg-[#f58220] text-white text-[12px] rounded-2xl py-1 px-2">
+                          2707 AZN - 5174 AZN
+                        </button>
+                        <a href="" class="text-[#484848] font-bold">Ətraflı</a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
 
-          <div
-            class="w-full  w-96 mx-auto   h-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col   hover:shadow-xl transition-shadow duration-300"
-          >
-            <div class="h-48">
-              <img
-                src="img/1670236336_317088838_135032282675170_4362932843425191754_n.jpg"
-                class="w-full h-full object-cover"
-                alt=""
-              />
-            </div>
-            <div class="p-4 flex flex-col gap-2">
-              <p class="font-bold uppercase">GOA</p>
-             <p class="font-bold mb-[16px]">10.01.2023 - 16.01.2023</p>
-              <div class="mb-[30px]">
-                <div class="flex flex-wrap justify-between items-center text-sm    gap-2">
-                  <button class="bg-[#f58220] text-white text-[12px] rounded-2xl py-1 px-2">2570 AZN</button>
-                  <a href="" class="text-[#484848] font-semibold">Ətraflı</a>
-                </div>
-              </div>
-            </div>
-          </div>
 
-          <div
-            class="w-full  w-96 mx-auto   h-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col   hover:shadow-xl transition-shadow duration-300"
-          >
-            <div class="h-48">
-              <img
-                src="img/1670236213_316646683_722930792529591_3701633023910475299_n.jpg"
-                class="w-full h-full object-cover"
-                alt=""
-              />
-            </div>
-            <div class="p-4 flex flex-col gap-2">
-              <p class="font-bold uppercase">TBİLİSİ - Yeni il</p>
-             <p class="font-bold mb-[16px]">28.12.2022- 02.01.2023</p>
-              <div class="mb-[30px]">
-                <div class="flex flex-wrap justify-between items-center text-sm    gap-2">
-                  <button class="bg-[#f58220] text-white text-[12px] rounded-2xl py-1 px-2">2581 $</button>
-                  <a href="" class="text-[#484848] font-semibold">Ətraflı</a>
+              <div class="swiper-slide px-3.5 flex">
+                <div
+                  class="card w-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col   hover:shadow-xl transition-shadow duration-300 group">
+                  <div class="h-56">
+                    <img src="img/1661432491_img_9995.jpg" class="w-full h-full object-cover" alt="Marmaris" />
+                  </div>
+                  <div class="p-4 flex flex-col gap-2">
+                    <p class="font-bold uppercase">Marmaris</p>
+                    <p class="font-bold mb-[16px]">02.09.2022 - 09.09.2022</p>
+                    <div class="mb-[30px]">
+                      <div class="flex flex-wrap justify-between items-center text-sm gap-2">
+                        <button class="bg-[#f58220] text-white text-[12px] rounded-2xl py-1 px-2">
+                          1874 USD - 2040 USD
+                        </button>
+                        <a href="" class="text-[#484848] font-semibold">Ətraflı</a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      
-      <div class="bg-[#f7f7fb]">
-        <div class="container pt-12 pb-24 px-3.5 lg:px-0">
-          <div class="flex items-center flex-wrap gap-2 justify-between mb-8">
-            <h3 class="font-bold uppercase text-2xl md:text-4xl">Ölkə turları</h3>
-            <a href="">Bütün turlara bax</a>
-          </div>
-          <div class="grid gap-3.5 grid-cols-2 md:grid-cols-14 px-3.5 md:auto-rows-[180px]">
-            <div
-              class="aspect-square md:aspect-auto md:row-span-3 md:col-span-5 relative rounded-3xl overflow-hidden group"
-            >
-              <img src="img/maldiv.webp" class="object-cover w-full h-full" alt="Maldiv" />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 transition-opacity duration-300 group-hover:opacity-0"
-              ></div>
-              <div
-                class="absolute bottom-4 left-4 text-white transition-transform duration-300 group-hover:-translate-y-6"
-              >
-                <p class="font-bold text-xl">Maldiv</p>
-                <p class="text-sm">Bir yerüzü cənnəti</p>
-              </div>
-            </div>
+    </div>
 
-            <div
-              class="aspect-square md:aspect-auto rounded-3xl md:col-span-3 relative overflow-hidden group"
-            >
-              <img src="img/Istanbul.jpg" class="object-cover w-full h-full" />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 transition-opacity duration-300 group-hover:opacity-0"
-              ></div>
-              <div
-                class="absolute bottom-3 left-3 text-white transition-transform duration-300 group-hover:-translate-y-6"
-              >
-                <p class="font-bold">İstanbul</p>
-                <p class="text-xs">Tarix yazan şəhər</p>
-              </div>
-            </div>
-            <div
-              class="aspect-square md:aspect-auto rounded-3xl md:col-span-3 relative overflow-hidden group"
-            >
-              <img src="img/antalya.jpg" class="object-cover w-full h-full" />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 transition-opacity duration-300 group-hover:opacity-0"
-              ></div>
-              <div
-                class="absolute bottom-3 left-3 text-white transition-transform duration-300 group-hover:-translate-y-6"
-              >
-                <p class="font-bold">Antalya</p>
-                <p class="text-xs">Turizmin paytaxtı</p>
-              </div>
-            </div>
-            <div
-              class="aspect-square md:aspect-auto rounded-3xl md:col-span-3 relative overflow-hidden group"
-            >
-              <img src="img/bodrum.jpg" class="object-cover w-full h-full" />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 transition-opacity duration-300 group-hover:opacity-0"
-              ></div>
-              <div
-                class="absolute bottom-3 left-3 text-white transition-transform duration-300 group-hover:-translate-y-6"
-              >
-                <p class="font-bold">Bodrum</p>
-                <p class="text-xs">Gücünü təbiətdən alan şəhər</p>
-              </div>
-            </div>
-            <div
-              class="aspect-square md:aspect-auto rounded-3xl md:col-span-3 relative overflow-hidden group"
-            >
-              <img src="img/kemer.jpg" class="object-cover w-full h-full" />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 transition-opacity duration-300 group-hover:opacity-0"
-              ></div>
-              <div
-                class="absolute bottom-3 left-3 text-white transition-transform duration-300 group-hover:-translate-y-6"
-              >
-                <p class="font-bold">Kemer</p>
-                <p class="text-xs">Hekayələrin diyarı</p>
-              </div>
-            </div>
-            <div
-              class="aspect-square md:aspect-auto rounded-3xl md:col-span-3 relative overflow-hidden group"
-            >
-              <img src="img/kusadasi.jpg" class="object-cover w-full h-full" />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 transition-opacity duration-300 group-hover:opacity-0"
-              ></div>
-              <div
-                class="absolute bottom-3 left-3 text-white transition-transform duration-300 group-hover:-translate-y-6"
-              >
-                <p class="font-bold">Kuşadası</p>
-                <p class="text-xs">Xəyalların həyata çevrildiyi yer</p>
-              </div>
-            </div>
-            <div
-              class="aspect-square md:aspect-auto rounded-3xl md:col-span-3 relative overflow-hidden group"
-            >
-              <img src="img/marmaris.jpg" class="object-cover w-full h-full" />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 transition-opacity duration-300 group-hover:opacity-0"
-              ></div>
-              <div
-                class="absolute bottom-3 left-3 text-white transition-transform duration-300 group-hover:-translate-y-6"
-              >
-                <p class="font-bold">Marmaris</p>
-                <p class="text-xs">Sonsuz kəşf</p>
-              </div>
-            </div>
-            <div
-              class="aspect-square md:aspect-auto rounded-3xl md:col-span-3 relative overflow-hidden group"
-            >
-              <img src="img/moskva.jpg" class="object-cover w-full h-full" />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 transition-opacity duration-300 group-hover:opacity-0"
-              ></div>
-              <div
-                class="absolute bottom-3 left-3 text-white transition-transform duration-300 group-hover:-translate-y-6"
-              >
-                <p class="font-bold">Moskva</p>
-                <p class="text-xs">Gəz, gəz və yenə gəz</p>
-              </div>
-            </div>
-            <div
-              class="aspect-square md:aspect-auto rounded-3xl md:col-span-3 relative overflow-hidden group"
-            >
-              <img src="img/dubay.jpg" class="object-cover w-full h-full" />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 transition-opacity duration-300 group-hover:opacity-0"
-              ></div>
-              <div
-                class="absolute bottom-3 left-3 text-white transition-transform duration-300 group-hover:-translate-y-6"
-              >
-                <p class="font-bold">Dubay</p>
-                <p class="text-xs">Dünyanın günəşli bucağı</p>
-              </div>
-            </div>
-            <div
-              class="aspect-square md:aspect-auto rounded-3xl md:col-span-3 relative overflow-hidden group"
-            >
-              <img src="img/avropa.jpg" class="object-cover w-full h-full" />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 transition-opacity duration-300 group-hover:opacity-0"
-              ></div>
-              <div
-                class="absolute bottom-3 left-3 text-white transition-transform duration-300 group-hover:-translate-y-6"
-              >
-                <p class="font-bold">Avropa</p>
-                <p class="text-xs">İlk qərar verilən destinasiya</p>
+
+    <div class="container py-10 px-3.5">
+      <div class="flex items-center flex-wrap justify-between mb-8 gap-2">
+        <h3 class=" Futura font-bold text-2xl md:text-4xl">Ən yeni turlar</h3>
+        <p class="hover:underline"><a href="">Bütün turlara bax</a></p>
+      </div>
+
+      <div class="grid mx-auto grid-cols-1 md:grid-cols-2 gap-4 lg:grid-cols-4">
+        <div
+          class="w-full max-w-[340px] mx-auto h-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col shadow-md hover:shadow-xl transition-shadow duration-300">
+          <div class="h-48">
+            <img src="img/1671814845_320197824_474959374762484_6974740135922900451_n.jpg"
+              class="w-full h-full object-cover" alt="" />
+          </div>
+          <div class="p-4  flex flex-col gap-2">
+            <p class="font-bold uppercase">BALİ TURU</p>
+            <p class="font-bold mb-[16px]">10.04.2023-20.04.2023</p>
+            <div class="mb-[30px]">
+              <div class="flex flex-wrap justify-between items-center text-sm  gap-2">
+                <button class="bg-[#f58220] text-white text-[12px] rounded-2xl py-1 px-2">5885 AZN</button>
+                <a href="" class="Futura text-[#484848] font-bold">Ətraflı</a>
               </div>
             </div>
           </div>
         </div>
-      </div>
-
-      
-      <div
-        class="container pb-12.5 relative flex justify-center lg:justify-end items-center px-3.5 lg:px-0"
-      >
-        <img src="img/lady.png" class="hidden lg:block absolute left-15 top-0 -mt-18 z-20" alt="" />
 
         <div
-          class="bg-[#1e419b] relative z-10 min-h-100 my-12 w-full lg:w-[75%] mx-auto lg:mr-15 lg:ml-0 rounded-3xl p-[30px_20px] lg:p-[30px_97px_80px_97px] text-white"
-        >
+          class="w-full max-w-[340px] mx-auto h-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col shadow-md hover:shadow-xl transition-shadow duration-300">
+          <div class="h-48">
+            <img src="img/1671814744_319399561_1404265310312231_1180767154768122051_n.jpg"
+              class="w-full h-full object-cover" alt="" />
+          </div>
+          <div class="p-4 flex flex-col gap-2">
+            <p class="font-bold uppercase">GƏMİ TURU</p>
+            <p class="font-bold mb-[16px]">03.02.2023 - 10.02.2023</p>
+            <div class="mb-[30px]">
+              <div class="flex flex-wrap justify-between items-center text-sm    gap-2">
+                <button class="bg-[#f58220] text-white text-[12px] rounded-2xl py-1 px-2">470 EUR</button>
+                <a href="" class="Futura text-[#484848] font-bold">Ətraflı</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="w-full max-w-[340px] mx-auto h-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col shadow-md hover:shadow-xl transition-shadow duration-300">
+          <div class="h-48">
+            <img src="img/1671814582_318927722_918446159123997_4786006261621954289_n.jpg"
+              class="w-full h-full object-cover" alt="" />
+          </div>
+          <div class="p-4 flex flex-col gap-2">
+            <p class="font-bold uppercase">İSTANBUL TURU</p>
+            <p class="font-bold mb-[16px]">16.01.2023 - 20.01.2023</p>
+            <div class="mb-[30px]">
+              <div class="flex flex-wrap justify-between items-center text-sm    gap-2">
+                <button class="bg-[#f58220] text-white text-[12px] rounded-2xl py-1 px-2">858 USD</button>
+                <a href="" class="Futura text-[#484848] font-bold">Ətraflı</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="w-full max-w-[340px] mx-auto h-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col shadow-md hover:shadow-xl transition-shadow duration-300">
+          <div class="h-48">
+            <img src="img/1671814284_318778486_859201515268009_4533359742507559573_n.jpg"
+              class="w-full h-full object-cover" alt="" />
+          </div>
+          <div class="p-4 flex flex-col gap-2">
+            <p class="font-bold uppercase">ŞARM - ƏL - ŞEYX TURU</p>
+            <p class="font-bold mb-[16px]">11.02.2023 - 17.02.2023</p>
+            <div class="mb-[30px]">
+              <div class="flex flex-wrap justify-between items-center text-sm    gap-2">
+                <button class="bg-[#f58220] text-white text-[12px] rounded-2xl py-1 px-2">1553 USD</button>
+                <a href="" class="Futura text-[#484848] font-bold">Ətraflı</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="w-full max-w-[340px] mx-auto h-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col shadow-md hover:shadow-xl transition-shadow duration-300">
+          <div class="h-48">
+            <img src="img/1671814035_318775077_534116688733795_7032595625630696824_n.jpg"
+              class="w-full h-full object-cover" alt="" />
+          </div>
+          <div class="p-4 flex flex-col gap-2">
+            <p class="font-bold uppercase">DUBAYDA NOVRUZ TƏTİLİ</p>
+            <p class="font-bold mb-[16px]">17.03.2023 - 21.03.2023</p>
+            <div class="mb-[30px]">
+              <div class="flex flex-wrap justify-between items-center text-sm    gap-2">
+                <button class="bg-[#f58220] text-white text-[12px] rounded-2xl py-1 px-2">1525 USD</button>
+                <a href="" class="Futura text-[#484848] font-bold">Ətraflı</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="w-full max-w-[340px] mx-auto h-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col shadow-md hover:shadow-xl transition-shadow duration-300">
+          <div class="h-48">
+            <img src="img/1670236819_318027961_1104105636923431_9000607565790901101_n.jpg"
+              class="w-full h-full object-cover" alt="" />
+          </div>
+          <div class="p-4 flex flex-col gap-2">
+            <p class=" font- font-bold uppercase">ISTANBUL SEVGİLİLƏR GÜNÜ</p>
+            <p class="font-bold mb-[16px]">13.02.2023- 16.02.2023</p>
+            <div class="mb-[30px]">
+              <div class="flex flex-wrap justify-between items-center text-sm    gap-2">
+                <button class="bg-[#f58220] text-white text-[12px] rounded-2xl py-1 px-2">1027 $</button>
+                <a href="" class="Futura text-[#484848] font-bold">Ətraflı</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="w-full max-w-[340px] mx-auto h-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col shadow-md hover:shadow-xl transition-shadow duration-300">
+          <div class="h-48">
+            <img src="img/1670236742_313744199_642864464293237_62955742268487170_n.jpg"
+              class="w-full h-full object-cover" alt="" />
+          </div>
+          <div class="p-4 flex flex-col gap-2">
+            <p class="font-bold uppercase">SEYŞEL ADALARI</p>
+            <p class="font-bold mb-[16px]">15.04.2023-22.04.2023</p>
+            <div class="mb-[30px]">
+              <div class="flex flex-wrap justify-between items-center text-sm    gap-2">
+                <button class="bg-[#f58220] text-white text-[12px] rounded-2xl py-1 px-2">4320 $</button>
+                <a href="" class="Futura text-[#484848] font-bold">Ətraflı</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="w-full max-w-[340px] mx-auto h-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col shadow-md hover:shadow-xl transition-shadow duration-300">
+          <div class="h-48">
+            <img src="img/1670236589_317376347_1587710911660299_1135005269473721542_n.jpg"
+              class="w-full h-full object-cover" alt="" />
+          </div>
+          <div class="p-4 flex flex-col gap-2">
+            <p class="font-bold uppercase">SANTORİNİ - MYKONOS</p>
+            <p class="font-bold mb-[16px]">19.03.2023-24.03.2023</p>
+            <div class="mb-[30px]">
+              <div class="flex flex-wrap justify-between items-center text-sm    gap-2">
+                <button class="bg-[#f58220] text-white text-[12px] rounded-2xl py-1 px-2">2999 $</button>
+                <a href="" class="Futura text-[#484848] font-bold">Ətraflı</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="w-full max-w-[340px] mx-auto h-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col shadow-md hover:shadow-xl transition-shadow duration-300">
+          <div class="h-48">
+            <img src="img/1670236495_317442380_876203460062741_5500239468445802104_n.jpg"
+              class="w-full h-full object-cover" alt="" />
+          </div>
+          <div class="p-4 flex flex-col gap-2">
+            <p class="font-bold uppercase">BALİ - Mistik tropik adada...</p>
+            <p class="font-bold mb-[16px]">10.04.2023- 17.04.2023</p>
+            <div class="mb-[30px]">
+              <div class="flex flex-wrap justify-between items-center text-sm    gap-2">
+                <button class="bg-[#f58220] text-white text-[12px] rounded-2xl py-1 px-2">2675 AZN</button>
+                <a href="" class="Futura text-[#484848] font-bold">Ətraflı</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="w-full max-w-[340px] mx-auto h-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col shadow-md hover:shadow-xl transition-shadow duration-300">
+          <div class="h-48">
+            <img src="img/1670236433_316420244_135306575981074_7140874793604679837_n.jpg"
+              class="w-full h-full object-cover" alt="" />
+          </div>
+          <div class="p-4 flex flex-col gap-2">
+            <p class="font-bold uppercase">ŞARM ƏL ŞEYX</p>
+            <p class="font-bold mb-[16px]">18.03.2023 - 24.03.2023</p>
+            <div class="mb-[30px]">
+              <div class="flex flex-wrap justify-between items-center text-sm    gap-2">
+                <button class="bg-[#f58220] text-white text-[12px] rounded-2xl py-1 px-2">2340 USD</button>
+                <a href="" class="Futura text-[#484848] font-bold">Ətraflı</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="w-full max-w-[340px] mx-auto h-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col shadow-md hover:shadow-xl transition-shadow duration-300">
+          <div class="h-48">
+            <img src="img/1670236336_317088838_135032282675170_4362932843425191754_n.jpg"
+              class="w-full h-full object-cover" alt="" />
+          </div>
+          <div class="p-4 flex flex-col gap-2">
+            <p class="font-bold uppercase">GOA</p>
+            <p class="font-bold mb-[16px]">10.01.2023 - 16.01.2023</p>
+            <div class="mb-[30px]">
+              <div class="flex flex-wrap justify-between items-center text-sm    gap-2">
+                <button class="bg-[#f58220] text-white text-[12px] rounded-2xl py-1 px-2">2570 AZN</button>
+                <a href="" class="Futura text-[#484848] font-bold">Ətraflı</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="w-full max-w-[340px] mx-auto h-full rounded-2xl bg-[#f7f7fb] overflow-hidden font-semibold flex flex-col shadow-md hover:shadow-xl transition-shadow duration-300">
+          <div class="h-48">
+            <img src="img/1670236213_316646683_722930792529591_3701633023910475299_n.jpg"
+              class="w-full h-full object-cover" alt="" />
+          </div>
+          <div class="p-4 flex flex-col gap-2">
+            <p class="font-bold uppercase">TBİLİSİ - Yeni il</p>
+            <p class="font-bold mb-[16px]">28.12.2022- 02.01.2023</p>
+            <div class="mb-[30px]">
+              <div class="flex flex-wrap justify-between items-center text-sm    gap-2">
+                <button class="bg-[#f58220] text-white text-[12px] rounded-2xl py-1 px-2">2581 $</button>
+                <a href="" class="Futura text-[#484848] font-bold">Ətraflı</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-[#f7f7fb]">
+      <div class="container pt-12 pb-24 px-3.5 lg:px-0">
+        <div class="flex items-center flex-wrap gap-2 justify-between mb-8">
+          <h3 class=" Futura font-bold uppercase text-2xl md:text-4xl">Ölkə turları</h3>
+          <a href="">Bütün turlara bax</a>
+        </div>
+        <div class="grid gap-3.5 grid-cols-2 md:grid-cols-14 px-3.5 md:auto-rows-[180px]">
           <div
-            class="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-5 lg:mb-8"
-          >
-            <h3 class="font-semibold text-3xl lg:text-[40px]">Online sifariş</h3>
-            <img
-              src="img/Forma 1-5.png"
-              class="hidden lg:block h-fit w-fit lg:-mr-10 mt-2"
-              alt=""
-            />
+            class="aspect-square md:aspect-auto md:row-span-3 md:col-span-5 relative rounded-3xl overflow-hidden group">
+            <img src="img/maldiv.webp" class="object-cover w-full h-full transition-opacity duration-300" alt="Maldiv"
+              id="gallery-main-img" />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 transition-opacity duration-500 group-hover:opacity-60">
+            </div>
+            <div class="absolute bottom-4 left-4 text-white    duration-300 group-hover:-translate-y-6">
+              <p class="font-bold text-xl transition-opacity duration-300" id="gallery-main-title">Maldiv</p>
+              <p class="text-sm hidden md:block transition-opacity duration-300" id="gallery-main-subtitle">Bir yerüzü
+                cənnəti</p>
+            </div>
           </div>
 
-          <div class="flex flex-col lg:flex-row mb-3.5 gap-3.5 lg:gap-6 relative z-40">
-            <input
-              type="text"
-              placeholder="* Ad, Soyad"
-              class="rounded-full px-6 h-12 w-full lg:w-1/2 focus:outline-none text-[#484848] placeholder-[#c0c0c0] bg-white"
-            />
-            <input
-              type="text"
-              placeholder="* Mobil telefon"
-              class="rounded-full px-6 h-12 w-full lg:w-1/2 focus:outline-none text-[#484848] placeholder-[#c0c0c0] bg-white"
-            />
+          <div
+            class="aspect-square md:aspect-auto rounded-3xl md:col-span-3 relative overflow-hidden group gallery-thumb "
+            data-img="img/Istanbul.jpg" data-title="İstanbul" data-subtitle="Tarix yazan şəhər">
+            <img src="img/Istanbul.jpg" class="object-cover w-full h-full transition-transform duration-700  " />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 transition-opacity duration-500 group-hover:opacity-60">
+            </div>
+            <div class="absolute bottom-3 left-3 text-white transition-all duration-500 group-hover:-translate-y-2">
+              <p class="font-bold">İstanbul</p>
+              <p class="text-xs hidden md:block">Tarix yazan şəhər</p>
+            </div>
           </div>
+          <div
+            class="aspect-square md:aspect-auto rounded-3xl md:col-span-3 relative overflow-hidden group gallery-thumb "
+            data-img="img/antalya.jpg" data-title="Antalya" data-subtitle="Turizmin paytaxtı">
+            <img src="img/antalya.jpg" class="object-cover w-full h-full transition-transform duration-700  " />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 transition-opacity duration-500 group-hover:opacity-60">
+            </div>
+            <div class="absolute bottom-3 left-3 text-white transition-all duration-500 group-hover:-translate-y-2">
+              <p class="font-bold">Antalya</p>
+              <p class="text-xs hidden md:block">Turizmin paytaxtı</p>
+            </div>
+          </div>
+          <div
+            class="aspect-square md:aspect-auto rounded-3xl md:col-span-3 relative overflow-hidden group gallery-thumb "
+            data-img="img/bodrum.jpg" data-title="Bodrum" data-subtitle="Gücünü təbiətdən alan şəhər">
+            <img src="img/bodrum.jpg" class="object-cover w-full h-full transition-transform duration-700  " />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 transition-opacity duration-500 group-hover:opacity-60">
+            </div>
+            <div class="absolute bottom-3 left-3 text-white transition-all duration-500 group-hover:-translate-y-2">
+              <p class="font-bold">Bodrum</p>
+              <p class="text-xs hidden md:block">Gücünü təbiətdən alan şəhər</p>
+            </div>
+          </div>
+          <div
+            class="aspect-square md:aspect-auto rounded-3xl md:col-span-3 relative overflow-hidden group gallery-thumb "
+            data-img="img/kemer.jpg" data-title="Kemer" data-subtitle="Hekayələrin diyarı">
+            <img src="img/kemer.jpg" class="object-cover w-full h-full transition-transform duration-700  " />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 transition-opacity duration-500 group-hover:opacity-60">
+            </div>
+            <div class="absolute bottom-3 left-3 text-white transition-all duration-500 group-hover:-translate-y-2">
+              <p class="font-bold">Kemer</p>
+              <p class="text-xs hidden md:block">Hekayələrin diyarı</p>
+            </div>
+          </div>
+          <div
+            class="aspect-square md:aspect-auto rounded-3xl md:col-span-3 relative overflow-hidden group gallery-thumb "
+            data-img="img/kusadasi.jpg" data-title="Kuşadası" data-subtitle="Xəyalların həyata çevrildiyi yer">
+            <img src="img/kusadasi.jpg" class="object-cover w-full h-full transition-transform duration-700  " />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 transition-opacity duration-500 group-hover:opacity-60">
+            </div>
+            <div class="absolute bottom-3 left-3 text-white transition-all duration-500 group-hover:-translate-y-2">
+              <p class="font-bold">Kuşadası</p>
+              <p class="text-xs hidden md:block">Xəyalların həyata çevrildiyi yer</p>
+            </div>
+          </div>
+          <div
+            class="aspect-square md:aspect-auto rounded-3xl md:col-span-3 relative overflow-hidden group gallery-thumb "
+            data-img="img/marmaris.jpg" data-title="Marmaris" data-subtitle="Sonsuz kəşf">
+            <img src="img/marmaris.jpg" class="object-cover w-full h-full transition-transform duration-700  " />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 transition-opacity duration-500 group-hover:opacity-60">
+            </div>
+            <div class="absolute bottom-3 left-3 text-white transition-all duration-500 group-hover:-translate-y-2">
+              <p class="font-bold">Marmaris</p>
+              <p class="text-xs hidden md:block">Sonsuz kəşf</p>
+            </div>
+          </div>
+          <div
+            class="aspect-square md:aspect-auto rounded-3xl md:col-span-3 relative overflow-hidden group gallery-thumb "
+            data-img="img/moskva.jpg" data-title="Moskva" data-subtitle="Gəz, gəz və yenə gəz">
+            <img src="img/moskva.jpg" class="object-cover w-full h-full transition-transform duration-700  " />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 transition-opacity duration-500 group-hover:opacity-60">
+            </div>
+            <div class="absolute bottom-3 left-3 text-white transition-all duration-500 group-hover:-translate-y-2">
+              <p class="font-bold">Moskva</p>
+              <p class="text-xs hidden md:block">Gəz, gəz və yenə gəz</p>
+            </div>
+          </div>
+          <div
+            class="aspect-square md:aspect-auto rounded-3xl md:col-span-3 relative overflow-hidden group gallery-thumb "
+            data-img="img/dubay.jpg" data-title="Dubay" data-subtitle="Dünyanın günəşli bucağı">
+            <img src="img/dubay.jpg" class="object-cover w-full h-full transition-transform duration-700  " />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 transition-opacity duration-500 group-hover:opacity-60">
+            </div>
+            <div class="absolute bottom-3 left-3 text-white transition-all duration-500 group-hover:-translate-y-2">
+              <p class="font-bold">Dubay</p>
+              <p class="text-xs hidden md:block">Dünyanın günəşli bucağı</p>
+            </div>
+          </div>
+          <div
+            class="aspect-square md:aspect-auto rounded-3xl md:col-span-3 relative overflow-hidden group gallery-thumb "
+            data-img="img/avropa.jpg" data-title="Avropa" data-subtitle="İlk qərar verilən destinasiya">
+            <img src="img/avropa.jpg" class="object-cover w-full h-full transition-transform duration-700  " />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 transition-opacity duration-500 group-hover:opacity-60">
+            </div>
+            <div class="absolute bottom-3 left-3 text-white transition-all duration-500 group-hover:-translate-y-2">
+              <p class="font-bold">Avropa</p>
+              <p class="text-xs hidden md:block">İlk qərar verilən destinasiya</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-          <div class="flex flex-col relative z-40">
-            <select
-              name=""
-              id=""
-              class="rounded-full px-6 h-12 mb-3.5 w-full text-[#484848] bg-white focus:outline-none"
-            >
+
+    <div class="container pb-12.5 relative flex justify-center lg:justify-end items-center px-3.5 lg:px-0">
+      <img src="img/lady.png" class="hidden lg:block absolute left-15 top-0 -mt-18 z-20" alt="" />
+
+      <div
+        class="bg-[#1e419b] relative z-10 min-h-100 my-12 w-full lg:w-[75%] mx-auto lg:mr-15 lg:ml-0 rounded-3xl p-[30px_20px] lg:p-[30px_97px_80px_97px] text-white">
+        <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-5 lg:mb-8">
+          <h3 class=" Futura font-semibold text-3xl lg:text-[40px]">Online sifariş</h3>
+          <img src="img/Forma 1-5.png" class="hidden lg:block h-fit w-fit lg:-mr-10 mt-2" alt="" />
+        </div>
+
+        <div class="flex flex-col lg:flex-row mb-3.5 gap-3.5 lg:gap-6 relative z-40">
+          <input type="text" placeholder="* Ad, Soyad"
+            class="rounded-full px-6 h-12 w-full lg:w-1/2 focus:outline-none text-[#484848] placeholder-[#c0c0c0] bg-white" />
+          <input type="text" placeholder="* Mobil telefon"
+            class="rounded-full px-6 h-12 w-full lg:w-1/2 focus:outline-none text-[#484848] placeholder-[#c0c0c0] bg-white" />
+        </div>
+
+        <div class="flex flex-col relative z-40">
+          <div class="relative z-[60] w-full mb-3.5 custom-select-wrapper">
+            <!-- Native select (hidden but used for form submission) -->
+            <select name="service" class="hidden" id="service-select">
               <option value="" disabled selected>-- Xidməti seçin</option>
               <option value="otel">Otel rezervasiyaları</option>
               <option value="aviabilet">Aviabiletlər</option>
@@ -1246,106 +944,174 @@
               <option value="tecili">Təcili dəstək</option>
             </select>
 
-            <textarea
-              class="mb-3.5 px-6 py-3.5 text-[#484848] placeholder-[#c0c0c0] focus:outline-none resize-none bg-white w-full h-28 rounded-3xl"
-              placeholder="Əlavə qeydlərinizi bura yazın"
-            ></textarea>
-
-            <div>
-              <button class="bg-[#f58220] w-40 h-12 font-semibold rounded-full text-white">
-                Göndər
-              </button>
-            </div>
-          </div>
-
-          <div class="absolute bottom-1 left-[3%] md:w-55">
-            <img src="img/cloud9.png" alt="" class="w-[150px] object-contain" />
-          </div>
-          <div class="absolute -bottom-12 right-[40px] w-72 md:w-120">
-            <img src="img/cloud5.png" alt="" class="w-full object-contain" />
-          </div>
-        </div>
-      </div>
-      
-      <div class="bg-[#1e419b] relative h-auto overflow-hidden">
-        <div
-          class="flex flex-col md:flex-row justify-between items-center relative z-10 w-full md:h-fit"
-        >
-          <img
-            src="img/cloud3.png"
-            class="absolute bottom-0 left-0 w-[50%] md:w-auto md:static object-contain z-0"
-            alt=""
-          />
-
-          <div class="container px-4 md:px-12.5 relative z-10 w-full py-20 md:py-10">
+            <!-- Custom Select Trigger -->
             <div
-              class="flex flex-col md:flex-row justify-center md:justify-between items-center md:items-start text-center md:text-left text-white gap-10 md:gap-4 font-semibold"
-            >
-              <div class="flex flex-col md:flex-row items-center gap-4">
-                <div
-                  class="flex items-center bg-[#f58220] rounded-full w-16 h-16 md:w-11 md:h-11 justify-center"
-                >
-                  <img src="img/pin.png" alt="" class="w-5 md:w-3.5" />
-                </div>
-                <div class="flex flex-col gap-1 md:gap-0 mt-2 md:mt-0">
-                  <a href="" class=" w-72   block"
-                    >Azadlıq pr. 95/12. Bakı, Azərbaycan</a
-                  >
-                  <a href="" class=" w-72   block"
-                    >Əhməd Cəmil Küçəsi, 2, Bakı, Azərbaycan</a
-                  >
-                </div>
+              class="w-full h-12 bg-white rounded-full px-6 flex items-center justify-between  text-[#c0c0c0] custom-select-trigger transition-all duration-300 shadow-sm border border-transparent">
+              <span class="custom-select-value truncate select-none">-- Xidməti seçin</span>
+              <i class="fa-solid fa-chevron-down text-sm transition-transform duration-300 custom-select-icon"></i>
+            </div>
+
+            <!-- Custom Select Dropdown -->
+            <div
+              class="absolute left-0 top-0 w-full bg-white rounded-3xl shadow-xl opacity-0 invisible -translate-y-2 transition-all duration-300 custom-select-dropdown z-[100] overflow-hidden flex flex-col border border-gray-100">
+              <!-- Header of Dropdown (looks like the trigger but with border-b) -->
+              <div
+                class="w-full h-12 px-6 flex items-center justify-between  text-[#c0c0c0] border-b border-gray-100 shrink-0 custom-select-dropdown-close hover:bg-gray-50 transition-colors">
+                <span class="truncate select-none">-- Xidməti seçin</span>
+                <i class="fa-solid fa-chevron-up text-sm"></i>
               </div>
-              <div class="flex flex-col md:flex-row items-center gap-4">
+
+              <!-- Options List -->
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-x-2 gap-y-1 p-4 max-h-[250px] md:max-h-none overflow-y-auto w-full">
                 <div
-                  class="flex items-center bg-[#f58220] rounded-full w-16 h-16 md:w-11 md:h-11 justify-center"
-                >
-                  <img src="img/message.png" alt="" class="w-6 md:w-[18px]" />
-                </div>
-                <a href="mailto:info@bravotravel.az" class="mt-2 md:mt-0">info@bravotravel.az</a>
-              </div>
-              <div class="flex flex-col md:flex-row items-center gap-4">
+                  class="px-4 py-2 text-[#c0c0c0] hover:bg-gray-50 hover:text-[#f58220] rounded-xl  transition-colors custom-select-option font-medium"
+                  data-value="">-- Xidməti seçin</div>
                 <div
-                  class="flex items-center bg-[#f58220] rounded-full w-16 h-16 md:w-11 md:h-11 justify-center"
-                >
-                  <img src="img/call.png" alt="" class="w-6 md:w-[18px]" />
-                </div>
-                <a href="tel:+99450 603 77 77" class="mt-2 md:mt-0">(+99450) 050 603 77 77</a>
+                  class="px-4 py-2 text-[#484848] hover:bg-gray-50 hover:text-[#f58220] rounded-xl  transition-colors custom-select-option font-medium"
+                  data-value="otel">Otel rezervasiyaları</div>
+                <div
+                  class="px-4 py-2 text-[#484848] hover:bg-gray-50 hover:text-[#f58220] rounded-xl  transition-colors custom-select-option font-medium"
+                  data-value="aviabilet">Aviabiletlər</div>
+                <div
+                  class="px-4 py-2 text-[#484848] hover:bg-gray-50 hover:text-[#f58220] rounded-xl  transition-colors custom-select-option font-medium"
+                  data-value="vip">VİP xidmətlər</div>
+                <div
+                  class="px-4 py-2 text-[#484848] hover:bg-gray-50 hover:text-[#f58220] rounded-xl  transition-colors custom-select-option font-medium"
+                  data-value="korporativ">Korporativ biletlər</div>
+                <div
+                  class="px-4 py-2 text-[#484848] hover:bg-gray-50 hover:text-[#f58220] rounded-xl  transition-colors custom-select-option font-medium"
+                  data-value="viza">Viza Dəstəyi</div>
+                <div
+                  class="px-4 py-2 text-[#484848] hover:bg-gray-50 hover:text-[#f58220] rounded-xl  transition-colors custom-select-option font-medium"
+                  data-value="biznes">Biznes Turizmi</div>
+                <div
+                  class="px-4 py-2 text-[#484848] hover:bg-gray-50 hover:text-[#f58220] rounded-xl  transition-colors custom-select-option font-medium"
+                  data-value="transfer">Transfer</div>
+                <div
+                  class="px-4 py-2 text-[#484848] hover:bg-gray-50 hover:text-[#f58220] rounded-xl  transition-colors custom-select-option font-medium"
+                  data-value="sigorta">Sığorta</div>
+                <div
+                  class="px-4 py-2 text-[#484848] hover:bg-gray-50 hover:text-[#f58220] rounded-xl  transition-colors custom-select-option font-medium"
+                  data-value="saglamliq">Sağlamlıq Turizmi</div>
+                <div
+                  class="px-4 py-2 text-[#484848] hover:bg-gray-50 hover:text-[#f58220] rounded-xl  transition-colors custom-select-option font-medium"
+                  data-value="xarici">Xarici və Daxili turlar</div>
+                <div
+                  class="px-4 py-2 text-[#484848] hover:bg-gray-50 hover:text-[#f58220] rounded-xl  transition-colors custom-select-option font-medium"
+                  data-value="qrup">Qrup turları</div>
+                <div
+                  class="px-4 py-2 text-[#484848] hover:bg-gray-50 hover:text-[#f58220] rounded-xl  transition-colors custom-select-option font-medium"
+                  data-value="kruiz">Kruiz səyahəti</div>
+                <div
+                  class="px-4 py-2 text-[#484848] hover:bg-gray-50 hover:text-[#f58220] rounded-xl  transition-colors custom-select-option font-medium"
+                  data-value="komanda">Komanda inkişafı</div>
+                <div
+                  class="px-4 py-2 text-[#484848] hover:bg-gray-50 hover:text-[#f58220] rounded-xl  transition-colors custom-select-option font-medium"
+                  data-value="tecili">Təcili dəstək</div>
               </div>
             </div>
           </div>
 
-          <img
-            src="img/cloud4.png"
-            class="absolute bottom-0 right-0 w-[70%] md:w-auto md:static object-contain z-0"
-            alt=""
-          />
+          <textarea
+            class="mb-3.5 px-6 py-3.5 text-[#484848] placeholder-[#c0c0c0] focus:outline-none resize-none bg-white w-full h-28 rounded-3xl"
+            placeholder="Əlavə qeydlərinizi bura yazın"></textarea>
+
+          <div>
+            <button class="bg-[#f58220] w-40 h-12 font-semibold rounded-full text-white">
+              Göndər
+            </button>
+          </div>
+        </div>
+
+        <div class="absolute bottom-1 left-[3%] md:w-55">
+          <img src="img/cloud9.png" alt="" class="w-[150px] object-contain" />
+        </div>
+        <div class="absolute -bottom-12 right-[40px] w-72 md:w-120">
+          <img src="img/cloud5.png" alt="" class="w-full object-contain" />
         </div>
       </div>
-    </main>
-    
-    <footer class="bg-white">
-      <div class="container px-4">
-        <div class="flex flex-col md:flex-row items-center text-center py-5 justify-between gap-4">
-          <div class="flex text-white items-center text-sm gap-2">
-            <div class="rounded-full py-1 px-1.5 bg-[#808080]">
-              <i class="fa-brands fa-facebook-f"></i>
+    </div>
+
+    <div class="bg-[#1e419b] relative h-auto overflow-hidden">
+      <div class="flex flex-col md:flex-row justify-between items-center relative z-10 w-full md:h-fit">
+        <img src="img/cloud3.png" class="absolute bottom-0 left-0 w-[50%] md:w-auto md:static object-contain z-0"
+          alt="" />
+
+        <div class="container px-4 md:px-12.5 relative z-10 w-full py-20 md:py-10">
+          <div
+            class="flex flex-col md:flex-row justify-center md:justify-between items-center md:items-start text-center md:text-left text-white gap-10 md:gap-4 font-semibold">
+            <div class="flex flex-col md:flex-row items-center gap-4">
+              <div class="flex items-center bg-[#f58220] rounded-full w-16 h-16 md:w-11 md:h-11 justify-center">
+                <img src="img/pin.png" alt="" class="w-5 md:w-3.5" />
+              </div>
+              <div class="flex flex-col gap-1 md:gap-0 mt-2 md:mt-0">
+                <a href="" class="   w-72     block">Azadlıq pr. 95/12. Bakı, Azərbaycan</a>
+                <a href="" class="   w-72     block">Əhməd Cəmil Küçəsi, 2, Bakı, Azərbaycan</a>
+              </div>
             </div>
-            <div class="rounded-full py-1 px-1.5 bg-[#808080]">
-              <i class="fa-brands fa-instagram"></i>
+            <div class="flex flex-col md:flex-row items-center gap-4">
+              <div class="flex items-center bg-[#f58220] rounded-full w-16 h-16 md:w-11 md:h-11 justify-center">
+                <img src="img/message.png" alt="" class="w-6 md:w-[18px]" />
+              </div>
+              <a href="mailto:info@bravotravel.az" class="mt-2 md:mt-0">info@bravotravel.az</a>
+            </div>
+            <div class="flex flex-col md:flex-row items-center gap-4">
+              <div class="flex items-center bg-[#f58220] rounded-full w-16 h-16 md:w-11 md:h-11 justify-center">
+                <img src="img/call.png" alt="" class="w-6 md:w-[18px]" />
+              </div>
+              <a href="tel:+99450 603 77 77" class="mt-2 md:mt-0">(+99450) 050 603 77 77</a>
             </div>
           </div>
-
-          <p class="text-[#212529]">© Copyright 2026. Bütün hüquqları qorunur</p>
-          <p class="flex gap-2 items-center text-[#b2b2b2]">
-            Created by
-            <a href=""> <img src="img/ok_logo.png" class="w-20" alt="" /></a>
-          </p>
         </div>
-      </div>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 
-    <script src="app.js"></script>
-  </body>
+        <img src="img/cloud4.png" class="absolute bottom-0 right-0 w-[70%] md:w-auto md:static object-contain z-0"
+          alt="" />
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-white">
+    <div class="container px-4">
+      <div class="flex flex-col md:flex-row items-center text-center py-5 justify-between gap-4">
+        <div class="flex text-white items-center text-sm gap-2">
+          <div class="rounded-full py-1 px-1.5 bg-[#808080]">
+            <i class="fa-brands fa-facebook-f"></i>
+          </div>
+          <div class="rounded-full py-1 px-1.5 bg-[#808080]">
+            <i class="fa-brands fa-instagram"></i>
+          </div>
+        </div>
+
+        <p class="text-[#212529]">© Copyright 2026. Bütün hüquqları qorunur</p>
+        <p class="flex gap-2 items-center text-[#b2b2b2]">
+          Created by
+          <a href=""> <img src="img/ok_logo.png" class="w-20" alt="" /></a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <!-- Search Overlay -->
+  <div id="search-overlay"
+    class="fixed inset-0 bg-black/80 backdrop-blur-md z-[-1] opacity-0 invisible transition-all duration-300 flex items-center justify-center">
+    <div class="absolute top-8 right-8 text-white  hover:text-[#f58220] transition-colors duration-300"
+      id="close-search">
+      <i class="fa-solid fa-xmark text-4xl"></i>
+    </div>
+    <div class="w-full max-w-3xl px-4 transform    opacity-0 transition-all duration-500 ease-out"
+      id="search-content">
+      <form action="#" method="get" class="relative">
+        <input type="text" id="overlay-search-input" placeholder="Axtarış..."
+          class="w-full bg-transparent border-b-2 border-white/50 text-white text-3xl md:text-5xl py-4 outline-none placeholder-white/50 focus:border-[#f58220] transition-colors pr-16">
+        <button type="submit"
+          class="absolute right-0 top-1/2 -translate-y-1/2 text-white/50 hover:text-[#f58220] transition-colors">
+          <i class="fa-solid fa-magnifying-glass text-3xl md:text-4xl"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+  <script src="app.js"></script>
+</body>
+
 </html>

@@ -8,7 +8,6 @@
   font-family: "Futura";
   src: url("../Fonts/FuturaNewMedium-Reg.ttf") format("truetype");
   font-weight: 500;
-  font-style: normal;
   font-display: swap;
 }
 
@@ -44,14 +43,49 @@
   background-image: linear-gradient(-90deg, #8ec7ef, #1e419b);
 }
 
-.mySwiper .swiper-slide {
-  height: auto !important;
-  display: flex;
-}
-
 .container {
   max-width: 1180px;
   margin: 0 auto;
+}
+/* BU HİSSƏNİ CSS-DƏN SİL Kİ, BOYU UZANMASIN */
+.heroSwiper .swiper-slide-active {
+  height: 380px !important;
+}
+.heroSwiper .swiper-slide:not(.swiper-slide-active) {
+  height: 300px !important;
+}
+
+.heroSwiper .swiper-slide {
+  transition: all 0.4s ease-in-out !important;
+  /* Ölçülər qətiyyən DƏYİŞMƏYƏCƏK, boyu uzanmayacaq: */
+  height: 340px !important; 
+  width: 260px !important; 
+margin: auto;
+}
+
+/* Üzərinə gələndə (hover) sadəcə narıncı rəng effekti: */
+.heroSwiper .swiper-slide:hover::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #f58220;
+  opacity: 0.3;
+  border-radius: 1.5rem;
+  z-index: 1;
+}
+
+.heroSwiper .swiper-slide {
+  /* Slaydların ölçüsü mütləq olaraq eyni qalacaq */
+  width: 260px !important; 
+  height: 340px !important; 
+  display: flex;
+  transition: opacity 0.3s ease;
+}
+
+.heroSwiper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 @keyframes floatFly {
@@ -60,10 +94,7 @@
     opacity: 0;
   }
 
-  10% {
-    opacity: 1;
-  }
-
+  10%,
   90% {
     opacity: 1;
   }
@@ -77,15 +108,6 @@
 .animate-fly {
   animation: floatFly 20s linear infinite;
 }
-.heroSwiper .swiper-wrapper {
-  align-items: flex-start; 
-  transition: height 0.3s ease-out; 
-}
-
-
-.heroSwiper .swiper-slide {
-  height: auto !important;
-}
 
 @keyframes flyAcross {
   0% {
@@ -97,20 +119,6 @@
   }
 }
 
-.heroSwiper .swiper-slide {
-  display: flex;
-  align-items: flex-end;       
-}
-.heroSwiper .swiper-slide-active {
-  height: 300px !important;     
-}
-
-.heroSwiper .swiper-slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 24px;
-} 
 .fly-once {
   animation: flyAcross 3.5s linear;
 }
