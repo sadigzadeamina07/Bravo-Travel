@@ -29,16 +29,14 @@ document.addEventListener("DOMContentLoaded", () => {
 function initHeroSwiper() {
   const heroSwiper = new Swiper(".heroSwiper", {
     slidesPerView: "auto",
-    centeredSlides: false, // Sola yapışıq qalması üçün
-    spaceBetween: 20,
+    centeredSlides: false,
+    spaceBetween: 15,
     loop: true,
     speed: 800,
-    
-    // 1. Sürüşdürməni (mouse drag) TAMAMİLƏ bağlayır
-    allowTouchMove: false, 
-    
-    // 2. Swiper-in öz kliklə-atlan funksiyasını söndürürük (1-1 getməsi üçün bu mütləqdir)
-    slideToClickedSlide: false, 
+
+    allowTouchMove: false,
+
+    slideToClickedSlide: false,
 
     on: {
       slideChange: function () {
@@ -49,12 +47,12 @@ function initHeroSwiper() {
           updateHeroDots(index);
         }
       },
-      
+
       // 3. Əllə klik idarəetməsi (Həmişə 1 addım irəli)
       click: function (swiper, event) {
         // Kliklənən slaydı tapırıq
         const clickedSlide = event.target.closest('.swiper-slide');
-        
+
         // Əgər kliklənən slayd aktiv (ən soldakı) deyilsə, ancaq 1 addım irəli get
         if (clickedSlide && !clickedSlide.classList.contains('swiper-slide-active')) {
           swiper.slideNext();
@@ -68,15 +66,8 @@ function updateHeroText(index) {
   const subtitleEl = document.getElementById("hero-subtitle");
 
   if (titleEl && subtitleEl && heroData[index]) {
-    titleEl.style.opacity = "0";
-    subtitleEl.style.opacity = "0";
-
-    setTimeout(() => {
-      titleEl.innerText = heroData[index].title;
-      subtitleEl.innerText = heroData[index].subtitle;
-      titleEl.style.opacity = "1";
-      subtitleEl.style.opacity = "1";
-    }, 300);
+    titleEl.innerText = heroData[index].title;
+    subtitleEl.innerText = heroData[index].subtitle;
   }
 }
 
@@ -112,9 +103,13 @@ function initToursSwiper() {
       disableOnInteraction: false,
     },
     breakpoints: {
-      768: {
-        slidesPerView: 3,
+
+      900:{
+        slidesPerView: 2,
       },
+     1050:{
+          slidesPerView: 3,
+      }
     },
     navigation: {
       nextEl: ".my-custom-next",

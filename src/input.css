@@ -47,24 +47,19 @@
   max-width: 1180px;
   margin: 0 auto;
 }
-/* BU HİSSƏNİ CSS-DƏN SİL Kİ, BOYU UZANMASIN */
-.heroSwiper .swiper-slide-active {
-  height: 380px !important;
-}
+
 .heroSwiper .swiper-slide:not(.swiper-slide-active) {
   height: 300px !important;
 }
 
 .heroSwiper .swiper-slide {
+  background-color: transparent !important;
+  height: 400px !important;
+  width: 260px !important;
+  margin: auto;
   transition: all 0.4s ease-in-out !important;
-  /* Ölçülər qətiyyən DƏYİŞMƏYƏCƏK, boyu uzanmayacaq: */
-  height: 340px !important; 
-  width: 260px !important; 
-margin: auto;
 }
-
-/* Üzərinə gələndə (hover) sadəcə narıncı rəng effekti: */
-.heroSwiper .swiper-slide:hover::after {
+.heroSwiper .swiper-slide:not(.swiper-slide-active):hover::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -74,13 +69,15 @@ margin: auto;
   z-index: 1;
 }
 
-.heroSwiper .swiper-slide {
-  /* Slaydların ölçüsü mütləq olaraq eyni qalacaq */
-  width: 260px !important; 
-  height: 340px !important; 
-  display: flex;
-  transition: opacity 0.3s ease;
+#hero-title,
+#hero-subtitle {
+  #hero-title {
+    display: inline-block;
+    /* Bu mütləqdir! */
+    transition: transform 0.5s ease-in-out, opacity 0.5s;
+  }
 }
+
 
 .heroSwiper .swiper-slide img {
   width: 100%;
