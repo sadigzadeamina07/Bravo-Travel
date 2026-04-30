@@ -1,4 +1,15 @@
 
+window.addEventListener('DOMContentLoaded', () => {
+  const underlineeffect = document.querySelectorAll('#phone-number')
+  setTimeout(() => {
+    if (underlineeffect) {
+      underlineeffect.classList.add('.active')
+      console.log('clas elave olundu');
+
+    }
+
+  }, 300);
+})
 const heroData = [
   { title: "Moskva", subtitle: "Gəz, gəz və yenə gəz" },
   { title: "İSTANBUL", subtitle: "Tarix yazan şəhər" },
@@ -36,10 +47,10 @@ function initHeroSwiper() {
     slideToClickedSlide: false,
     breakpoints: {
       0: {
-        slidesPerView: 1,      
-        spaceBetween: 0,      
+        slidesPerView: 1,
+        spaceBetween: 0,
         centeredSlides: true,
-        allowTouchMove: true   
+        allowTouchMove: true
       },
       768: {
         slidesPerView: "auto",
