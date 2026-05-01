@@ -45,6 +45,10 @@ function initHeroSwiper() {
     speed: 800,
     allowTouchMove: false,
     slideToClickedSlide: false,
+    autoplay: {
+      delay: 3000, // 3 saniyə gözləmə vaxtı
+      disableOnInteraction: false, // İstifadəçi toxunduqdan sonra da davam etsin
+    },
     breakpoints: {
       0: {
         slidesPerView: 1,
@@ -211,16 +215,23 @@ function initCustomSelect() {
     const hiddenSelect = wrapper.querySelector('select');
     if (!trigger || !dropdown) return;
     function openDropdown() {
-      trigger.classList.add('opacity-0', 'invisible');
-      dropdown.classList.remove('opacity-0', 'invisible', '-translate-y-2');
-      dropdown.classList.add('opacity-100', 'visible', 'translate-y-0');
+      trigger.classList.add('hidden');
+      dropdown.classList.remove('hidden');
+
+      // Allow the DOM to update 'hidden' before transitioning
+      requestAnimationFrame(() => {
+        dropdown.classList.remove('opacity-0', 'max-h-0');
+        dropdown.classList.add('opacity-100', 'max-h-[500px]');
+      });
     }
     function closeDropdown() {
-      dropdown.classList.remove('opacity-100', 'visible', 'translate-y-0');
-      dropdown.classList.add('opacity-0', 'invisible', '-translate-y-2');
+      dropdown.classList.remove('opacity-100', 'max-h-[500px]');
+      dropdown.classList.add('opacity-0', 'max-h-0');
+
       setTimeout(() => {
-        trigger.classList.remove('opacity-0', 'invisible');
-      }, 150);
+        dropdown.classList.add('hidden');
+        trigger.classList.remove('hidden');
+      }, 300); // Wait for transition to finish
     }
     trigger.addEventListener('click', (e) => {
       e.preventDefault();
@@ -235,17 +246,24 @@ function initCustomSelect() {
     options.forEach(option => {
       option.addEventListener('click', (e) => {
         e.stopPropagation();
+        if (option.classList.contains('disabled')) return;
         const value = option.getAttribute('data-value');
         const text = option.innerText;
+
+        // Update display values
         valueDisplay.innerHTML = text;
-        wrapper.querySelector('.custom-select-dropdown-close span').innerHTML = text;
-        options.forEach(opt => {
-          if (opt === option) {
-            opt.classList.replace('text-[#484848]', 'text-[#c0c0c0]');
-          } else {
-            opt.classList.replace('text-[#c0c0c0]', 'text-[#484848]');
-          }
-        });
+        const dropdownCloseText = wrapper.querySelector('.custom-select-dropdown-close span');
+        if (dropdownCloseText) dropdownCloseText.innerHTML = text;
+
+        // Update trigger color based on selection
+        if (value === "") {
+          trigger.classList.remove('text-[#212529]');
+          trigger.classList.add('text-[#c0c0c0]');
+        } else {
+          trigger.classList.remove('text-[#c0c0c0]');
+          trigger.classList.add('text-[#212529]');
+        }
+
         if (hiddenSelect) {
           hiddenSelect.value = value;
           hiddenSelect.dispatchEvent(new Event('change'));
