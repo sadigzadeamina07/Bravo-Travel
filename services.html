@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Xidmətlər - Bravo Travel</title>
+  <link href="./src/output.css" rel="stylesheet" />
+  <link href="./src/input.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+</head>
+
+<body class="overflow-x-hidden bg-[#f7f7fb]">
+
+  <!-- Sticky Header (on Scroll) -->
+  <div id="sticky-header" class="fixed top-0 left-0 w-full z-[1000] -translate-y-full sticky-header-gradient">
+    <div class="absolute rotate-180 w-[105px] -z-10 top-0 left-0">
+      <img src="img/cloud4.png" alt="" />
+    </div>
+    <div class="container h-full px-[15px] flex items-center justify-between relative">
+      <div class="flex">
+        <a href="index.html" class="hidden md:flex items-center py-[20px] w-[130px] h-full relative">
+          <img src="img/logo-new-white.png" class="h-fit relative z-10" />
+        </a>
+        <a href="index.html" class="flex md:hidden items-center py-[20px] w-[130px] h-full relative">
+          <img src="img/logo-new.png" class="h-fit relative z-10" />
+        </a>
+
+        <ul class="font-futura hidden lg:flex items-center text-white font-medium relative nav-magic">
+          <li>
+            <a href="about.html" class="transition-colors px-[10px] duration-300 hover:text-[#f58220]">Haqqımızda</a>
+          </li>
+          <li>
+            <a href="new-tours.html" class="transition-colors px-[10px] duration-300 hover:text-[#f58220]">Yeni turlar</a>
+          </li>
+          <li>
+            <a href="services.html" class="transition-colors px-[10px] duration-300 text-[#f58220] hover:text-[#f58220]">Xidmətlər</a>
+          </li>
+          <li>
+            <a href="azerbaijan-tours.html" class="transition-colors px-[10px] duration-300 hover:text-[#f58220]">Azərbaycan turları</a>
+          </li>
+          <li>
+            <a href="cooperation.html" class="transition-colors px-[10px] duration-300 hover:text-[#f58220]">Korporativ əməkdaşlıq</a>
+          </li>
+          <li>
+            <a href="contact.html" class="transition-colors px-[10px] duration-300 hover:text-[#f58220]">Əlaqə</a>
+          </li>
+          <div class="nav-magic-line"></div>
+        </ul>
+      </div>
+
+      <div class="flex items-center gap-[15px] lg:gap-4">
+        <div class="search-toggle text-[#f58220] hidden lg:flex items-center justify-center bg-white w-8 h-8 rounded-full hover:bg-gray-50 transition-colors shadow-sm">
+          <i class="fa-solid fa-magnifying-glass text-[13px]"></i>
+        </div>
+
+        <div class="relative lang-container z-[200]">
+          <div class="flex items-center gap-1.5 bg-white px-2 py-1.5 lg:px-2.5 lg:py-1.5 rounded-full lang-toggle shadow-sm cursor-pointer">
+            <img src="img/azerbaijan.png" alt="" class="w-5 h-5 rounded-full object-cover" />
+            <span class="uppercase text-[13px] font-bold text-black">AZ</span>
+            <i class="fa-solid fa-caret-down text-gray-300 text-[10px] ml-0.5 transition-transform duration-300 icon-caret"></i>
+          </div>
+
+          <div class="absolute top-[120%] left-1/2 -translate-x-1/2 mt-2 bg-white rounded-xl opacity-0 invisible translate-y-2 transition-all duration-300 ease-in-out w-24 overflow-hidden z-[200] shadow-xl border border-gray-100 lang-dropdown">
+            <div class="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-white rotate-45 z-0 border-t border-l border-gray-100"></div>
+            <div class="relative bg-white flex flex-col z-10 py-1">
+              <a href="#" class="flex items-center gap-2 px-3 py-2 hover:bg-gray-50 transition-colors">
+                <img src="img/azerbaijan.png" alt="" class="w-5 h-5 rounded-full object-cover" />
+                <span class="uppercase text-sm font-bold text-[#484848]">AZ</span>
+              </a>
+              <a href="#" class="flex items-center gap-2 px-3 py-2 hover:bg-gray-50 transition-colors">
+                <img src="img/russia.png" alt="" class="w-5 h-5 rounded-full object-cover" />
+                <span class="uppercase text-sm font-bold text-[#484848]">RU</span>
+              </a>
+              <a href="#" class="flex items-center gap-2 px-3 py-2 hover:bg-gray-50 transition-colors">
+                <img src="img/united-kingdom.png" alt="" class="w-5 h-5 rounded-full object-cover" />
+                <span class="uppercase text-sm font-bold text-[#484848]">EN</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="hidden lg:flex bg-white items-center px-3 py-1.5 lg:px-4 lg:py-1.5 text-sm gap-2 rounded-full shadow-sm whitespace-nowrap">
+          <img src="img/callcolor.png" alt="" class="w-3.5 h-3.5 object-contain" />
+          <a href="tel:+99450 603 77 77" class="text-black font-bold text-[13px] whitespace-nowrap">(+99450) 603 77 77</a>
+        </div>
+      </div>
+
+      <div class="flex lg:hidden flex-col gap-1.5">
+        <div class="w-8 h-[3px] bg-white rounded-full"></div>
+        <div class="w-8 h-[3px] bg-white rounded-full"></div>
+        <div class="w-5 h-[3px] bg-white rounded-full self-end"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Header -->
+  <header class="sticky-header-gradient relative overflow-hidden flex flex-col text-white shadow-md">
+    <div class="absolute rotate-180 w-[105px] -z-10 top-0 left-0">
+      <img src="img/cloud4.png" alt="" />
+    </div>
+    <div class="container">
+      <div class="flex py-2 items-center justify-between gap-1 px-3.5 lg:px-0">
+        <div class="flex py-[8px]">
+          <a href="index.html" class="w-40 z-20 py-5 block">
+            <img src="img/logo-new.png" class="w-full" />
+          </a>
+          <ul class="hidden font-futura font-medium lg:flex items-center text-white relative nav-magic">
+            <li>
+              <a href="about.html" class="transition-colors px-[10px] duration-300 hover:text-[#f58220] block">Haqqımızda</a>
+            </li>
+            <li>
+              <a href="new-tours.html" class="transition-colors px-[10px] duration-300 hover:text-[#f58220] block">Yeni turlar</a>
+            </li>
+            <li>
+              <a href="services.html" class="transition-colors px-[10px] duration-300 text-[#f58220] hover:text-[#f58220] block">Xidmətlər</a>
+            </li>
+            <li>
+              <a href="azerbaijan-tours.html" class="transition-colors px-[10px] duration-300 hover:text-[#f58220] block">Azərbaycan turları</a>
+            </li>
+            <li>
+              <a href="cooperation.html" class="transition-colors px-[10px] duration-300 hover:text-[#f58220] block">Korporativ əməkdaşlıq</a>
+            </li>
+            <li>
+              <a href="contact.html" class="transition-colors px-[10px] duration-300 hover:text-[#f58220] block">Əlaqə</a>
+            </li>
+            <div class="nav-magic-line"></div>
+          </ul>
+        </div>
+
+        <div class="flex items-center gap-3.5">
+          <div class="search-toggle text-[#f6892d] hidden lg:flex items-center bg-white p-2 rounded-full hover:bg-gray-50 transition-colors shadow-sm">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+
+          <div class="relative lang-container z-[200]">
+            <div class="flex items-center gap-2 bg-white px-3 py-1.5 rounded-full lang-toggle shadow-sm text-black cursor-pointer">
+              <img src="img/azerbaijan.png" alt="" class="w-5 h-5 rounded-full object-cover" />
+              <span class="uppercase text-sm font-bold">AZ</span>
+              <i class="fa-solid fa-caret-down text-gray-300 text-xs transition-transform duration-300 icon-caret"></i>
+            </div>
+
+            <div class="absolute top-[120%] left-1/2 -translate-x-1/2 mt-2 bg-white rounded-xl opacity-0 invisible translate-y-2 transition-all duration-300 ease-in-out w-24 overflow-hidden z-[200] shadow-xl border border-gray-100 lang-dropdown">
+              <div class="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-white rotate-45 z-0 border-t border-l border-gray-100"></div>
+              <div class="relative bg-white flex flex-col z-10 py-1">
+                <a href="#" class="flex items-center gap-2 px-3 py-2 hover:bg-gray-50 transition-colors">
+                  <img src="img/azerbaijan.png" alt="" class="w-5 h-5 rounded-full object-cover" />
+                  <span class="uppercase text-sm font-bold text-[#484848]">AZ</span>
+                </a>
+                <a href="#" class="flex items-center gap-2 px-3 py-2 hover:bg-gray-50 transition-colors">
+                  <img src="img/russia.png" alt="" class="w-5 h-5 rounded-full object-cover" />
+                  <span class="uppercase text-sm font-bold text-[#484848]">RU</span>
+                </a>
+                <a href="#" class="flex items-center gap-2 px-3 py-2 hover:bg-gray-50 transition-colors">
+                  <img src="img/united-kingdom.png" alt="" class="w-5 h-5 rounded-full object-cover" />
+                  <span class="uppercase text-sm font-bold text-[#484848]">EN</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="hidden lg:flex bg-white items-center px-4 py-1.5 text-sm gap-2 rounded-full shadow-sm text-black">
+            <img src="img/callcolor.png" alt="" class="w-3.5 h-3.5 object-contain" />
+            <a href="tel:+99450 603 77 77" class="font-bold text-[13px] whitespace-nowrap">(+99450) 603 77 77</a>
+          </div>
+
+          <div class="flex lg:hidden flex-col gap-1.5 cursor-pointer ml-1">
+            <div class="w-8 h-[3px] bg-[#1e419b] rounded-full"></div>
+            <div class="w-8 h-[3px] bg-[#1e419b] rounded-full"></div>
+            <div class="w-8 h-[3px] bg-[#1e419b] rounded-full"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="py-16">
+    <div class="container px-4 lg:px-0">
+      
+      <!-- Title + Palm Tree Outline -->
+      <div class="flex flex-col items-center justify-center mb-16">
+        <!-- Palm outline svg -->
+        <svg class="w-16 h-16" viewBox="0 0 64 64" fill="none" stroke="#f58220" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+          <path d="M22 50c0-10 4-18 12-20" />
+          <path d="M34 30c-2-5-8-6-12-5 3 2 4 5 12 5z" fill="#f58220" opacity="0.2" />
+          <path d="M34 30c-2-5-8-6-12-5" />
+          <path d="M34 30c2-5 7-5 11-3-3 2-4 5-11 3z" fill="#f58220" opacity="0.2" />
+          <path d="M34 30c2-5 7-5 11-3" />
+          <path d="M34 30c-5-2-9 1-11 4 3-1 7-1 11-4z" fill="#f58220" opacity="0.2" />
+          <path d="M34 30c-5-2-9 1-11 4" />
+          <path d="M34 30c4-1 8 2 9 6-2-2-6-3-9-6z" fill="#f58220" opacity="0.2" />
+          <path d="M34 30c4-1 8 2 9 6" />
+          <path d="M44 50c0-8-3-14-9-16" />
+          <path d="M35 34c-1-4-5-5-9-4 2 1 3 4 9 4z" fill="#f58220" opacity="0.2" />
+          <path d="M35 34c-1-4-5-5-9-4" />
+          <path d="M35 34c1-4 6-4 9-2-2 1-3 4-9 2z" fill="#f58220" opacity="0.2" />
+          <path d="M35 34c1-4 6-4 9-2" />
+          <path d="M35 34c-4-2-7 1-9 3 2-1 5-1 9-3z" fill="#f58220" opacity="0.2" />
+          <path d="M35 34c-4-2-7 1-9 3" />
+          <path d="M35 34c3-1 6 2 7 5-1-2-5-2-7-5z" fill="#f58220" opacity="0.2" />
+          <path d="M35 34c3-1 6 2 7 5" />
+          <path d="M12 50c8-3 32-3 40 0" />
+        </svg>
+        <h2 class="text-3xl font-bold text-[#f58220] font-futura mt-2 tracking-wide text-center">Xidmətlər</h2>
+      </div>
+
+      <!-- Services Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-[1200px] mx-auto pb-12">
+        
+        <!-- Card 1: Otel rezervasiyaları -->
+        <div class="bg-white rounded-3xl p-8 flex flex-col items-center text-center shadow-[0_8px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.1)] transition-shadow duration-300 min-h-[220px] justify-center">
+          <div class="text-[#1e419b] text-4xl mb-4 h-12 flex items-center justify-center">
+            <i class="fa-solid fa-hotel"></i>
+          </div>
+          <h4 class="font-futura font-bold text-lg text-black mb-2">Otel rezervasiyaları</h4>
+          <p class="font-futura text-sm text-[#484848] leading-relaxed">Dünyanın hər yerində komfortlu istirahət</p>
+        </div>
+
+        <!-- Card 2: Aviabiletlər -->
+        <div class="bg-white rounded-3xl p-8 flex flex-col items-center text-center shadow-[0_8px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.1)] transition-shadow duration-300 min-h-[220px] justify-center">
+          <div class="text-[#1e419b] text-4xl mb-4 h-12 flex items-center justify-center">
+            <i class="fa-solid fa-plane-departure"></i>
+          </div>
+          <h4 class="font-futura font-bold text-lg text-black mb-2">Aviabiletlər</h4>
+          <p class="font-futura text-sm text-[#484848] leading-relaxed">Ən münasib qiymətə və komfortlu uçuşlar</p>
+        </div>
+
+        <!-- Card 3: VİP xidmətlər -->
+        <div class="bg-white rounded-3xl p-8 flex flex-col items-center text-center shadow-[0_8px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.1)] transition-shadow duration-300 min-h-[220px] justify-center">
+          <div class="mb-4 h-12 flex items-center justify-center">
+            <span class="bg-[#1e419b] text-white text-[12px] font-bold px-3 py-1 rounded-md tracking-wider">VIP</span>
+          </div>
+          <h4 class="font-futura font-bold text-lg text-black mb-2">VİP xidmətlər</h4>
+          <p class="font-futura text-sm text-[#484848] leading-relaxed">Ən yüksək komfort səyahət və lüks istirahət</p>
+        </div>
+
+        <!-- Card 4: Korporativ biletlər -->
+        <div class="bg-white rounded-3xl p-8 flex flex-col items-center text-center shadow-[0_8px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.1)] transition-shadow duration-300 min-h-[220px] justify-center">
+          <div class="text-[#1e419b] text-4xl mb-4 h-12 flex items-center justify-center">
+            <i class="fa-solid fa-ticket"></i>
+          </div>
+          <h4 class="font-futura font-bold text-lg text-black mb-2">Korporativ biletlər</h4>
+          <p class="font-futura text-sm text-[#484848] leading-relaxed">Əməkdaş və qonaqlarınızın korporativ qiymətlərlə səyahəti</p>
+        </div>
+
+        <!-- Card 5: Viza Dəstəyi -->
+        <div class="bg-white rounded-3xl p-8 flex flex-col items-center text-center shadow-[0_8px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.1)] transition-shadow duration-300 min-h-[220px] justify-center">
+          <div class="mb-4 h-12 flex items-center justify-center">
+            <span class="border-2 border-[#1e419b] text-[#1e419b] text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">Visa</span>
+          </div>
+          <h4 class="font-futura font-bold text-lg text-black mb-2">Viza Dəstəyi</h4>
+          <p class="font-futura text-sm text-[#484848] leading-relaxed">Şengen, ABŞ, Böyük Britaniya, və s. ölkələr</p>
+        </div>
+
+        <!-- Card 6: Biznes Turizmi -->
+        <div class="bg-white rounded-3xl p-8 flex flex-col items-center text-center shadow-[0_8px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.1)] transition-shadow duration-300 min-h-[220px] justify-center">
+          <div class="text-[#1e419b] text-4xl mb-4 h-12 flex items-center justify-center">
+            <i class="fa-solid fa-building-user"></i>
+          </div>
+          <h4 class="font-futura font-bold text-lg text-black mb-2">Biznes Turizmi</h4>
+          <p class="font-futura text-sm text-[#484848] leading-relaxed">Korporativ müştərilərimiz üçün tam biznes səyahət</p>
+        </div>
+
+        <!-- Card 7: Transfer -->
+        <div class="bg-white rounded-3xl p-8 flex flex-col items-center text-center shadow-[0_8px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.1)] transition-shadow duration-300 min-h-[220px] justify-center">
+          <div class="text-[#1e419b] text-4xl mb-4 h-12 flex items-center justify-center">
+            <i class="fa-solid fa-car-side"></i>
+          </div>
+          <h4 class="font-futura font-bold text-lg text-black mb-2">Transfer</h4>
+          <p class="font-futura text-sm text-[#484848] leading-relaxed">Səyahət etdiyiniz şəhərlərdə transfer və Rent a Car xidməti</p>
+        </div>
+
+        <!-- Card 8: Sığorta -->
+        <div class="bg-white rounded-3xl p-8 flex flex-col items-center text-center shadow-[0_8px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.1)] transition-shadow duration-300 min-h-[220px] justify-center">
+          <div class="text-[#1e419b] text-4xl mb-4 h-12 flex items-center justify-center">
+            <i class="fa-solid fa-file-shield"></i>
+          </div>
+          <h4 class="font-futura font-bold text-lg text-black mb-2">Sığorta</h4>
+          <p class="font-futura text-sm text-[#484848] leading-relaxed">Təhlükəsiz bir səyahət üçün sığorta xidməti</p>
+        </div>
+
+        <!-- Card 9: Sağlamlıq Turizmi -->
+        <div class="bg-white rounded-3xl p-8 flex flex-col items-center text-center shadow-[0_8px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.1)] transition-shadow duration-300 min-h-[220px] justify-center">
+          <div class="text-[#1e419b] text-4xl mb-4 h-12 flex items-center justify-center">
+            <i class="fa-solid fa-user-doctor"></i>
+          </div>
+          <h4 class="font-futura font-bold text-lg text-black mb-2">Sağlamlıq Turizmi</h4>
+          <p class="font-futura text-sm text-[#484848] leading-relaxed">Dünyanın ən uğurlu klinikalarında müalicə bizdə</p>
+        </div>
+
+        <!-- Card 10: Xarici və Daxili turlar -->
+        <div class="bg-white rounded-3xl p-8 flex flex-col items-center text-center shadow-[0_8px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.1)] transition-shadow duration-300 min-h-[220px] justify-center">
+          <div class="text-[#1e419b] text-4xl mb-4 h-12 flex items-center justify-center">
+            <i class="fa-solid fa-globe"></i>
+          </div>
+          <h4 class="font-futura font-bold text-lg text-black mb-2">Xarici və Daxili turlar</h4>
+          <p class="font-futura text-sm text-[#484848] leading-relaxed">Dünyanın hər istiqamətinə, turizmin bütün sahələri üzrə</p>
+        </div>
+
+        <!-- Card 11: Qrup turları -->
+        <div class="bg-white rounded-3xl p-8 flex flex-col items-center text-center shadow-[0_8px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.1)] transition-shadow duration-300 min-h-[220px] justify-center">
+          <div class="text-[#1e419b] text-4xl mb-4 h-12 flex items-center justify-center">
+            <i class="fa-solid fa-users-gear"></i>
+          </div>
+          <h4 class="font-futura font-bold text-lg text-black mb-2">Qrup turları</h4>
+          <p class="font-futura text-sm text-[#484848] leading-relaxed">Dünyanı tanımaq üçün bol ekskursiyalar</p>
+        </div>
+
+        <!-- Card 12: Kruiz səyahəti -->
+        <div class="bg-white rounded-3xl p-8 flex flex-col items-center text-center shadow-[0_8px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.1)] transition-shadow duration-300 min-h-[220px] justify-center">
+          <div class="text-[#1e419b] text-4xl mb-4 h-12 flex items-center justify-center">
+            <i class="fa-solid fa-ship"></i>
+          </div>
+          <h4 class="font-futura font-bold text-lg text-black mb-2">Kruiz səyahəti</h4>
+          <p class="font-futura text-sm text-[#484848] leading-relaxed">Dünyanı dəniz və okeanlarla səyahət edin</p>
+        </div>
+
+        <!-- Card 13: Komanda inkişafı -->
+        <div class="bg-white rounded-3xl p-8 flex flex-col items-center text-center shadow-[0_8px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.1)] transition-shadow duration-300 min-h-[220px] justify-center">
+          <div class="text-[#1e419b] text-4xl mb-4 h-12 flex items-center justify-center">
+            <i class="fa-solid fa-people-group"></i>
+          </div>
+          <h4 class="font-futura font-bold text-lg text-black mb-2">Komanda inkişafı</h4>
+          <p class="font-futura text-sm text-[#484848] leading-relaxed">Kollektivinizin komanda şəklində səyahəti</p>
+        </div>
+
+        <!-- Card 14: Təcili dəstək -->
+        <div class="bg-white rounded-3xl p-8 flex flex-col items-center text-center shadow-[0_8px_30px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.1)] transition-shadow duration-300 min-h-[220px] justify-center">
+          <div class="text-[#1e419b] text-4xl mb-4 h-12 flex items-center justify-center">
+            <i class="fa-solid fa-phone-volume"></i>
+          </div>
+          <h4 class="font-futura font-bold text-lg text-black mb-2">Təcili dəstək</h4>
+          <p class="font-futura text-sm text-[#484848] leading-relaxed">Səyahətiniz müddətində 24/7 təcili dəstək</p>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer Contact Info Section -->
+  <div class="bg-[#1e419b] relative h-auto overflow-hidden">
+    <div class="flex flex-col md:flex-row justify-between items-center relative z-10 w-full md:h-fit">
+      <img src="img/cloud3.png" class="absolute bottom-0 left-0 w-[50%] md:w-auto md:static object-contain z-0" alt="" />
+
+      <div class="container px-4 md:px-12.5 relative z-10 w-full py-20 md:py-10">
+        <div class="flex flex-col md:flex-row justify-center md:justify-between items-center md:items-start text-center md:text-left text-white gap-10 md:gap-4 font-semibold">
+          <div class="flex flex-col md:flex-row items-center gap-4">
+            <div class="flex items-center bg-[#f58220] rounded-full w-16 h-16 md:w-11 md:h-11 justify-center">
+              <img src="img/pin.png" alt="" class="w-5 md:w-3.5" />
+            </div>
+            <div class="flex flex-col gap-1 md:gap-0 mt-2 md:mt-0">
+              <a href="" class="w-72 block">Azadlıq pr. 95/12. Bakı, Azərbaycan</a>
+              <a href="" class="w-72 block">Əhməd Cəmil Küçəsi, 2, Bakı, Azərbaycan</a>
+            </div>
+          </div>
+          <div class="flex flex-col md:flex-row items-center gap-4">
+            <div class="flex items-center bg-[#f58220] rounded-full w-16 h-16 md:w-11 md:h-11 justify-center">
+              <img src="img/message.png" alt="" class="w-6 md:w-[18px]" />
+            </div>
+            <a href="mailto:info@bravotravel.az" class="linkeffect mt-2 md:mt-0">info@bravotravel.az</a>
+          </div>
+          <div class="flex flex-col md:flex-row items-center gap-4">
+            <div class="flex items-center bg-[#f58220] rounded-full w-16 h-16 md:w-11 md:h-11 justify-center">
+              <img src="img/call.png" alt="" class="w-6 md:w-[18px]" />
+            </div>
+            <a href="tel:+99450 603 77 77" class="linkeffect mt-2 md:mt-0">(+99450) 603 77 77</a>
+          </div>
+        </div>
+      </div>
+
+      <img src="img/cloud4.png" class="absolute bottom-0 right-0 w-[70%] md:w-auto md:static object-contain z-0" alt="" />
+    </div>
+  </div>
+
+  <!-- Footer Socials & Copyright -->
+  <footer class="bg-white">
+    <div class="container px-4">
+      <div class="flex flex-col md:flex-row items-center text-center py-5 justify-between gap-4">
+        <div class="flex text-white items-center text-sm gap-2">
+          <div class="rounded-full py-1 px-1.5 bg-[#808080] cursor-pointer">
+            <i class="fa-brands fa-facebook-f"></i>
+          </div>
+          <div class="rounded-full py-1 px-1.5 bg-[#808080] cursor-pointer">
+            <i class="fa-brands fa-instagram"></i>
+          </div>
+        </div>
+
+        <p class="text-[#212529] font-medium font-futura">© Copyright 2026. Bütün hüquqları qorunur</p>
+        <p class="flex gap-2 items-center text-[#b2b2b2]">
+          <span class="font-medium font-futura">Created by </span>    
+          <a href=""> <img src="img/ok_logo.png" class="w-20" alt="" /></a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>

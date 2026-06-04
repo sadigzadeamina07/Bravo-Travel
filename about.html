@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Haqqımızda - Bravo Travel</title>
+  <link href="./src/output.css" rel="stylesheet" />
+  <link href="./src/input.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+</head>
+
+<body class="overflow-x-hidden">
+
+  <!-- Sticky Header (on Scroll) -->
+  <div id="sticky-header" class="fixed top-0 left-0 w-full z-[1000] -translate-y-full sticky-header-gradient">
+    <div class="absolute rotate-180 w-[105px] -z-10 top-0 left-0">
+      <img src="img/cloud4.png" alt="" />
+    </div>
+    <div class="container h-full px-[15px] flex items-center justify-between relative">
+      <div class="flex">
+        <a href="index.html" class="hidden md:flex items-center py-[20px] w-[130px] h-full relative">
+          <img src="img/logo-new-white.png" class="h-fit relative z-10" />
+        </a>
+        <a href="index.html" class="flex md:hidden items-center py-[20px] w-[130px] h-full relative">
+          <img src="img/logo-new.png" class="h-fit relative z-10" />
+        </a>
+
+        <ul class="font-futura hidden lg:flex items-center text-white font-medium relative nav-magic">
+          <li>
+            <a href="about.html" class="transition-colors px-[10px] duration-300 text-[#f58220] hover:text-[#f58220]">Haqqımızda</a>
+          </li>
+          <li>
+            <a href="new-tours.html" class="transition-colors px-[10px] duration-300 hover:text-[#f58220]">Yeni turlar</a>
+          </li>
+          <li>
+            <a href="services.html" class="transition-colors px-[10px] duration-300 hover:text-[#f58220]">Xidmətlər</a>
+          </li>
+          <li>
+            <a href="azerbaijan-tours.html" class="transition-colors px-[10px] duration-300 hover:text-[#f58220]">Azərbaycan turları</a>
+          </li>
+          <li>
+            <a href="cooperation.html" class="transition-colors px-[10px] duration-300 hover:text-[#f58220]">Korporativ əməkdaşlıq</a>
+          </li>
+          <li>
+            <a href="contact.html" class="transition-colors px-[10px] duration-300 hover:text-[#f58220]">Əlaqə</a>
+          </li>
+          <div class="nav-magic-line"></div>
+        </ul>
+      </div>
+
+      <div class="flex items-center gap-[15px] lg:gap-4">
+        <div class="search-toggle text-[#f58220] hidden lg:flex items-center justify-center bg-white w-8 h-8 rounded-full hover:bg-gray-50 transition-colors shadow-sm">
+          <i class="fa-solid fa-magnifying-glass text-[13px]"></i>
+        </div>
+
+        <div class="relative lang-container z-[200]">
+          <div class="flex items-center gap-1.5 bg-white px-2 py-1.5 lg:px-2.5 lg:py-1.5 rounded-full lang-toggle shadow-sm cursor-pointer">
+            <img src="img/azerbaijan.png" alt="" class="w-5 h-5 rounded-full object-cover" />
+            <span class="uppercase text-[13px] font-bold text-black">AZ</span>
+            <i class="fa-solid fa-caret-down text-gray-300 text-[10px] ml-0.5 transition-transform duration-300 icon-caret"></i>
+          </div>
+
+          <div class="absolute top-[120%] left-1/2 -translate-x-1/2 mt-2 bg-white rounded-xl opacity-0 invisible translate-y-2 transition-all duration-300 ease-in-out w-24 overflow-hidden z-[200] shadow-xl border border-gray-100 lang-dropdown">
+            <div class="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-white rotate-45 z-0 border-t border-l border-gray-100"></div>
+            <div class="relative bg-white flex flex-col z-10 py-1">
+              <a href="#" class="flex items-center gap-2 px-3 py-2 hover:bg-gray-50 transition-colors">
+                <img src="img/azerbaijan.png" alt="" class="w-5 h-5 rounded-full object-cover" />
+                <span class="uppercase text-sm font-bold text-[#484848]">AZ</span>
+              </a>
+              <a href="#" class="flex items-center gap-2 px-3 py-2 hover:bg-gray-50 transition-colors">
+                <img src="img/russia.png" alt="" class="w-5 h-5 rounded-full object-cover" />
+                <span class="uppercase text-sm font-bold text-[#484848]">RU</span>
+              </a>
+              <a href="#" class="flex items-center gap-2 px-3 py-2 hover:bg-gray-50 transition-colors">
+                <img src="img/united-kingdom.png" alt="" class="w-5 h-5 rounded-full object-cover" />
+                <span class="uppercase text-sm font-bold text-[#484848]">EN</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="hidden lg:flex bg-white items-center px-3 py-1.5 lg:px-4 lg:py-1.5 text-sm gap-2 rounded-full shadow-sm whitespace-nowrap">
+          <img src="img/callcolor.png" alt="" class="w-3.5 h-3.5 object-contain" />
+          <a href="tel:+99450 603 77 77" class="text-black font-bold text-[13px] whitespace-nowrap">(+99450) 603 77 77</a>
+        </div>
+      </div>
+
+      <div class="flex lg:hidden flex-col gap-1.5">
+        <div class="w-8 h-[3px] bg-white rounded-full"></div>
+        <div class="w-8 h-[3px] bg-white rounded-full"></div>
+        <div class="w-5 h-[3px] bg-white rounded-full self-end"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Header -->
+  <header class="sticky-header-gradient relative overflow-hidden flex flex-col text-white shadow-md">
+    <div class="absolute rotate-180 w-[105px] -z-10 top-0 left-0">
+      <img src="img/cloud4.png" alt="" />
+    </div>
+    <div class="container">
+      <div class="flex py-2 items-center justify-between gap-1 px-3.5 lg:px-0">
+        <div class="flex py-[8px]">
+          <a href="index.html" class="w-40 z-20 py-5 block">
+            <img src="img/logo-new.png" class="w-full" />
+          </a>
+          <ul class="hidden font-futura font-medium lg:flex items-center text-white relative nav-magic">
+            <li>
+              <a href="about.html" class="transition-colors px-[10px] duration-300 text-[#f58220] hover:text-[#f58220] block">Haqqımızda</a>
+            </li>
+            <li>
+              <a href="new-tours.html" class="transition-colors px-[10px] duration-300 hover:text-[#f58220] block">Yeni turlar</a>
+            </li>
+            <li>
+              <a href="services.html" class="transition-colors px-[10px] duration-300 hover:text-[#f58220] block">Xidmətlər</a>
+            </li>
+            <li>
+              <a href="azerbaijan-tours.html" class="transition-colors px-[10px] duration-300 hover:text-[#f58220] block">Azərbaycan turları</a>
+            </li>
+            <li>
+              <a href="cooperation.html" class="transition-colors px-[10px] duration-300 hover:text-[#f58220] block">Korporativ əməkdaşlıq</a>
+            </li>
+            <li>
+              <a href="contact.html" class="transition-colors px-[10px] duration-300 hover:text-[#f58220] block">Əlaqə</a>
+            </li>
+            <div class="nav-magic-line"></div>
+          </ul>
+        </div>
+
+        <div class="flex items-center gap-3.5">
+          <div class="search-toggle text-[#f6892d] hidden lg:flex items-center bg-white p-2 rounded-full hover:bg-gray-50 transition-colors shadow-sm">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+
+          <div class="relative lang-container z-[200]">
+            <div class="flex items-center gap-2 bg-white px-3 py-1.5 rounded-full lang-toggle shadow-sm text-black cursor-pointer">
+              <img src="img/azerbaijan.png" alt="" class="w-5 h-5 rounded-full object-cover" />
+              <span class="uppercase text-sm font-bold">AZ</span>
+              <i class="fa-solid fa-caret-down text-gray-300 text-xs transition-transform duration-300 icon-caret"></i>
+            </div>
+
+            <div class="absolute top-[120%] left-1/2 -translate-x-1/2 mt-2 bg-white rounded-xl opacity-0 invisible translate-y-2 transition-all duration-300 ease-in-out w-24 overflow-hidden z-[200] shadow-xl border border-gray-100 lang-dropdown">
+              <div class="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-white rotate-45 z-0 border-t border-l border-gray-100"></div>
+              <div class="relative bg-white flex flex-col z-10 py-1">
+                <a href="#" class="flex items-center gap-2 px-3 py-2 hover:bg-gray-50 transition-colors">
+                  <img src="img/azerbaijan.png" alt="" class="w-5 h-5 rounded-full object-cover" />
+                  <span class="uppercase text-sm font-bold text-[#484848]">AZ</span>
+                </a>
+                <a href="#" class="flex items-center gap-2 px-3 py-2 hover:bg-gray-50 transition-colors">
+                  <img src="img/russia.png" alt="" class="w-5 h-5 rounded-full object-cover" />
+                  <span class="uppercase text-sm font-bold text-[#484848]">RU</span>
+                </a>
+                <a href="#" class="flex items-center gap-2 px-3 py-2 hover:bg-gray-50 transition-colors">
+                  <img src="img/united-kingdom.png" alt="" class="w-5 h-5 rounded-full object-cover" />
+                  <span class="uppercase text-sm font-bold text-[#484848]">EN</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="hidden lg:flex bg-white items-center px-4 py-1.5 text-sm gap-2 rounded-full shadow-sm text-black">
+            <img src="img/callcolor.png" alt="" class="w-3.5 h-3.5 object-contain" />
+            <a href="tel:+99450 603 77 77" class="font-bold text-[13px] whitespace-nowrap">(+99450) 603 77 77</a>
+          </div>
+
+          <div class="flex lg:hidden flex-col gap-1.5 cursor-pointer ml-1">
+            <div class="w-8 h-[3px] bg-[#1e419b] rounded-full"></div>
+            <div class="w-8 h-[3px] bg-[#1e419b] rounded-full"></div>
+            <div class="w-8 h-[3px] bg-[#1e419b] rounded-full"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="bg-white py-12">
+    <!-- Banner Section with Laptop Mockup & List -->
+    <div class="container px-4 lg:px-0 mb-16">
+      <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
+        <!-- Left: Laptop Mockup -->
+        <div class="w-full lg:w-[48%] flex justify-center">
+          <div class="relative w-full max-w-[460px]">
+            <!-- Screen container -->
+            <div class="relative bg-gray-800 rounded-t-3xl p-2.5 shadow-2xl border-4 border-gray-700 aspect-[16/10] overflow-hidden">
+              <!-- Inner Screen -->
+              <div class="relative w-full h-full bg-[#f7f7fb] rounded-lg overflow-hidden border border-gray-900 flex flex-col">
+                <!-- Mini Browser Header -->
+                <div class="h-5 bg-gray-200 border-b border-gray-300 flex items-center px-2 gap-1.5 shrink-0">
+                  <div class="w-2 h-2 rounded-full bg-red-400"></div>
+                  <div class="w-2 h-2 rounded-full bg-yellow-400"></div>
+                  <div class="w-2 h-2 rounded-full bg-green-400"></div>
+                  <div class="bg-white text-[8px] text-gray-500 rounded px-4 py-0.5 ml-4 flex-1 truncate select-none">
+                    bravotravel.az
+                  </div>
+                </div>
+                <!-- Mini Site Preview -->
+                <div class="flex-1 overflow-y-auto bg-cover bg-top" style="background-image: url('img/baku.png'); background-color: #1e419b;">
+                  <!-- Header logo/nav preview -->
+                  <div class="p-2 flex justify-between items-center bg-black/20 backdrop-blur-[2px]">
+                    <img src="img/logo-new.png" class="h-4 object-contain" />
+                    <div class="flex gap-1 text-[5px] text-white font-bold uppercase scale-[0.8] origin-right">
+                      <span class="text-[#f58220]">Haqqımızda</span>
+                      <span>Turlar</span>
+                      <span>Əlaqə</span>
+                    </div>
+                  </div>
+                  <!-- Hero area preview -->
+                  <div class="p-4 text-white text-center mt-3">
+                    <h4 class="text-xs font-bold uppercase text-[#f58220] drop-shadow-md">Moskva</h4>
+                    <p class="text-[6px] opacity-90">Gəz, gəz və yenə gəz</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Laptop base -->
+            <div class="relative bg-gray-400 h-2.5 rounded-b-xl w-[108%] -left-[4%] shadow-lg border-t border-gray-300">
+              <!-- Laptop notch -->
+              <div class="absolute top-0 left-1/2 -translate-x-1/2 w-12 h-0.5 bg-gray-600 rounded-b-sm"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Bullet Points -->
+        <div class="w-full lg:w-[48%]">
+          <ul class="flex flex-col gap-6 text-gray-700 font-futura font-medium text-[16px] lg:text-[18px]">
+            <li class="flex items-center gap-3.5">
+              <span class="w-3.5 h-3.5 rounded-full bg-[#8ec7ef] border-2 border-[#1e419b] shrink-0"></span>
+              <span>Öz istəyinizə uyğun səyahət paketi seçimi</span>
+            </li>
+            <li class="flex items-center gap-3.5">
+              <span class="w-3.5 h-3.5 rounded-full bg-[#8ec7ef] border-2 border-[#1e419b] shrink-0"></span>
+              <span>Hazır proqramlar sayəsində vaxta və pulunuza qənaət</span>
+            </li>
+            <li class="flex items-center gap-3.5">
+              <span class="w-3.5 h-3.5 rounded-full bg-[#8ec7ef] border-2 border-[#1e419b] shrink-0"></span>
+              <span>Tur boyunca daim kömək edəcək səyahət ekspertləri</span>
+            </li>
+            <li class="flex items-center gap-3.5">
+              <span class="w-3.5 h-3.5 rounded-full bg-[#8ec7ef] border-2 border-[#1e419b] shrink-0"></span>
+              <span>Yüksək səviyyədə xidmət göstərmək üçün hər fəsildə sizinləyik</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- About Content Section -->
+    <div class="container px-4 lg:px-0 mb-16 max-w-[900px] mx-auto text-left">
+      <!-- Title + Palm Tree Outline -->
+      <div class="flex flex-col items-center justify-center mb-8">
+        <!-- Palm outline svg -->
+        <svg class="w-16 h-16" viewBox="0 0 64 64" fill="none" stroke="#f58220" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+          <path d="M22 50c0-10 4-18 12-20" />
+          <path d="M34 30c-2-5-8-6-12-5 3 2 4 5 12 5z" fill="#f58220" opacity="0.2" />
+          <path d="M34 30c-2-5-8-6-12-5" />
+          <path d="M34 30c2-5 7-5 11-3-3 2-4 5-11 3z" fill="#f58220" opacity="0.2" />
+          <path d="M34 30c2-5 7-5 11-3" />
+          <path d="M34 30c-5-2-9 1-11 4 3-1 7-1 11-4z" fill="#f58220" opacity="0.2" />
+          <path d="M34 30c-5-2-9 1-11 4" />
+          <path d="M34 30c4-1 8 2 9 6-2-2-6-3-9-6z" fill="#f58220" opacity="0.2" />
+          <path d="M34 30c4-1 8 2 9 6" />
+          <path d="M44 50c0-8-3-14-9-16" />
+          <path d="M35 34c-1-4-5-5-9-4 2 1 3 4 9 4z" fill="#f58220" opacity="0.2" />
+          <path d="M35 34c-1-4-5-5-9-4" />
+          <path d="M35 34c1-4 6-4 9-2-2 1-3 4-9 2z" fill="#f58220" opacity="0.2" />
+          <path d="M35 34c1-4 6-4 9-2" />
+          <path d="M35 34c-4-2-7 1-9 3 2-1 5-1 9-3z" fill="#f58220" opacity="0.2" />
+          <path d="M35 34c-4-2-7 1-9 3" />
+          <path d="M35 34c3-1 6 2 7 5-1-2-5-2-7-5z" fill="#f58220" opacity="0.2" />
+          <path d="M35 34c3-1 6 2 7 5" />
+          <path d="M12 50c8-3 32-3 40 0" />
+        </svg>
+        <h2 class="text-3xl font-bold text-[#f58220] font-futura mt-2 tracking-wide text-center">Haqqımızda</h2>
+      </div>
+
+      <!-- Main Headline -->
+      <h3 class="text-[#f58220] font-futura font-bold text-xl lg:text-2xl uppercase tracking-wider mb-6 text-center">
+        SİZİN SƏYAHƏTİNİZ BİZİM İŞİMİZDİR
+      </h3>
+
+      <!-- Paragraphs -->
+      <div class="flex flex-col gap-6 text-[#212529] font-futura text-base lg:text-[17px] leading-relaxed text-justify">
+        <p>
+          <strong class="text-black font-bold">Bravo Travel</strong> bütün aviaşirkətlərlə əməkdaşlıq edir və <strong class="text-black font-semibold">IATA</strong> sertifikatlaşdırılaraq global bilet sisteminə giriş imkanına malikdir və bununla müştərilərə hər bir istiqamətdə ən sərfəli qiymətlə və zaman baxımından ən rahat aviabiletləri təqdim edir.
+        </p>
+        <p>
+          Öz sahəsində mütəxəssis tur menecerlərimiz dünyanın bütün istiqamətlərində turlara ən münasib qiymətləri alaraq müştərilərinə təqdim edir. <strong class="text-black font-semibold">Bravo Travel</strong> Azərbaycan vətəndaşlarına və xarici vətəndaşlara iş və turizm vizalarının alınmasında köməklik göstərir. Habelə bizim təcrübəli komanda üzvləri Shengen, USA və digər ölkələrə viza almaq üçün bütün zəruri sənədləri hazırlamaqda kömək edəcək.
+        </p>
+        <p>
+          <strong class="text-black font-bold">Bravo Travel</strong> olaraq müştərilərimizə göstərdiyimiz peşəkar xidmətlə müştərilərin və əməkdaşlıq etdiyimiz şirkətlərin güvənini əldə etmişik. Müştərilərimizin istəklərinə uyğun peşəkarcasına və qiymət baxımından sərfəli səyahət paketlərini hazırlayaraq ölkənin ən böyük və ən etibarlı Səyahət Təşkilatı olmuşuq.
+        </p>
+      </div>
+    </div>
+
+    <!-- Why Us Section -->
+    <div class="container px-4 lg:px-0 mb-16 max-w-[900px] mx-auto">
+      <h3 class="text-[#f58220] font-futura font-bold text-xl lg:text-2xl uppercase tracking-wider mb-2 text-center lg:text-left">
+        NİYƏ BİZ ?
+      </h3>
+      <h4 class="text-black font-futura font-extrabold text-[18px] lg:text-[20px] uppercase tracking-wide mb-8 text-center lg:text-left">
+        HƏR ADDIMDA YANINIZDA VƏ YARDIMA HAZIR
+      </h4>
+
+      <div class="flex flex-col gap-8 font-futura">
+        <!-- Item 1 -->
+        <div class="flex items-start gap-4">
+          <div class="w-5 h-5 rounded-full border-[3px] border-[#f58220] flex-shrink-0 mt-1.5"></div>
+          <div>
+            <h5 class="text-lg font-bold text-black mb-1">Müxtəliflik</h5>
+            <p class="text-[#484848] text-[15px] lg:text-base leading-relaxed text-justify">
+              Biz sizə səyahətiniz üzrə bütün variantlar haqqında, xüsusi kampaniyalar haqqında və müəyyən bir məhsulun keyfiyyətinə dair məlumat verəcəyik və siz öz istəyinizə uyğun səyahət paketini seçə bilərsiniz.
+            </p>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="flex items-start gap-4">
+          <div class="w-5 h-5 rounded-full border-[3px] border-[#f58220] flex-shrink-0 mt-1.5"></div>
+          <div>
+            <h5 class="text-lg font-bold text-black mb-1">Rahat bir universal satış</h5>
+            <p class="text-[#484848] text-[15px] lg:text-base leading-relaxed text-justify">
+              Sizin səfərinizin hər bir istiqamətini - aviaşirkətlərdən avtomobil icarəyə götürməyinizə və yaşayış yerlərindən biznes görüşlərədək proqramlar hazırlayaraq vaxtınıza və pulunuza qənaət edəcəyik.
+            </p>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="flex items-start gap-4">
+          <div class="w-5 h-5 rounded-full border-[3px] border-[#f58220] flex-shrink-0 mt-1.5"></div>
+          <div>
+            <h5 class="text-lg font-bold text-black mb-1">Səyahət ekspertləri</h5>
+            <p class="text-[#484848] text-[15px] lg:text-base leading-relaxed text-justify">
+              Bizim mütəxəssislər sizin səyahət etmək istədiyiniz istiqamət üzrə iqlim, siyasi və turizm üzrə sizi məlumatlandıraraq səyahətinizin daha komfortlu olmasını təmin edirlər və sizin səyahət edəcəyiniz istiqamətlə bağlı hər bir istəyinizə uyğun xidmət təklif hazırlayacaq.
+            </p>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="flex items-start gap-4">
+          <div class="w-5 h-5 rounded-full border-[3px] border-[#f58220] flex-shrink-0 mt-1.5"></div>
+          <div>
+            <h5 class="text-lg font-bold text-black mb-1">Maksimum seçim</h5>
+            <p class="text-[#484848] text-[15px] lg:text-base leading-relaxed text-justify">
+              Biz sizin səyahətiniz üçün ən geniş seçim imkanları təqdim edirik. Müxtəlif sistemləri girişə malik olduğumuza görə, Sizin özünüzün və ya digər şirkət vasitəsi ilə əldə edə bilməyəcəyiniz sahələri təqdim edə bilərik.
+            </p>
+          </div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="flex items-start gap-4">
+          <div class="w-5 h-5 rounded-full border-[3px] border-[#f58220] flex-shrink-0 mt-1.5"></div>
+          <div>
+            <h5 class="text-lg font-bold text-black mb-1">Güvən</h5>
+            <p class="text-[#484848] text-[15px] lg:text-base leading-relaxed text-justify">
+              2016-cı ildən bu günədək fəaliyyət göstərdiyimiz müddətdə müştərilərə göstərdiyimiz şəffaf və keyfiyyətli xidmətimizlə müştərilərin güvənini qazanmışıq. Biz, digər şirkətlərdən fərqli olaraq müştərilərimizə yüksək səviyyəli xidmət göstərmək üçün hər fəsildə sizinləyik.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer Contact Info Section -->
+  <div class="bg-[#1e419b] relative h-auto overflow-hidden">
+    <div class="flex flex-col md:flex-row justify-between items-center relative z-10 w-full md:h-fit">
+      <img src="img/cloud3.png" class="absolute bottom-0 left-0 w-[50%] md:w-auto md:static object-contain z-0" alt="" />
+
+      <div class="container px-4 md:px-12.5 relative z-10 w-full py-20 md:py-10">
+        <div class="flex flex-col md:flex-row justify-center md:justify-between items-center md:items-start text-center md:text-left text-white gap-10 md:gap-4 font-semibold">
+          <div class="flex flex-col md:flex-row items-center gap-4">
+            <div class="flex items-center bg-[#f58220] rounded-full w-16 h-16 md:w-11 md:h-11 justify-center">
+              <img src="img/pin.png" alt="" class="w-5 md:w-3.5" />
+            </div>
+            <div class="flex flex-col gap-1 md:gap-0 mt-2 md:mt-0">
+              <a href="" class="w-72 block">Azadlıq pr. 95/12. Bakı, Azərbaycan</a>
+              <a href="" class="w-72 block">Əhməd Cəmil Küçəsi, 2, Bakı, Azərbaycan</a>
+            </div>
+          </div>
+          <div class="flex flex-col md:flex-row items-center gap-4">
+            <div class="flex items-center bg-[#f58220] rounded-full w-16 h-16 md:w-11 md:h-11 justify-center">
+              <img src="img/message.png" alt="" class="w-6 md:w-[18px]" />
+            </div>
+            <a href="mailto:info@bravotravel.az" class="linkeffect mt-2 md:mt-0">info@bravotravel.az</a>
+          </div>
+          <div class="flex flex-col md:flex-row items-center gap-4">
+            <div class="flex items-center bg-[#f58220] rounded-full w-16 h-16 md:w-11 md:h-11 justify-center">
+              <img src="img/call.png" alt="" class="w-6 md:w-[18px]" />
+            </div>
+            <a href="tel:+99450 603 77 77" class="linkeffect mt-2 md:mt-0">(+99450) 603 77 77</a>
+          </div>
+        </div>
+      </div>
+
+      <img src="img/cloud4.png" class="absolute bottom-0 right-0 w-[70%] md:w-auto md:static object-contain z-0" alt="" />
+    </div>
+  </div>
+
+  <!-- Footer Socials & Copyright -->
+  <footer class="bg-white">
+    <div class="container px-4">
+      <div class="flex flex-col md:flex-row items-center text-center py-5 justify-between gap-4">
+        <div class="flex text-white items-center text-sm gap-2">
+          <div class="rounded-full py-1 px-1.5 bg-[#808080] cursor-pointer">
+            <i class="fa-brands fa-facebook-f"></i>
+          </div>
+          <div class="rounded-full py-1 px-1.5 bg-[#808080] cursor-pointer">
+            <i class="fa-brands fa-instagram"></i>
+          </div>
+        </div>
+
+        <p class="text-[#212529] font-medium font-futura">© Copyright 2026. Bütün hüquqları qorunur</p>
+        <p class="flex gap-2 items-center text-[#b2b2b2]">
+          <span class="font-medium font-futura">Created by </span>    
+          <a href=""> <img src="img/ok_logo.png" class="w-20" alt="" /></a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
