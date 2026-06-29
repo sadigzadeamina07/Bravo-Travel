@@ -1,15 +1,17 @@
 
 window.addEventListener('DOMContentLoaded', () => {
-  const underlineeffect = document.querySelectorAll('#phone-number')
+  // querySelectorAll bir NodeList qaytarır, NodeList-də .classList olmur — buna görə
+  // bu kod həqiqətən heç vaxt işləmirdi (konsolda "Cannot read properties of
+  // undefined (reading 'add')" xətası verirdi). Tək element üçün querySelector istifadə edirik.
+  const underlineeffect = document.querySelector('#phone-number');
   setTimeout(() => {
     if (underlineeffect) {
-      underlineeffect.classList.add('.active')
-      console.log('clas elave olundu');
-
+      // '.active' yox — classList.add-a class adı NÖQTƏSİZ verilir.
+      underlineeffect.classList.add('phone-pulse');
+      console.log('class əlavə olundu');
     }
-
   }, 300);
-})
+});
 const heroData = [
   { title: "Moskva", subtitle: "Gəz, gəz və yenə gəz" },
   { title: "İSTANBUL", subtitle: "Tarix yazan şəhər" },
@@ -34,6 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initStickyHeader();
   initLangDropdown();
   initCustomSelect();
+  initNavMagic();
 });
 
 function initHeroSwiper() {
@@ -52,7 +55,7 @@ function initHeroSwiper() {
     breakpoints: {
       0: {
         slidesPerView: 1,
-        spaceBetween: 0,
+        spaceBetween: 12,
         centeredSlides: true,
         allowTouchMove: true
       },
@@ -146,7 +149,10 @@ function initStickyHeader() {
   if (!stickyHeader) return;
   window.addEventListener("scroll", () => {
     if (window.scrollY > 150) {
-      stickyHeader.classList.remove("-translate-y-full");
+      if (stickyHeader.classList.contains("-translate-y-full")) {
+        stickyHeader.classList.remove("-translate-y-full");
+        window.dispatchEvent(new Event('resize'));
+      }
     } else {
       stickyHeader.classList.add("-translate-y-full");
     }
@@ -278,5 +284,76 @@ function initCustomSelect() {
         }
       }
     });
+  });
+}
+function initNavMagic() {
+  const navContainers = document.querySelectorAll('.nav-magic');
+  let rawPath = window.location.pathname.split('/').filter(Boolean).pop() || 'index.html';
+  if (!rawPath.endsWith('.html') && !rawPath.includes('.')) {
+    rawPath += '.html';
+  }
+  const currentPath = rawPath;
+
+  navContainers.forEach(container => {
+    const line = container.querySelector('.nav-magic-line');
+    if (!line) return;
+
+    const items = container.querySelectorAll('a, button');
+    let activeLink = null;
+
+    items.forEach(item => {
+      const href = item.getAttribute('href');
+      const isHtmlActive = item.classList.contains('active-link') || item.classList.contains('text-[#f58220]');
+      const isPathActive = href && (href === currentPath || href.endsWith('/' + currentPath));
+
+      if (isHtmlActive || isPathActive) {
+        activeLink = item;
+        item.classList.add('active-link', 'text-[#f58220]');
+      }
+    });
+
+    function positionLine(el) {
+      if (el && container.offsetWidth > 0 && container.offsetHeight > 0) {
+        const containerRect = container.getBoundingClientRect();
+        const rect = el.getBoundingClientRect();
+        const style = window.getComputedStyle(el);
+        const padLeft = parseFloat(style.paddingLeft) || 0;
+        const padRight = parseFloat(style.paddingRight) || 0;
+
+        line.style.left = `${rect.left - containerRect.left + padLeft}px`;
+        line.style.width = `${rect.width - padLeft - padRight}px`;
+        line.style.top = `${rect.bottom - containerRect.top + 2}px`;
+        line.style.opacity = '1';
+      } else {
+        line.style.width = '0px';
+        line.style.opacity = '0';
+      }
+    }
+
+    items.forEach(item => {
+      const href = item.getAttribute('href');
+
+      // Hover
+      item.addEventListener('mouseenter', () => positionLine(item));
+
+      item.addEventListener('click', () => {
+        if (!href || href.startsWith('#') || item.tagName.toLowerCase() === 'button') {
+          items.forEach(i => i.classList.remove('active-link', 'text-[#f58220]'));
+          activeLink = item;
+          item.classList.add('active-link', 'text-[#f58220]');
+          positionLine(activeLink);
+        }
+      });
+    });
+
+    // Reset underline to active element
+    container.addEventListener('mouseleave', () => positionLine(activeLink));
+
+    // Initialize line position on load, scroll, and resize
+    const reset = () => positionLine(activeLink);
+    setTimeout(reset, 150);
+    window.addEventListener('load', reset);
+    window.addEventListener('resize', reset);
+    window.addEventListener('scroll', reset, { passive: true });
   });
 }

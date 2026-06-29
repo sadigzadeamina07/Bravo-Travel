@@ -1,8 +1,4 @@
-@import "tailwindcss";
-
-@theme {
-  --font-futura: "Futura", sans-serif;
-}
+/* Custom Styles - Tailwind build-dən ayrı */
 
 @font-face {
   font-family: "Futura";
@@ -46,7 +42,6 @@
 .linkeffect {
   position: relative;
   display: inline-block;
-
 }
 
 .linkeffect::after {
@@ -56,15 +51,13 @@
   position: absolute;
   left: 0;
   bottom: -2px;
-
   border-bottom: 2px solid white;
   transition: width 0.5s ease;
 }
 
 .linkeffect:hover::after {
-  width:100%;
+  width: 100%;
 }
-
 
 .container {
   max-width: 1140px;
@@ -78,7 +71,7 @@
 .heroSwiper .swiper-slide {
   background-color: transparent !important;
   height: 400px !important;
-  width: 82% !important; /* mobil: kart bütün ekranı tutmasın, yan slaydlar bir az görünsün */
+  width: 82% !important;
   margin: auto;
   transition: all 0.4s ease-in-out !important;
 }
@@ -95,11 +88,9 @@
 
 #hero-title,
 #hero-subtitle {
-  display: inline-block;
-  /* Bu mütləqdir! */
+  display: block;
   transition: transform 0.5s ease-in-out, opacity 0.5s;
 }
-
 
 .heroSwiper .swiper-slide img {
   width: 100%;
@@ -107,16 +98,9 @@
   object-fit: cover;
 }
 
-/* HTML-də hər hero slaydında istifadə olunur, amma heç vaxt təyin edilməyib —
-   şəklin üstündəki yazının oxunaqlı olması üçün qaranlıq overlay verir. */
+/* Hero slider gradient overlay */
 .hero-slider-gradient {
   background: linear-gradient(to top, rgba(10, 20, 40, 0.7) 0%, rgba(10, 20, 40, 0) 65%);
-}
-
-#hero-title,
-#hero-subtitle {
-  display: block;
-  transition: transform 0.5s ease-in-out, opacity 0.5s;
 }
 
 @keyframes floatFly {
@@ -124,12 +108,10 @@
     transform: translate(-100vw, 5vh) rotate(5deg) scale(0.8);
     opacity: 0;
   }
-
   10%,
   90% {
     opacity: 1;
   }
-
   100% {
     transform: translate(100vw, -10vh) rotate(5deg) scale(0.8);
     opacity: 0;
@@ -144,7 +126,6 @@
   0% {
     transform: translate(0, 0) rotate(0deg) scale(0.8);
   }
-
   100% {
     transform: translate(120vw, 0) rotate(0deg) scale(0.8);
   }
@@ -158,7 +139,6 @@
   .heroSwiper .swiper-slide {
     width: 260px !important;
   }
-
   .heroSwiper {
     overflow: hidden;
   }
@@ -183,8 +163,7 @@
   border-radius: 2px;
 }
 
-/* Səhifə açılandan qısa müddət sonra telefon nömrəsinə diqqət çəkmək üçün.
-   app.js bunu #phone-number elementinə əlavə edir (DOMContentLoaded + 300ms). */
+/* Phone pulse animation */
 #phone-number.phone-pulse {
   animation: phonePulse 1s ease-in-out 2;
 }
